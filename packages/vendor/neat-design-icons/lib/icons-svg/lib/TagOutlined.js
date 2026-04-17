@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var TagOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M3.94502 17.3229C3.94262 17.2911 3.94141 17.259 3.94141 17.2266L3.94141 5.20312C3.94141 4.50414 4.50805 3.9375 5.20703 3.9375L17.2305 3.9375C17.2813 3.9375 17.3313 3.94049 17.3806 3.94631C17.6914 3.95578 17.9995 4.07914 18.2367 4.31641L32.0203 18.1C32.5522 18.6319 32.6897 18.8802 32.7802 19.1786C32.8706 19.4771 32.8706 19.7823 32.7802 20.0807C32.6897 20.3792 32.5522 20.6274 32.0203 21.1593L21.1585 32.0212C20.6266 32.5531 20.3783 32.6906 20.0799 32.781C19.7814 32.8715 19.4762 32.8715 19.1778 32.781C18.8793 32.6906 18.6311 32.5531 18.0992 32.0212L4.31555 18.2376C4.0634 17.9854 3.93988 17.6533 3.94502 17.3229ZM6.47266 16.8149L19.6288 29.9711L29.9703 19.6297L16.8093 6.46875L6.47266 6.46875L6.47266 16.8149Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M13.0411 13.042C13.4805 12.6027 13.4805 11.8903 13.0411 11.451C12.6018 11.0117 11.8895 11.0117 11.4501 11.451C11.0108 11.8903 11.0108 12.6027 11.4501 13.042C11.8895 13.4813 12.6018 13.4813 13.0411 13.042ZM14.6321 14.633C13.3141 15.951 11.1772 15.951 9.85916 14.633C8.54114 13.315 8.54114 11.178 9.85916 9.86001C11.1772 8.54199 13.3141 8.54199 14.6321 9.86001C15.9501 11.178 15.9501 13.315 14.6321 14.633Z" })] })); });
+TagOutlined.displayName = 'TagOutlined';
+exports.default = TagOutlined;

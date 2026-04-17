@@ -1,0 +1,335 @@
+/**
+ * @file ProgressTokenMeta.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+
+export default [{
+  source: 'Progress',
+  token: 'progress-color-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-color-text-inverse',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-color-bg-empty',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-color-bg-filled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-color-success',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-color-fail',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-color-icon-inverse',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-font-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-font-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-font-size-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-line-height-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-line-height-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-line-height-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-bar-item-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-bar-item-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-bar-item-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-bar-v-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-bar-v-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-bar-v-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-ring-border-mini',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-ring-border-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-ring-border-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-ring-border-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-bold-weight-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-bold-weight-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-bold-weight-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-icon-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-icon-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-icon-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-icon-bold-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-icon-bold-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-icon-bold-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-label-h-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-label-h-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-label-h-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-ring-mini',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-ring-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-ring-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-size-ring-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-gap-bar-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-gap-bar-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-gap-bar-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-padding-icon-bold',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-padding-bold-label-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-padding-bold-label-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-padding-bold-label-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Progress',
+  token: 'progress-border-radius',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var MealFilled = React.forwardRef(function (props, ref) { return _jsxs("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [_jsx("path", { d: "M32.625 27C33.2463 27 33.75 27.5037 33.75 28.125C33.75 28.7463 33.2463 29.25 32.625 29.25H3.375C2.75368 29.25 2.25 28.7463 2.25 28.125C2.25 27.5037 2.75368 27 3.375 27H32.625Z" }), _jsx("path", { fillRule: "evenodd", d: "M18 5.625C18.6213 5.625 19.125 6.12868 19.125 6.75V8.76132C26.6765 9.33577 32.625 15.6451 32.625 23.3438V24.75C32.625 25.3713 32.1213 25.875 31.5 25.875H4.5C3.87868 25.875 3.375 25.3713 3.375 24.75V23.3438C3.375 15.6451 9.3235 9.33578 16.875 8.76132V6.75C16.875 6.12868 17.3787 5.625 18 5.625ZM12.9505 14.5502C12.5986 14.0382 11.8981 13.9084 11.3861 14.2604C9.72824 15.4002 8.47278 17.0345 7.79878 18.9301L7.58839 19.5216C7.38029 20.107 7.68621 20.7503 8.27161 20.9585C8.857 21.1666 9.50034 20.8607 9.70848 20.2753L9.91873 19.6839C10.4339 18.235 11.3936 16.9858 12.6608 16.1146C13.1728 15.7626 13.3025 15.0621 12.9505 14.5502Z", clipRule: "evenodd" })] })); });
+MealFilled.displayName = 'MealFilled';
+export default MealFilled;

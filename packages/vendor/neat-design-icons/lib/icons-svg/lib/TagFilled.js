@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var TagFilled = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("path", { d: "M5.1861 3.93767L5.20703 3.9375L17.2305 3.9375C17.2811 3.9375 17.3311 3.94048 17.3802 3.94627C17.6853 3.95551 17.9877 4.07444 18.2232 4.3031L18.2367 4.31641L32.0203 18.1C32.5242 18.6039 32.6742 18.8533 32.7655 19.1319L32.7715 19.1505C32.7744 19.1598 32.7773 19.1692 32.7802 19.1786C32.8706 19.4771 32.8706 19.7823 32.7802 20.0807C32.7773 20.0902 32.7744 20.0995 32.7715 20.1089L32.7655 20.1275C32.6752 20.403 32.5276 20.6499 32.037 21.1426L21.1585 32.0212C20.6546 32.5251 20.4053 32.675 20.1267 32.7663L20.108 32.7723C20.0987 32.7753 20.0893 32.7782 20.0799 32.781C19.7814 32.8715 19.4762 32.8715 19.1778 32.781C19.1684 32.7782 19.159 32.7753 19.1496 32.7723L19.131 32.7663C18.8555 32.676 18.6086 32.5284 18.1159 32.0378L4.31555 18.2376L4.30088 18.2226C4.05857 17.9724 3.93995 17.6467 3.94502 17.3227C3.94314 17.2979 3.94199 17.2728 3.94158 17.2475L3.94141 17.2266L3.94141 5.20312C3.94141 4.51113 4.49677 3.94885 5.1861 3.93767ZM9.85916 9.86001C8.54114 11.178 8.54114 13.315 9.85916 14.633C11.1772 15.951 13.3141 15.951 14.6321 14.633C15.9502 13.315 15.9502 11.178 14.6321 9.86001C13.3141 8.54199 11.1772 8.54199 9.85916 9.86001ZM11.4502 11.451C11.8895 11.0117 12.6018 11.0117 13.0411 11.451C13.4805 11.8903 13.4805 12.6027 13.0411 13.042C12.6018 13.4813 11.8895 13.4813 11.4502 13.042C11.0108 12.6027 11.0108 11.8903 11.4502 11.451Z" }) })); });
+TagFilled.displayName = 'TagFilled';
+exports.default = TagFilled;

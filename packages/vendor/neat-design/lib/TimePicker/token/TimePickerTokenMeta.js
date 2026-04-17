@@ -1,0 +1,137 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * @file TimePickerTokenMeta.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+var _default = exports.default = [{
+  source: 'TimePicker',
+  token: 'timepicker-color-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-color-text-selected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-color-text-secondary',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-color-text-inverse',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-color-text-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-color-bg',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-color-bg-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-color-bg-selected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-color-bg-selected-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-color-bg-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-color-divider',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-font-size',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-size-item-v',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-size-item-h',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-gap',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-padding-h',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-padding-v',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'TimePicker',
+  token: 'timepicker-border-radius-item',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

@@ -1,0 +1,186 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * @file TreeTokenMeta.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+var _default = exports.default = [{
+  source: 'Tree',
+  token: 'tree-color-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-color-text-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-color-icon',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-color-icon-secondary',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-color-icon-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-color-bg-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-color-border',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-font-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-font-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-font-size-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-line-height-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-line-height-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-line-height-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-size-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-size-fill-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-size-fill-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-size-fill-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-size-icon-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-size-icon-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-size-icon-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-gap',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-padding',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tree',
+  token: 'tree-border-radius',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

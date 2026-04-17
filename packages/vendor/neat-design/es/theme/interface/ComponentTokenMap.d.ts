@@ -1,0 +1,76 @@
+/**
+ * @file ComponentTokenMap.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+import type { AlertToken } from '../../Alert/token';
+import type { AvatarToken } from '../../Avatar/token';
+import type { BadgeToken } from '../../Badge/token';
+import type { BreadcrumbToken } from '../../Breadcrumb/token';
+import type { ButtonToken } from '../../Button/token';
+import type { CheckboxToken } from '../../Checkbox/token';
+import type { CollapseToken } from '../../Collapse/token';
+import type { DatePickerToken } from '../../DatePicker/token';
+import type { DividerToken } from '../../Divider/token';
+import type { DrawerToken } from '../../Drawer/token';
+import type { DropdownToken } from '../../Dropdown/token';
+import type { FormToken } from '../../Form/token';
+import type { InputToken } from '../../Input/token';
+import type { InputNumberToken } from '../../InputNumber/token';
+import type { MenuToken } from '../../Menu/token';
+import type { ModalToken } from '../../Modal/token';
+import type { NotificationToken } from '../../Notification/token';
+import type { PaginationToken } from '../../Pagination/token';
+import type { PopoverToken } from '../../Popover/token';
+import type { ProgressToken } from '../../Progress/token';
+import type { RadioToken } from '../../Radio/token';
+import type { RateToken } from '../../Rate/token';
+import type { SegmentedToken } from '../../Segmented/token';
+import type { SelectToken } from '../../Select/token';
+import type { SkeletonToken } from '../../Skeleton/token';
+import type { SpinnerToken } from '../../Spinner/token';
+import type { StepsToken } from '../../Steps/token';
+import type { SwitchToken } from '../../Switch/token';
+import type { TableToken } from '../../Table/token';
+import type { TabsToken } from '../../Tabs/token';
+import type { TagToken } from '../../Tag/token';
+import type { TimePickerToken } from '../../TimePicker/token';
+import type { ToastToken } from '../../Toast/token';
+import type { TooltipToken } from '../../Tooltip/token';
+import type { TreeToken } from '../../Tree/token';
+export default interface ComponentTokenMap {
+    Alert: AlertToken;
+    Avatar: AvatarToken;
+    Badge: BadgeToken;
+    Breadcrumb: BreadcrumbToken;
+    Button: ButtonToken;
+    Checkbox: CheckboxToken;
+    Collapse: CollapseToken;
+    DatePicker: DatePickerToken;
+    Divider: DividerToken;
+    Drawer: DrawerToken;
+    Dropdown: DropdownToken;
+    Form: FormToken;
+    Input: InputToken;
+    InputNumber: InputNumberToken;
+    Menu: MenuToken;
+    Modal: ModalToken;
+    Notification: NotificationToken;
+    Pagination: PaginationToken;
+    Popover: PopoverToken;
+    Progress: ProgressToken;
+    Radio: RadioToken;
+    Rate: RateToken;
+    Segmented: SegmentedToken;
+    Select: SelectToken;
+    Skeleton: SkeletonToken;
+    Spinner: SpinnerToken;
+    Steps: StepsToken;
+    Switch: SwitchToken;
+    Table: TableToken;
+    Tabs: TabsToken;
+    Tag: TagToken;
+    TimePicker: TimePickerToken;
+    Toast: ToastToken;
+    Tooltip: TooltipToken;
+    Tree: TreeToken;
+}

@@ -1,0 +1,15 @@
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+
+const MinusCircleFilled: React.ComponentType<React.SVGProps<SVGSVGElement> > = React.forwardRef((props, ref) => <svg
+  viewBox="0 0 36 36"         
+  {...props}
+  ref={ref}
+>
+  <path d="M18 33.75C9.30152 33.75 2.25 26.6985 2.25 18C2.25 9.30152 9.30152 2.25 18 2.25C26.6985 2.25 33.75 9.30152 33.75 18C33.75 26.6985 26.6985 33.75 18 33.75ZM10.8281 16.7344C10.1291 16.7344 9.5625 17.301 9.5625 18C9.5625 18.699 10.1291 19.2656 10.8281 19.2656H25.1719C25.8709 19.2656 26.4375 18.699 26.4375 18C26.4375 17.301 25.8709 16.7344 25.1719 16.7344H10.8281Z" />
+</svg>);
+
+MinusCircleFilled.displayName = 'MinusCircleFilled';
+
+export default MinusCircleFilled;

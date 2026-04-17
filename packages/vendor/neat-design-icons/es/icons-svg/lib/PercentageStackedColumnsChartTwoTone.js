@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var PercentageStackedColumnsChartTwoTone = React.forwardRef(function (props, ref) { return _jsxs("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [_jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M32.2344 28.2188H3.26562C2.56664 28.2188 2 28.7854 2 29.4844C2 30.1834 2.56664 30.75 3.26562 30.75H32.2344C32.9334 30.75 33.5 30.1834 33.5 29.4844C33.5 28.7854 32.9334 28.2188 32.2344 28.2188Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M4.53125 7.26562C4.53125 6.56664 3.96461 6 3.26562 6C2.56664 6 2 6.56664 2 7.26562V29.4844C2 30.1834 2.56664 30.75 3.26562 30.75C3.96461 30.75 4.53125 30.1834 4.53125 29.4844V7.26562Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.tertiary) || "#B2D5E1", d: "M7.30078 8.69844C7.30078 8.25661 7.65895 7.89844 8.10078 7.89844H12.4008C12.8426 7.89844 13.2008 8.25661 13.2008 8.69844V15.7984C13.2008 16.2403 12.8426 16.5984 12.4008 16.5984H8.10078C7.65895 16.5984 7.30078 16.2403 7.30078 15.7984V8.69844Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M7.30078 18.3C7.30078 17.8582 7.65895 17.5 8.10078 17.5H12.4008C12.8426 17.5 13.2008 17.8582 13.2008 18.3V25.3C13.2008 25.7418 12.8426 26.1 12.4008 26.1H8.10078C7.65895 26.1 7.30078 25.7418 7.30078 25.3V18.3Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.tertiary) || "#B2D5E1", d: "M15.6895 8.69844C15.6895 8.25661 16.0476 7.89844 16.4895 7.89844H20.7895C21.2313 7.89844 21.5895 8.25661 21.5895 8.69844V12.8984C21.5895 13.3403 21.2313 13.6984 20.7895 13.6984H16.4895C16.0476 13.6984 15.6895 13.3403 15.6895 12.8984V8.69844Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M15.6895 15.3C15.6895 14.8582 16.0476 14.5 16.4895 14.5H20.7895C21.2313 14.5 21.5895 14.8582 21.5895 15.3V25.4C21.5895 25.8418 21.2313 26.2 20.7895 26.2H16.4895C16.0476 26.2 15.6895 25.8418 15.6895 25.4V15.3Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.tertiary) || "#B2D5E1", d: "M24.1992 8.69844C24.1992 8.25661 24.5574 7.89844 24.9992 7.89844H29.2992C29.741 7.89844 30.0992 8.25661 30.0992 8.69844V15.7984C30.0992 16.2403 29.741 16.5984 29.2992 16.5984H24.9992C24.5574 16.5984 24.1992 16.2403 24.1992 15.7984V8.69844Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M24.1992 18.3C24.1992 17.8582 24.5574 17.5 24.9992 17.5H29.2992C29.741 17.5 30.0992 17.8582 30.0992 18.3V25.4C30.0992 25.8418 29.741 26.2 29.2992 26.2H24.9992C24.5574 26.2 24.1992 25.8418 24.1992 25.4V18.3Z" })] })); });
+PercentageStackedColumnsChartTwoTone.displayName = 'PercentageStackedColumnsChartTwoTone';
+export default PercentageStackedColumnsChartTwoTone;

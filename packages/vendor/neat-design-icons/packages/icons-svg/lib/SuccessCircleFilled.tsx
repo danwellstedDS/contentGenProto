@@ -1,0 +1,15 @@
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+
+const SuccessCircleFilled: React.ComponentType<React.SVGProps<SVGSVGElement> > = React.forwardRef((props, ref) => <svg
+  viewBox="0 0 36 36"         
+  {...props}
+  ref={ref}
+>
+  <path d="M16.9953 22.9767L24.9502 15.0217C25.4994 14.4725 25.4994 13.5821 24.9502 13.033C24.4011 12.4838 23.5107 12.4838 22.9615 13.033L16.0009 19.9936L13.0178 17.0105C12.4686 16.4613 11.5782 16.4613 11.0291 17.0105C10.4799 17.5596 10.4799 18.45 11.0291 18.9992L15.0065 22.9767C15.5557 23.5258 16.4461 23.5258 16.9953 22.9767ZM18 33.75C9.30152 33.75 2.25 26.6985 2.25 18C2.25 9.30152 9.30152 2.25 18 2.25C26.6985 2.25 33.75 9.30152 33.75 18C33.75 26.6985 26.6985 33.75 18 33.75Z" />
+</svg>);
+
+SuccessCircleFilled.displayName = 'SuccessCircleFilled';
+
+export default SuccessCircleFilled;

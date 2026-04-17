@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var FlagFilled = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M7.0332 5.51953C7.0332 4.66522 6.34064 3.97266 5.48633 3.97266C4.63201 3.97266 3.93945 4.66522 3.93945 5.51953V30.5508C3.93945 31.4051 4.63201 32.0977 5.48633 32.0977C6.34064 32.0977 7.0332 31.4051 7.0332 30.5508V5.51953Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M11.1652 6.43359H22.3074C23.0596 6.43359 23.3324 6.51192 23.6074 6.65899C23.8824 6.80606 24.0982 7.02188 24.2453 7.29688C24.3924 7.57188 24.4707 7.84465 24.4707 8.59687V10.3711H29.9012C30.6534 10.3711 30.9262 10.4494 31.2012 10.5965C31.4762 10.7436 31.692 10.9594 31.8391 11.2344C31.9861 11.5094 32.0645 11.7822 32.0645 12.5344V24.2391C32.0645 24.9913 31.9861 25.2641 31.8391 25.5391C31.692 25.8141 31.4762 26.0299 31.2012 26.177C30.9262 26.324 30.6534 26.4023 29.9012 26.4023H24.1027C23.3505 26.4023 23.0777 26.324 22.8027 26.177C22.5277 26.0299 22.3119 25.8141 22.1648 25.5391C22.0178 25.2641 21.9395 24.9913 21.9395 24.2391V22.4648H11.1652C10.413 22.4648 10.1402 22.3865 9.86524 22.2395C9.59024 22.0924 9.37442 21.8766 9.22735 21.6016C9.08027 21.3266 9.00195 21.0538 9.00195 20.3016V8.59687C9.00195 7.84465 9.08027 7.57188 9.22735 7.29688C9.37442 7.02188 9.59024 6.80606 9.86524 6.65899C10.1402 6.51192 10.413 6.43359 11.1652 6.43359Z" })] })); });
+FlagFilled.displayName = 'FlagFilled';
+exports.default = FlagFilled;

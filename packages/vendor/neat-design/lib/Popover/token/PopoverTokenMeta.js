@@ -1,0 +1,109 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * @file PopoverTokenMeta.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+var _default = exports.default = [{
+  source: 'Popover',
+  token: 'popover-color-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-color-bg',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-color-icon-info',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-font-size',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-font-size-title',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-line-height',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-line-height-title',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-size-icon',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-gap',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-gap-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-gap-action',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-padding-v',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popover-padding-h',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Popover',
+  token: 'popver-border-radius',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

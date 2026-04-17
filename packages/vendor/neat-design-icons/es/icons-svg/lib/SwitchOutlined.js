@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var SwitchOutlined = React.forwardRef(function (props, ref) { return _jsx("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: _jsx("path", { fillRule: "evenodd", d: "M15.1332 4.31991C15.6275 4.81417 15.6275 5.61552 15.1332 6.10978L8.27032 12.9727L30.7617 12.9727C31.4607 12.9727 32.0273 13.5393 32.0273 14.2383C32.0273 14.9373 31.4607 15.5039 30.7617 15.5039L5.23828 15.5039C4.5393 15.5039 3.97266 14.9373 3.97266 14.2383C3.97266 14.2344 3.97267 14.2304 3.97271 14.2265C3.96971 13.8987 4.09326 13.57 4.34335 13.3199L13.3434 4.31991C13.8376 3.82565 14.639 3.82565 15.1332 4.31991ZM3.97266 21.7617C3.97266 21.0627 4.5393 20.4961 5.23828 20.4961L30.7617 20.4961C31.4607 20.4961 32.0273 21.0627 32.0273 21.7617C32.0273 21.7657 32.0273 21.7696 32.0273 21.7735C32.0303 22.1013 31.9068 22.43 31.6567 22.6801L22.6567 31.6801C22.1624 32.1744 21.361 32.1744 20.8668 31.6801C20.3725 31.1859 20.3725 30.3845 20.8668 29.8903L27.7297 23.0274L5.23828 23.0274C4.5393 23.0274 3.97266 22.4607 3.97266 21.7617Z", clipRule: "evenodd" }) })); });
+SwitchOutlined.displayName = 'SwitchOutlined';
+export default SwitchOutlined;

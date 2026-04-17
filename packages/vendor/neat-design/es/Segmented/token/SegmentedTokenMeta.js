@@ -1,0 +1,293 @@
+/**
+ * @file SegmentedTokenMeta.ts
+ * @author minglong.zhao(minglong.zhao@derbysoft.net)
+ */
+
+export default [{
+  source: 'Segmented',
+  token: 'segmented-color-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-text-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-text-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-text-press',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-text-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-icon',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-icon-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-icon-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-icon-press',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-icon-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-bg',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-bg-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-bg-item-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-bg-item-press',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-color-bg-item-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-font-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-font-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-font-size-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-line-height-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-line-height-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-line-height-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-size-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-size-icon-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-size-icon-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-size-icon-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-gap-item-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-gap-item-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-gap-item-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-padding-item',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-gap',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-padding-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-padding-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-padding-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-padding-icon-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-padding-icon-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-padding-icon-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-border-radius-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-border-radius-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Segmented',
+  token: 'segmented-border-radius-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

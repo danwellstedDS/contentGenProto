@@ -1,0 +1,277 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * @file CheckboxTokenMeta.ts
+ * @author sunday(sunday.wei@derbysoft.net)
+ */
+var _default = exports.default = [{
+  source: 'Checkbox',
+  token: 'checkbox-color-bg-unselected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-bg-unselected-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-bg-selected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-bg-selected-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-bg-selected-press',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-bg-selected-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-border-unselected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-border-unselected-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-border-unselected-press',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-border-unselected-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-border-danger',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-icon-selected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-icon-selected-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-icon-selected-danger',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-color-text-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-font-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-font-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-font-size-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-line-height-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-line-height-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-line-height-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-size-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-size-group-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-size-group-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-size-group-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-gap',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-gap-group-h-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-gap-group-v-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-gap-group-h-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-gap-group-v-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-gap-group-h-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-gap-group-v-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-padding-group-v-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-padding-group-v-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Checkbox',
+  token: 'checkbox-padding-group-v-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

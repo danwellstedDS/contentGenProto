@@ -1,0 +1,27 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _hooks = require("../../hooks");
+var _templateObject;
+/**
+ * @file overlay.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ * @author rzh(peter.rao@derbysoft.net)
+ */
+// Hooks
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var useStyle = function useStyle() {
+  var createStyles = (0, _hooks.useCreateStyles)();
+  return createStyles(function (_ref) {
+    var css = _ref.css,
+      prefixCls = _ref.prefixCls,
+      token = _ref.token,
+      componentsToken = _ref.componentsToken;
+    var dropdownToken = componentsToken.Dropdown;
+    return css(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n            &.", "-dropdown, &.", "-dropdown-menu-submenu-popup {\n                padding: ", "px;\n                background: ", ";\n                border-radius: ", "px;\n                box-shadow:\n                    0 1.2px 7.2px rgba(0, 0, 0, 0.1),\n                    0 6.4px 28.8px rgba(0, 0, 0, 0.13);\n\n                .", "-dropdown-menu {\n                    padding: 0;\n                    box-shadow: none;\n                    background-color: transparent;\n                    .", "-dropdown-menu-item-selected, \n                    .", "-dropdown-menu-submenu .", "-dropdown-menu .", "-dropdown-menu-item-selected, \n                    .", "-dropdown-menu .", "-dropdown-menu-submenu-title-selected, \n                    .", "-dropdown-menu-submenu .", "-dropdown-menu .", "-dropdown-menu-submenu-title-selected {\n                        background-color: ", ";\n                        color: ", ";\n                        font-weight: 600;\n                        :hover {\n                            background-color: ", ";\n                        }\n                    }\n\n\n                    .", "-dropdown-menu-item:not(.", "-dropdown-menu-item-disabled), .", "-dropdown-menu-submenu:not(.", "-dropdown-menu-submenu-disabled) .", "-dropdown-menu-submenu-title {\n                        height: ", "px;\n                        padding: 0 ", "px;\n                        line-height: 20px;\n                        :has(.", "-dropdown-menu-submenu-expand-icon) {\n                            padding: 0 ", "px 0 ", "px;\n                        }\n\n                        :hover {\n                            background: ", ";\n                        }\n\n                        :focus-visible {\n                            outline: 2px solid ", "33;\n                            outline-offset: 0;\n                        }\n                    }\n\n                    .", "-dropdown-menu-item {\n                        .", "-dropdown-menu-item-icon {\n                            height: ", "px;\n                            line-height: ", "px;\n                            font-size: ", "px;\n                            color: ", ";\n                        }\n\n                        .", "-dropdown-menu-title-content-checkbox {\n                            pointer-events: none;\n                        }\n                    }\n\n                    .", "-dropdown-menu-submenu .", "-dropdown-menu-submenu-title {\n                            display: flex;\n                            align-items: center;\n                    }\n                }\n            }\n        "])), prefixCls, prefixCls, dropdownToken['dropdown-padding'], dropdownToken['dropdown-color-bg'], dropdownToken['dropdown-border-radius'], prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, dropdownToken['dropdown-color-bg'], dropdownToken['dropdown-color-text-active'], dropdownToken['dropdown-color-bg-hover'], prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, dropdownToken['dropdown-size'], dropdownToken['dropdown-padding-item-h'], prefixCls, dropdownToken['dropdown-padding-item-h'] + dropdownToken['dropdown-font-size'], dropdownToken['dropdown-padding-item-h'], dropdownToken['dropdown-color-bg-hover'], token === null || token === void 0 ? void 0 : token['neutral-28'], prefixCls, prefixCls, dropdownToken['dropdown-font-size'], dropdownToken['dropdown-font-size'], dropdownToken['dropdown-font-size'], dropdownToken['dropdown-color-text'], prefixCls, prefixCls, prefixCls);
+  }).styles;
+};
+var _default = exports.default = useStyle;

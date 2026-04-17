@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var PlayArrowCircleOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M9.36251 27.5469C9.34182 27.5261 9.32194 27.5045 9.30292 27.4821C9.28037 27.4574 9.2579 27.4326 9.23552 27.4078L9.24263 27.4046C9.11218 27.2209 9.0355 26.9963 9.0355 26.7539C9.0355 26.1326 9.53918 25.6289 10.1605 25.6289C10.5067 25.6289 10.8164 25.7853 11.0228 26.0313L11.0241 26.0297C13.1815 28.3564 16.2646 29.8125 19.6878 29.8125C26.2117 29.8125 31.5003 24.5239 31.5003 18C31.5003 11.4761 26.2117 6.1875 19.6878 6.1875C13.584 6.1875 8.5615 10.817 7.94003 16.7563L8.9827 15.7136C9.47696 15.2194 10.2783 15.2194 10.7726 15.7136C11.2668 16.2079 11.2668 17.0092 10.7726 17.5035L7.59058 20.6855C7.09633 21.1797 6.29498 21.1797 5.80072 20.6855L2.61874 17.5035C2.12448 17.0092 2.12448 16.2079 2.61874 15.7136C3.113 15.2194 3.91435 15.2194 4.4086 15.7136L5.66265 16.9677C6.19118 9.68317 12.2685 3.9375 19.6878 3.9375C27.4543 3.9375 33.7503 10.2335 33.7503 18C33.7503 25.7665 27.4543 32.0625 19.6878 32.0625C15.6066 32.0625 11.9314 30.3239 9.36251 27.5469Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M16.0601 23.8557L25.6002 18.4894C25.69 18.4389 25.7642 18.3647 25.8147 18.2749C25.967 18.0042 25.871 17.6612 25.6002 17.5089L16.0601 12.1426C15.9759 12.0952 15.8809 12.0703 15.7843 12.0703C15.4736 12.0703 15.2218 12.3222 15.2218 12.6328V23.3655C15.2218 23.4621 15.2467 23.5571 15.294 23.6413C15.4463 23.912 15.7893 24.008 16.0601 23.8557Z" })] })); });
+PlayArrowCircleOutlined.displayName = 'PlayArrowCircleOutlined';
+exports.default = PlayArrowCircleOutlined;

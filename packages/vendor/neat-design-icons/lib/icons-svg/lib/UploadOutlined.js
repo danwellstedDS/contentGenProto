@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var UploadOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M18.0002 4.46484C18.4155 4.46484 18.7842 4.66495 19.0149 4.97401L26.0514 12.0105C26.5457 12.5048 26.5457 13.3061 26.0514 13.8004C25.5572 14.2946 24.7558 14.2946 24.2616 13.8004L19.2658 8.80459V22.5352C19.2658 23.2341 18.6991 23.8008 18.0002 23.8008C17.3012 23.8008 16.7345 23.2341 16.7345 22.5352V8.78596L11.7201 13.8004C11.2259 14.2946 10.4245 14.2946 9.93026 13.8004C9.43601 13.3061 9.43601 12.5048 9.93026 12.0105L17.0897 4.85106L17.0975 4.8433C17.3271 4.60971 17.6467 4.46484 18.0002 4.46484Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M6.46875 21.9023V27.8086H29.5312V21.9023C29.5312 21.2034 30.0979 20.6367 30.7969 20.6367C31.4959 20.6367 32.0625 21.2034 32.0625 21.9023V28.1766C32.0625 28.9288 31.9842 29.2016 31.8371 29.4766C31.69 29.7516 31.4742 29.9674 31.1992 30.1144C30.9242 30.2615 30.6514 30.3398 29.8992 30.3398H6.10078C5.34856 30.3398 5.07579 30.2615 4.80079 30.1144C4.52579 29.9674 4.30996 29.7516 4.16289 29.4766C4.01582 29.2016 3.9375 28.9288 3.9375 28.1766V21.9023C3.9375 21.2034 4.50414 20.6367 5.20312 20.6367C5.90211 20.6367 6.46875 21.2034 6.46875 21.9023Z" })] })); });
+UploadOutlined.displayName = 'UploadOutlined';
+exports.default = UploadOutlined;

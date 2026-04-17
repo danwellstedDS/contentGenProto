@@ -1,0 +1,314 @@
+/**
+ * @file TabsTokenMeta.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+
+export default [{
+  source: 'Tabs',
+  token: 'tabs-color-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-text-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-text-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-text-press',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-text-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-icon',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-icon-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-icon-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-icon-press',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-icon-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-bg',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-bg-item',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-bg-item-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-bg-item-press',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-bg-item-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-bg-item-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-border',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-color-border-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-font-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-font-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-font-size-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-line-height-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-line-height-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-line-height-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-size-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-size-icon-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-size-icon-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-size-icon-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-size-arrow-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-size-arrow-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-size-arrow-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-gap',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-gap-item',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-padding-arrow-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-padding-arrow-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-padding-arrow-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-padding-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-padding-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-padding-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-border-radius-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-border-radius-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tabs',
+  token: 'tabs-border-radius-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

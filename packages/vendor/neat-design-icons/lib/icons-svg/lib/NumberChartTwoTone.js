@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var NumberChartTwoTone = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M4.25 8.25V28.5H31.25V8.25H4.25ZM4.16328 6H31.3367C32.0889 6 32.3617 6.07832 32.6367 6.22539C32.9117 6.37246 33.1275 6.58829 33.2746 6.86329C33.4217 7.13829 33.5 7.41106 33.5 8.16328V28.5867C33.5 29.3389 33.4217 29.6117 33.2746 29.8867C33.1275 30.1617 32.9117 30.3775 32.6367 30.5246C32.3617 30.6717 32.0889 30.75 31.3367 30.75H4.16328C3.41106 30.75 3.13829 30.6717 2.86329 30.5246C2.58829 30.3775 2.37246 30.1617 2.22539 29.8867C2.07832 29.6117 2 29.3389 2 28.5867V8.16328C2 7.41106 2.07832 7.13829 2.22539 6.86329C2.37246 6.58829 2.58829 6.37246 2.86329 6.22539C3.13829 6.07832 3.41106 6 4.16328 6Z" }), (0, jsx_runtime_1.jsx)("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M8.50469 12.3281H16.8703C17.3718 12.3281 17.5536 12.3803 17.737 12.4784C17.9203 12.5764 18.0642 12.7203 18.1622 12.9036C18.2603 13.087 18.3125 13.2688 18.3125 13.7703V15.9484C18.3125 16.4499 18.2603 16.6318 18.1622 16.8151C18.0642 16.9984 17.9203 17.1423 17.737 17.2404C17.5536 17.3384 17.3718 17.3906 16.8703 17.3906H8.50469C8.00321 17.3906 7.82136 17.3384 7.63802 17.2404C7.45469 17.1423 7.31081 16.9984 7.21276 16.8151C7.11471 16.6318 7.0625 16.4499 7.0625 15.9484V13.7703C7.0625 13.2688 7.11471 13.087 7.21276 12.9036C7.31081 12.7203 7.45469 12.5764 7.63802 12.4784C7.82136 12.3803 8.00321 12.3281 8.50469 12.3281Z" }), (0, jsx_runtime_1.jsx)("path", { fill: (props === null || props === void 0 ? void 0 : props.tertiary) || "#B2D5E1", d: "M26.2936 13.1097L28.1501 16.4515C28.301 16.723 28.2031 17.0655 27.9316 17.2164C27.848 17.2628 27.754 17.2872 27.6584 17.2872H23.9453C23.6347 17.2872 23.3828 17.0353 23.3828 16.7247C23.3828 16.6291 23.4072 16.535 23.4536 16.4515L25.3101 13.1097C25.461 12.8382 25.8035 12.7403 26.075 12.8912C26.1669 12.9422 26.2426 13.0179 26.2936 13.1097Z" }), (0, jsx_runtime_1.jsx)("path", { fill: (props === null || props === void 0 ? void 0 : props.secondary) || "#58A5BD", d: "M27.875 24H7.625C7.00368 24 6.5 24.5037 6.5 25.125C6.5 25.7463 7.00368 26.25 7.625 26.25H27.875C28.4963 26.25 29 25.7463 29 25.125C29 24.5037 28.4963 24 27.875 24Z" })] })); });
+NumberChartTwoTone.displayName = 'NumberChartTwoTone';
+exports.default = NumberChartTwoTone;

@@ -1,0 +1,153 @@
+/**
+ * @file ToastTokenMeta.ts
+ * @author sunday(sunday.wei@derbysoft.net)
+ */
+
+export default [{
+  source: 'Toast',
+  token: 'toast-color-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-text-link',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-text-link-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-text-link-press',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-text-link-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-icon-info',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-icon-success',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-icon-warning',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-icon-error',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-bg-info',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-bg-success',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-bg-warning',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-color-bg-error',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-font-size',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-font-size-link',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-line-height',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-size-icon',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-gap',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-padding-v',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-padding-h',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Toast',
+  token: 'toast-border-radius',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

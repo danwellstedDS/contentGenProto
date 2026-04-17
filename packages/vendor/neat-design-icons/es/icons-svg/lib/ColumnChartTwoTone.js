@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var ColumnChartTwoTone = React.forwardRef(function (props, ref) { return _jsxs("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [_jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.tertiary) || "#B2D5E1", d: "M20.5625 7.96875H16.9062C16.2849 7.96875 15.7812 8.47243 15.7812 9.09375V25.125C15.7812 25.7463 16.2849 26.25 16.9062 26.25H20.5625C21.1838 26.25 21.6875 25.7463 21.6875 25.125V9.09375C21.6875 8.47243 21.1838 7.96875 20.5625 7.96875Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M29 13.875H25.3438C24.7224 13.875 24.2188 14.3787 24.2188 15V25.125C24.2188 25.7463 24.7224 26.25 25.3438 26.25H29C29.6213 26.25 30.125 25.7463 30.125 25.125V15C30.125 14.3787 29.6213 13.875 29 13.875Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M12.125 20.3438H8.46875C7.84743 20.3438 7.34375 20.8474 7.34375 21.4688V25.125C7.34375 25.7463 7.84743 26.25 8.46875 26.25H12.125C12.7463 26.25 13.25 25.7463 13.25 25.125V21.4688C13.25 20.8474 12.7463 20.3438 12.125 20.3438Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M32.2344 28.2188H3.26562C2.56664 28.2188 2 28.7854 2 29.4844C2 30.1834 2.56664 30.75 3.26562 30.75H32.2344C32.9334 30.75 33.5 30.1834 33.5 29.4844C33.5 28.7854 32.9334 28.2188 32.2344 28.2188Z" }), _jsx("path", { fill: (props === null || props === void 0 ? void 0 : props.primary) || "#06789D", d: "M4.53125 7.26562C4.53125 6.56664 3.96461 6 3.26562 6C2.56664 6 2 6.56664 2 7.26562V29.4844C2 30.1834 2.56664 30.75 3.26562 30.75C3.96461 30.75 4.53125 30.1834 4.53125 29.4844V7.26562Z" })] })); });
+ColumnChartTwoTone.displayName = 'ColumnChartTwoTone';
+export default ColumnChartTwoTone;

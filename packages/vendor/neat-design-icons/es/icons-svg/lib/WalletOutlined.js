@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var WalletOutlined = React.forwardRef(function (props, ref) { return _jsx("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: _jsx("path", { fillRule: "evenodd", d: "M27.2109 6.43359C27.2109 5.50161 26.4566 4.74609 25.526 4.74609H5.62245C4.69188 4.74609 3.9375 5.50161 3.9375 6.43359V29.5312C3.9375 30.4632 4.69302 31.2188 5.625 31.2188H30.375C31.307 31.2188 32.0625 30.4632 32.0625 29.5312V10.7227C32.0625 9.79068 31.307 9.03516 30.375 9.03516H27.2109V6.43359ZM24.6797 9.03516V8.40234C24.6797 7.78102 24.176 7.27734 23.5547 7.27734H7.38281C6.89741 7.27734 6.50391 7.67084 6.50391 8.15625C6.50391 8.64166 6.89741 9.03516 7.38281 9.03516H24.6797ZM6.46875 11.5664V28.6875H29.5312V23.9818C29.3935 24.0015 29.2526 24.0117 29.1094 24.0117H23.2383C21.6073 24.0117 20.2852 22.6896 20.2852 21.0586V19.1602C20.2852 17.5292 21.6073 16.207 23.2383 16.207H29.1094C29.2526 16.207 29.3935 16.2172 29.5312 16.2369V11.5664H6.46875ZM29.5312 19.1602V21.0586C29.5312 21.2916 29.3424 21.4805 29.1094 21.4805H23.2383C23.0053 21.4805 22.8164 21.2916 22.8164 21.0586V19.1602C22.8164 18.9272 23.0053 18.7383 23.2383 18.7383H29.1094C29.3424 18.7383 29.5312 18.9272 29.5312 19.1602Z", clipRule: "evenodd" }) })); });
+WalletOutlined.displayName = 'WalletOutlined';
+export default WalletOutlined;

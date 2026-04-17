@@ -1,0 +1,291 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * @file DatePickerTokenMeta.ts
+ * @author sunday(sunday.wei@derbysoft.net)
+ */
+var _default = exports.default = [{
+  source: 'DatePicker',
+  token: 'datepicker-color-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-text-secondary',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-text-inverse',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-text-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-hover-enhance',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-compared-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-compared-hover-enhance',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-overlap-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-overlap-hover-enhance',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-selected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-selected-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-selected-secondary',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-compared-selected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-compared-selected-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-compared-selected-secondary',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-overlap-selected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-overlap-selected-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-overlap-selected-secondary',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-bg-disabled-enhance',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-border',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-border-compared',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-border-overlap',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-border-selected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-border-compared-selected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-border-overlap-selected',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-border-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-border-disabled-enhance',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-icon',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-color-divider',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-font-size',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-size-item-1',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-size-item-2',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-size-item-3',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-gap',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-padding-h',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-border-radius-item',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'DatePicker',
+  token: 'datepicker-border-radius',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

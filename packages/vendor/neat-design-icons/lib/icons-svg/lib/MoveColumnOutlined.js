@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var MoveColumnOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { fillRule: "evenodd", d: "M21.0742 31.8371C21.3492 31.69 21.565 31.4742 21.7121 31.1992C21.8592 30.9242 21.9375 30.6514 21.9375 29.8992L21.9375 6.07718C21.9358 5.34282 21.8576 5.07289 21.7121 4.80079C21.565 4.52579 21.3492 4.30996 21.0742 4.16289C20.7992 4.01582 20.5264 3.9375 19.7742 3.9375L16.2022 3.93753C15.4678 3.93916 15.1979 4.01737 14.9258 4.16289C14.6508 4.30996 14.435 4.52579 14.2879 4.80079C14.1408 5.07579 14.0625 5.34856 14.0625 6.10078V29.8992C14.0625 30.6514 14.1408 30.9242 14.2879 31.1992C14.435 31.4742 14.6508 31.69 14.9258 31.8371C15.2008 31.9842 15.4735 32.0625 16.2258 32.0625H19.7742C20.5264 32.0625 20.7992 31.9842 21.0742 31.8371ZM19.4062 6.46875V29.5312H16.5937V6.46875H19.4062Z", clipRule: "evenodd" }), (0, jsx_runtime_1.jsx)("path", { d: "M12.6899 19.2642C13.3889 19.2642 13.9556 18.6976 13.9556 17.9986C13.9556 17.2996 13.3889 16.7329 12.6899 16.7329L8.20646 16.7329L10.2693 14.67C10.7568 14.1825 10.7568 13.3922 10.2693 12.9047C9.78184 12.4172 8.99147 12.4172 8.50398 12.9047L4.30312 17.1055C3.81563 17.593 3.81563 18.3834 4.30312 18.8709C4.31951 18.8873 4.33625 18.9031 4.35331 18.9184L8.51427 23.0794C9.00176 23.5668 9.79213 23.5668 10.2796 23.0794C10.7671 22.5919 10.7671 21.8015 10.2796 21.314L8.22981 19.2642L12.6899 19.2642Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M27.4931 23.0925L31.6939 18.8916C32.1814 18.4041 32.1814 17.6137 31.6939 17.1262C31.6775 17.1098 31.6608 17.094 31.6437 17.0787L27.4828 12.9178C26.9953 12.4303 26.2049 12.4303 25.7174 12.9178C25.23 13.4053 25.23 14.1956 25.7174 14.6831L27.7673 16.7329L23.3071 16.7329C22.6081 16.7329 22.0415 17.2996 22.0415 17.9986C22.0415 18.6976 22.6081 19.2642 23.3071 19.2642L27.7906 19.2642L25.7277 21.3271C25.2402 21.8146 25.2402 22.605 25.7277 23.0925C26.2152 23.5799 27.0056 23.5799 27.4931 23.0925Z" })] })); });
+MoveColumnOutlined.displayName = 'MoveColumnOutlined';
+exports.default = MoveColumnOutlined;

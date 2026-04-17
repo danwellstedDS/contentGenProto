@@ -1,6 +1,9 @@
 # Dependencies
 node_modules/
 
+# Vendored DerbySoft packages — committed intentionally (not on public npm)
+!packages/vendor/
+
 # Build outputs
 dist/
 build/

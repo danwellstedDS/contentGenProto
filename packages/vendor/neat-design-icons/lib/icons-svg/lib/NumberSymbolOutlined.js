@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var NumberSymbolOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("path", { fillRule: "evenodd", d: "M29.0702 23.119H23.9902L25.7802 12.999H29.0702C29.7702 12.999 30.3402 12.429 30.3402 11.729C30.3402 11.029 29.7702 10.469 29.0702 10.469H26.2202L27.1002 5.48903C27.2202 4.79903 26.7602 4.14903 26.0702 4.01903C25.3802 3.89903 24.7302 4.35903 24.6002 5.04903L23.6402 10.469H15.0002L15.8802 5.48903C16.0002 4.79903 15.5402 4.14903 14.8602 4.01903C14.1702 3.89903 13.5102 4.35903 13.3902 5.04903L12.4302 10.469H6.93016C6.23016 10.469 5.66016 11.029 5.66016 11.729C5.66016 12.429 6.23016 12.999 6.93016 12.999H11.9902L10.2102 23.119H6.93016C6.23016 23.119 5.66016 23.689 5.66016 24.389C5.66016 25.089 6.23016 25.649 6.93016 25.649H9.76016L8.88016 30.639C8.76016 31.329 9.22016 31.979 9.91016 32.099C10.5902 32.219 11.2502 31.769 11.3702 31.079L12.3302 25.649H20.9702L20.0902 30.639C19.9702 31.329 20.4302 31.979 21.1202 32.099C21.8102 32.219 22.4602 31.769 22.5902 31.079L23.5502 25.649H29.0702C29.7702 25.649 30.3402 25.089 30.3402 24.389C30.3402 23.689 29.7702 23.119 29.0702 23.119ZM21.4202 23.119H12.7702L14.5602 12.999H23.2002L21.4202 23.119Z", clipRule: "evenodd" }) })); });
+NumberSymbolOutlined.displayName = 'NumberSymbolOutlined';
+exports.default = NumberSymbolOutlined;

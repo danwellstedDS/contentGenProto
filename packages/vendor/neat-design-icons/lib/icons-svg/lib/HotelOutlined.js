@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var HotelOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M9.14062 10.0898H11.6719V12.6211H9.14062V10.0898Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M15.3281 10.0898H12.7969V12.6211H15.3281V10.0898Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M16.4531 10.0898H18.9844V12.6211H16.4531V10.0898Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M11.6719 13.7461H9.14062V16.2773H11.6719V13.7461Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M12.7969 13.7461H15.3281V16.2773H12.7969V13.7461Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M18.9844 13.7461H16.4531V16.2773H18.9844V13.7461Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M9.14062 17.4023H11.6719V19.9336H9.14062V17.4023Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M15.3281 17.4023H12.7969V19.9336H15.3281V17.4023Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M16.4531 17.4023H18.9844V19.9336H16.4531V17.4023Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M11.6719 21.0586H9.14062V23.5898H11.6719V21.0586Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M12.7969 21.0586H15.3281V23.5898H12.7969V21.0586Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M18.9844 21.0586H16.4531V23.5898H18.9844V21.0586Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M9.14062 24.7148H11.6719V27.2461H9.14062V24.7148Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M15.3281 24.7148H12.7969V27.2461H15.3281V24.7148Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M16.4531 24.7148H18.9844V27.2461H16.4531V24.7148Z" }), (0, jsx_runtime_1.jsx)("path", { fillRule: "evenodd", d: "M7.78828 5.625H20.3367C21.0889 5.625 21.3617 5.70332 21.6367 5.85039C21.9117 5.99746 22.1275 6.21329 22.2746 6.48829C22.4217 6.76329 22.5 7.03606 22.5 7.78828V29.5312H28.125V17.1562H25.1367C24.5154 17.1562 24.0117 16.6526 24.0117 16.0312C24.0117 15.4099 24.5154 14.9062 25.1367 14.9062H28.2117C28.9639 14.9062 29.2367 14.9846 29.5117 15.1316C29.7867 15.2787 30.0025 15.4945 30.1496 15.7695C30.2967 16.0445 30.375 16.3173 30.375 17.0695V29.5312H30.7969C31.4959 29.5312 32.0625 30.0979 32.0625 30.7969C32.0625 31.4959 31.4959 32.0625 30.7969 32.0625H5.20312C4.50414 32.0625 3.9375 31.4959 3.9375 30.7969C3.9375 30.0979 4.50414 29.5312 5.20312 29.5312H5.625V7.78828C5.625 7.03606 5.70332 6.76329 5.85039 6.48829C5.99746 6.21329 6.21329 5.99746 6.48829 5.85039C6.76329 5.70332 7.03606 5.625 7.78828 5.625ZM7.875 7.875V29.4609H20.25V7.875H7.875Z", clipRule: "evenodd" }), (0, jsx_runtime_1.jsx)("path", { d: "M24.1875 18.4219H26.7188V20.9531H24.1875V18.4219Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M26.7188 22.0781H24.1875V24.6094H26.7188V22.0781Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M24.1875 25.7344H26.7188V28.2656H24.1875V25.7344Z" })] })); });
+HotelOutlined.displayName = 'HotelOutlined';
+exports.default = HotelOutlined;

@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var EmailOffOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { fillRule: "evenodd", d: "M4.50025 5.625C3.25761 5.625 2.25025 6.63236 2.25025 7.875V11.2605C2.24991 11.2764 2.24992 11.2923 2.25025 11.3082V28.125C2.25025 29.3676 3.25761 30.375 4.50025 30.375H19.9906V28.125H4.50025V13.0889L16.2905 18.8637C16.8368 19.1313 17.4762 19.1313 18.0225 18.8637L29.8128 13.0889V18.1406H32.0628V11.308C32.0631 11.2923 32.0631 11.2764 32.0628 11.2606V7.875C32.0628 6.63236 31.0554 5.625 29.8128 5.625H4.50025ZM17.1565 16.7825L4.50025 10.5835V7.875L29.8128 7.875V10.5835L17.1565 16.7825Z", clipRule: "evenodd" }), (0, jsx_runtime_1.jsx)("path", { d: "M29.3246 22.6503C29.7076 22.9158 29.8028 23.4415 29.5373 23.8245L26.4252 28.3134C26.1597 28.6964 25.634 28.7916 25.2511 28.5261C24.8681 28.2606 24.7729 27.7349 25.0384 27.352L28.1505 22.863C28.416 22.4801 28.9416 22.3848 29.3246 22.6503Z" }), (0, jsx_runtime_1.jsx)("path", { fillRule: "evenodd", d: "M20.8128 25.5938C20.8128 22.0212 23.7089 19.125 27.2815 19.125C30.8541 19.125 33.7503 22.0212 33.7503 25.5938C33.7503 29.1663 30.8541 32.0625 27.2815 32.0625C23.7089 32.0625 20.8128 29.1663 20.8128 25.5938ZM27.2815 21.0938C24.7962 21.0938 22.7815 23.1085 22.7815 25.5938C22.7815 28.079 24.7962 30.0938 27.2815 30.0938C29.7668 30.0938 31.7815 28.079 31.7815 25.5938C31.7815 23.1085 29.7668 21.0938 27.2815 21.0938Z", clipRule: "evenodd" })] })); });
+EmailOffOutlined.displayName = 'EmailOffOutlined';
+exports.default = EmailOffOutlined;

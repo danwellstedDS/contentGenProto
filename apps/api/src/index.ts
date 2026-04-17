@@ -1,8 +1,11 @@
 import "dotenv/config"
+import path from "path"
+import fs from "fs"
 import Fastify from "fastify"
 import cors from "@fastify/cors"
 import jwt from "@fastify/jwt"
 import multipart from "@fastify/multipart"
+import fastifyStatic from "@fastify/static"
 import { authRoutes } from "./interface/authRoutes"
 import { projectRoutes } from "./interface/projectRoutes"
 import { importRoutes } from "./interface/importRoutes"
@@ -51,6 +54,19 @@ async function main() {
   await app.register(importRoutes)
   await app.register(toneConfigRoutes)
   await app.register(generationRoutes)
+
+  // Serve the compiled React frontend in production
+  const webDistPath = path.join(__dirname, "../../web/dist")
+  if (fs.existsSync(webDistPath)) {
+    await app.register(fastifyStatic, { root: webDistPath, prefix: "/" })
+    // SPA fallback — any unmatched GET returns index.html for React Router
+    app.setNotFoundHandler(async (req, reply) => {
+      if (req.method === "GET") {
+        return reply.type("text/html").sendFile("index.html")
+      }
+      return reply.status(404).send({ error: "Not found" })
+    })
+  }
 
   await app.listen({ port: PORT, host: HOST })
 }

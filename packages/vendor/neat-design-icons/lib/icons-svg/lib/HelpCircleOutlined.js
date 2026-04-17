@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var HelpCircleOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M21.7361 11.1515C20.8518 10.3587 19.6801 9.98438 18.2432 9.98438C16.6073 9.98438 15.3251 10.4468 14.3745 11.3717C13.4017 12.2966 12.9375 13.5738 12.9375 15.2033H15.4577C15.4577 14.2564 15.6346 13.5297 16.0104 13.0233C16.4525 12.4287 17.1378 12.1424 18.0884 12.1424C18.8401 12.1424 19.437 12.3406 19.857 12.759C20.2549 13.1774 20.476 13.75 20.476 14.4766C20.476 15.0272 20.277 15.5557 19.8791 16.0401L19.6138 16.3484C18.1769 17.6256 17.3147 18.5505 17.0273 19.1451C16.7178 19.7397 16.5852 20.4663 16.5852 21.3031V21.6114H19.1275V21.3031C19.1275 20.7746 19.238 20.2902 19.4591 19.8498C19.658 19.4534 19.9454 19.079 20.3433 18.7707C21.4045 17.8459 22.0456 17.2513 22.2445 17.0311C22.7751 16.3264 23.0625 15.4235 23.0625 14.3225C23.0625 12.9792 22.6204 11.9222 21.7361 11.1515Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M19.0832 23.1529C18.7516 22.8446 18.3316 22.6905 17.8453 22.6905C17.3589 22.6905 16.961 22.8446 16.6515 23.1529C16.2978 23.4612 16.143 23.8576 16.143 24.342C16.143 24.8265 16.2978 25.2229 16.6515 25.5312C16.961 25.8395 17.3589 26.0156 17.8453 26.0156C18.3316 26.0156 18.7295 25.8615 19.0832 25.5532C19.3927 25.2449 19.5696 24.8265 19.5696 24.342C19.5696 23.8576 19.3927 23.4612 19.0832 23.1529Z" }), (0, jsx_runtime_1.jsx)("path", { fillRule: "evenodd", d: "M2.25 18C2.25 26.6985 9.30152 33.75 18 33.75C26.6985 33.75 33.75 26.6985 33.75 18C33.75 9.30152 26.6985 2.25 18 2.25C9.30152 2.25 2.25 9.30152 2.25 18ZM31.2188 18C31.2188 25.3005 25.3005 31.2188 18 31.2188C10.6995 31.2188 4.78125 25.3005 4.78125 18C4.78125 10.6995 10.6995 4.78125 18 4.78125C25.3005 4.78125 31.2188 10.6995 31.2188 18Z", clipRule: "evenodd" })] })); });
+HelpCircleOutlined.displayName = 'HelpCircleOutlined';
+exports.default = HelpCircleOutlined;

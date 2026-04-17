@@ -1,0 +1,30 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _hooks = require("../../hooks");
+var _templateObject, _templateObject2;
+/**
+ * @file index.tsx
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ * @author minglong.zhao(minglong.zhao@derbysoft.net)
+ */
+// Hooks
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var useStyle = function useStyle(_ref) {
+  var responsive = _ref.responsive;
+  var createStyles = (0, _hooks.useCreateStyles)();
+  return createStyles(function (_ref2) {
+    var css = _ref2.css,
+      prefixCls = _ref2.prefixCls,
+      token = _ref2.token,
+      componentsToken = _ref2.componentsToken;
+    var buttonToken = componentsToken.Button,
+      modalToken = componentsToken.Modal;
+    var responsiveStyle = css(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n            @media (max-width: 767px) {\n                &.", "-modal-root {\n                    .", "-modal {\n                        max-width: 100vw;\n                        margin: 0;\n                    }\n\n                    .", "-modal-centered::before {\n                        content: unset;\n                    }\n\n                    .", "-modal-content {\n                        height: 100vh;\n                        border-radius: 0;\n                    }\n\n                    .", "-modal-body {\n                        // window height - 56px header height - 89px footer height\n                        max-height: calc(100vh - 56px - 89px);\n                    }\n\n                    .", "-modal-footer {\n                        display: flex;\n\n                        & > * {\n                            flex: 1;\n                        }\n                    }\n\n                    &.", "-modal-full-screen {\n                        .", "-modal {\n                            max-width: 100vw;\n                        }\n\n                        .", "-modal-content {\n                            height: 100vh;\n                        }\n                    }\n                }\n            }\n        "])), prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, prefixCls);
+    return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            &.", "-modal-root {\n                .", "-modal-content {\n                    padding: 0;\n                    background-color: ", ";\n                }\n\n                .", "-modal-close {\n                    width: ", "px;\n                    height: ", "px;\n                }\n\n                .", "-modal-close-x {\n                    font-size: ", "px;\n                    color: ", ";\n                }\n\n                .", "-modal-header {\n                    display: flex;\n                    align-items: center;\n                    height: ", "px;\n                    padding: 0 ", "px;\n                    border-bottom: 1px solid ", ";\n                    margin: 0;\n                }\n\n                .", "-modal-title {\n                    padding: 0\n                        ", "px\n                        0 ", "px;\n                    overflow: hidden;\n                    white-space: nowrap;\n                    text-overflow: ellipsis;\n                }\n\n                .", "-modal-body {\n                    height: 100%;\n                    // window height - 48px modal padding - 56px header height - 89px footer height\n                    max-height: calc(100vh - 48px - 56px - 89px);\n                    padding: ", "px;\n                    overflow: auto;\n\n                    .", "-modal-body-skeleton {\n                        margin-block: 0;\n                    }\n\n                    .", "-skeleton-paragraph {\n                        margin-block: 0;\n\n                        & > li {\n                            height: 16px;\n                            background: #f1f5f8;\n\n                            & + li {\n                                margin-block-start: 16px;\n                            }\n                        }\n                    }\n                }\n\n                .", "-modal-footer {\n                    padding: ", "px;\n                    border-top: 1px solid ", ";\n                    margin: 0;\n\n                    & > .", "-btn {\n                        min-width: 136px;\n\n                        & + .", "-btn {\n                            margin-inline-start: ", "px;\n                        }\n                    }\n                }\n\n                &.", "-modal-full-screen {\n                    .", "-modal {\n                        max-width: calc(100vw - 48px);\n                    }\n\n                    .", "-modal-content {\n                        height: calc(100vh - 48px);\n                    }\n                }\n            }\n\n            ", "\n        "])), prefixCls, prefixCls, modalToken['modal-color-bg'], prefixCls, buttonToken['button-size-medium'], buttonToken['button-size-medium'], prefixCls, buttonToken['button-size-icon-only-medium'], token['color-icon'], prefixCls, modalToken['modal-size-header'], modalToken['modal-padding-header'], modalToken['modal-color-border'], prefixCls, modalToken['modal-padding-title'] + buttonToken['button-size-medium'], modalToken['modal-padding-title'], prefixCls, modalToken['modal-padding'], prefixCls, prefixCls, prefixCls, modalToken['modal-padding'], modalToken['modal-color-border'], prefixCls, prefixCls, modalToken['modal-gap'], prefixCls, prefixCls, prefixCls, responsive ? responsiveStyle : '');
+  });
+};
+var _default = exports.default = useStyle;

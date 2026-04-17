@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var CloseCircleFilled = React.forwardRef(function (props, ref) { return _jsx("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: _jsx("path", { d: "M18 33.75C9.30152 33.75 2.25 26.6985 2.25 18C2.25 9.30152 9.30152 2.25 18 2.25C26.6985 2.25 33.75 9.30152 33.75 18C33.75 26.6985 26.6985 33.75 18 33.75ZM19.7955 18.0057L23.9719 13.8293C24.4661 13.3351 24.4661 12.5337 23.9719 12.0395C23.4776 11.5452 22.6763 11.5452 22.182 12.0395L18.0057 16.2158L13.8293 12.0395C13.3351 11.5452 12.5337 11.5452 12.0395 12.0395C11.5452 12.5337 11.5452 13.3351 12.0395 13.8293L16.2158 18.0057L12.0395 22.182C11.5452 22.6763 11.5452 23.4776 12.0395 23.9719C12.5337 24.4661 13.3351 24.4661 13.8293 23.9719L18.0057 19.7955L22.182 23.9719C22.6763 24.4661 23.4776 24.4661 23.9719 23.9719C24.4661 23.4776 24.4661 22.6763 23.9719 22.182L19.7955 18.0057Z" }) })); });
+CloseCircleFilled.displayName = 'CloseCircleFilled';
+export default CloseCircleFilled;

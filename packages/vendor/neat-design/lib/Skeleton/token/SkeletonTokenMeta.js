@@ -1,0 +1,312 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * @file SkeletonTokenMeta.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+var _default = exports.default = [{
+  source: 'Skeleton',
+  token: 'skeleton-color-bg',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-color-animation-dark',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-gap-h-notifications-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-gap-h-notifications-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-gap-h-notifications-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-gap-v-notifications-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-gap-v-notifications-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-gap-v-notifications-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-gap-v-menu',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-gap-h-content',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-padding-container',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-padding-h-menu',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-padding-h-table',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-icon-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-icon-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-icon-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-avatar-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-avatar-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-avatar-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-h-button-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-h-button-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-h-button-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-button-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-button-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-button-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-block-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-block-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-block-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-title-box-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-title-box-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-title-box-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-text-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-text-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-text-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-paragraph-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-paragraph-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-paragraph-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-menu',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-v-content',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-table-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-table-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-size-table-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Skeleton',
+  token: 'skeleton-border-radius',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

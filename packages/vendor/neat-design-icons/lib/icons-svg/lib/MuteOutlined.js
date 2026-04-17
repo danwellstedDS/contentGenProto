@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var MuteOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { fillRule: "evenodd", d: "M21.7998 25.345L21.7969 29.9281C21.7969 31.7381 19.667 32.7076 18.3021 31.5188L11.3386 25.4538H6.32812C5.00782 25.4538 3.9375 24.3835 3.9375 23.0632V12.9382C3.9375 11.6179 5.00782 10.5476 6.32812 10.5476H7.00232L9.53357 13.0788H6.46875V22.9226H11.3913C11.9684 22.9226 12.5261 23.1314 12.9614 23.5105L19.2656 29.0012V22.8109L21.7998 25.345ZM25.9869 22.3726L24.21 20.5958C24.2475 20.548 24.2889 20.5024 24.3341 20.4593C24.9419 19.8804 25.3477 19.0053 25.3477 18.0007C25.3477 16.9961 24.9418 16.1209 24.3341 15.5421C23.828 15.06 23.8085 14.2589 24.2906 13.7528C24.7727 13.2466 25.5738 13.2272 26.0799 13.7093C27.1955 14.7719 27.8789 16.3122 27.8789 18.0007C27.8789 19.6891 27.1957 21.2294 26.0799 22.2921C26.0499 22.3207 26.0188 22.3476 25.9869 22.3726ZM29.2072 25.5929C31.0007 23.6167 32.0273 20.9032 32.0273 17.9614C32.0273 14.1255 30.1713 10.7193 27.3214 8.79546C26.7421 8.40436 25.9554 8.55696 25.5643 9.1363C25.1732 9.71563 25.3258 10.5023 25.9051 10.8934C28.0347 12.331 29.4961 14.9383 29.4961 17.9614C29.4961 20.276 28.709 22.3245 27.4138 23.7996L29.2072 25.5929ZM21.8044 18.1901L19.2686 15.6544L19.2797 6.99952L14.6435 11.0293L12.8493 9.23508L18.3189 4.4808C19.6852 3.2932 21.8144 4.26524 21.8121 6.07552L21.8044 18.1901Z", clipRule: "evenodd" }), (0, jsx_runtime_1.jsx)("path", { d: "M4.35049 4.31601C4.84475 3.82175 5.6461 3.82175 6.14035 4.31601L31.6887 29.8644C32.183 30.3586 32.183 31.16 31.6887 31.6542C31.1944 32.1485 30.3931 32.1485 29.8988 31.6542L4.35049 6.10587C3.85623 5.61161 3.85623 4.81026 4.35049 4.31601Z" })] })); });
+MuteOutlined.displayName = 'MuteOutlined';
+exports.default = MuteOutlined;

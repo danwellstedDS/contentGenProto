@@ -1,0 +1,217 @@
+/**
+ * @file BadgeTokenMeta.ts
+ * @author sunday(sunday.wei@derbysoft.net)
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+
+export default [{
+  source: 'Badge',
+  token: 'badge-color-text',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-text-inverse',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-primary',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-default',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-inverse',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-important',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-info',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-success',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-warning',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-red',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-deep-orange',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-orange',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-amber',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-yellow',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-green',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-teal',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-cyan',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-blue',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-deep-purple',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-purple',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-color-bg-pinkish-red',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-font-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-font-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-size-dot',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-gap',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-padding-h-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-padding-h-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Badge',
+  token: 'badge-border-radius',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

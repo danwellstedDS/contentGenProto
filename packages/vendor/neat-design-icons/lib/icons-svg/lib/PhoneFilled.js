@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var PhoneFilled = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("path", { d: "M31.5141 26.2375L25.6784 20.4015C24.9454 19.6703 23.7587 19.6703 23.0257 20.4015L21.6993 21.7279C20.9491 22.4781 18.5196 21.7314 16.3942 19.6058C14.2689 17.4802 13.5207 15.0518 14.2721 14.3007L15.5985 12.9743C16.3297 12.2413 16.3297 11.0547 15.5985 10.3216L9.76254 4.48591C9.02956 3.7547 7.84304 3.7547 7.1101 4.48591L5.78376 5.81225C4.80371 6.7923 4.20679 8.08138 4.00915 9.64382C3.82577 11.093 3.99484 12.7183 4.51135 14.4737C5.54741 17.9999 7.88403 21.7072 11.0889 24.9111C14.2937 28.115 18.0003 30.4526 21.5254 31.4887C22.824 31.8706 24.051 32.0627 25.1881 32.0627C25.5786 32.0633 25.9687 32.0393 26.3562 31.9909C27.9186 31.7932 29.2077 31.1963 30.1878 30.2162L31.5141 28.8899C32.2453 28.157 32.2453 26.9704 31.5141 26.2375H31.5141Z" }) })); });
+PhoneFilled.displayName = 'PhoneFilled';
+exports.default = PhoneFilled;

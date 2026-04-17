@@ -1,0 +1,15 @@
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+
+const ArrowUpSM: React.ComponentType<React.SVGProps<SVGSVGElement> > = React.forwardRef((props, ref) => <svg
+  viewBox="0 0 10 5"         
+  {...props}
+  ref={ref}
+>
+  <path d="M5 9.29832e-05C4.86776 -0.00232697 4.73467 0.042388 4.63376 0.134237L0.147482 4.21761C-0.049161 4.39659 -0.049161 4.68678 0.147482 4.86576C0.344125 5.04475 0.662947 5.04475 0.85959 4.86576L5 1.0972L9.14041 4.86576C9.33705 5.04475 9.65587 5.04475 9.85252 4.86576C10.0492 4.68678 10.0492 4.39659 9.85252 4.21761L5.36624 0.134237C5.26533 0.042388 5.13224 -0.00232697 5 9.29832e-05Z" />
+</svg>);
+
+ArrowUpSM.displayName = 'ArrowUpSM';
+
+export default ArrowUpSM;

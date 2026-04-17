@@ -1,0 +1,33 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _jsxRuntime = require("@emotion/react/jsx-runtime");
+/**
+ * @file FinishOutlined.tsx
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+
+// Types
+
+var FinishOutlined = function FinishOutlined() {
+  return (0, _jsxRuntime.jsxs)("svg", {
+    width: "1em",
+    height: "1em",
+    viewBox: "0 0 32 32",
+    fill: "currentColor",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [(0, _jsxRuntime.jsx)("path", {
+      d: "M8.91842 17.015L12.959 21.0557C13.5169 21.6136 14.4214 21.6136 14.9793 21.0557L23.0605 12.9744C23.6184 12.4165 23.6184 11.512 23.0605 10.9541C22.5026 10.3962 21.5981 10.3962 21.0402 10.9541L13.9692 18.0252L10.9387 14.9947C10.3808 14.4369 9.47631 14.4369 8.91842 14.9947C8.36053 15.5526 8.36053 16.4572 8.91842 17.015Z",
+      fill: "currentColor"
+    }), (0, _jsxRuntime.jsx)("path", {
+      fillRule: "evenodd",
+      clipRule: "evenodd",
+      d: "M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16ZM29.4286 16C29.4286 23.4164 23.4164 29.4286 16 29.4286C8.5836 29.4286 2.57143 23.4164 2.57143 16C2.57143 8.5836 8.5836 2.57143 16 2.57143C23.4164 2.57143 29.4286 8.5836 29.4286 16Z",
+      fill: "currentColor"
+    })]
+  });
+};
+var _default = exports.default = FinishOutlined;

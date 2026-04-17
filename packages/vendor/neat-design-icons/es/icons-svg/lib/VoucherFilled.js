@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var VoucherFilled = React.forwardRef(function (props, ref) { return _jsx("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: _jsx("g", { id: "Voucherfilled", children: _jsxs("g", { id: "Shape", children: [_jsx("path", { fillRule: "evenodd", d: "M3.9375 13.4989C3.9375 11.3631 5.6689 9.6317 7.80469 9.6317H28.1953C30.3311 9.6317 32.0625 11.3631 32.0625 13.4989V16.2762C32.0625 16.8976 31.5432 17.382 30.9608 17.5983C29.7565 18.0457 28.8984 19.2053 28.8984 20.5653C28.8984 21.9253 29.7565 23.0849 30.9608 23.5323C31.5432 23.7486 32.0625 24.233 32.0625 24.8544V27.5965C32.0625 29.7323 30.3311 31.4637 28.1953 31.4637H7.80469C5.6689 31.4637 3.9375 29.7323 3.9375 27.5965V24.7617C3.9375 24.1739 4.40475 23.7045 4.94445 23.4715C6.06865 22.9862 6.85547 21.8676 6.85547 20.5653C6.85547 19.263 6.06865 18.1444 4.94445 17.659C4.40475 17.426 3.9375 16.9567 3.9375 16.3689V13.4989ZM12.6211 18.1044C12.6211 17.483 13.1248 16.9794 13.7461 16.9794H22.2539C22.8752 16.9794 23.3789 17.483 23.3789 18.1044C23.3789 18.7257 22.8752 19.2294 22.2539 19.2294H13.7461C13.1248 19.2294 12.6211 18.7257 12.6211 18.1044ZM13.7461 21.8661C13.1248 21.8661 12.6211 22.3698 12.6211 22.9911C12.6211 23.6124 13.1248 24.1161 13.7461 24.1161H22.2539C22.8752 24.1161 23.3789 23.6124 23.3789 22.9911C23.3789 22.3698 22.8752 21.8661 22.2539 21.8661H13.7461Z", clipRule: "evenodd" }), _jsx("path", { d: "M7.37248 7.75295C8.3187 5.10136 11.2353 3.71889 13.8869 4.66511L24.6521 8.5067H7.80469C7.56034 8.5067 7.32009 8.52425 7.08513 8.55817L7.37248 7.75295Z" })] }) }) })); });
+VoucherFilled.displayName = 'VoucherFilled';
+export default VoucherFilled;

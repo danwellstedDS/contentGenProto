@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var SortFilled = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("path", { d: "M26.4658 21.6562C26.9939 21.6564 27.4219 22.0591 27.4219 22.5556C27.4218 22.7791 27.3328 22.9947 27.1729 23.1601L18.9434 31.6698C18.4697 32.1595 17.6637 32.1958 17.1426 31.7509C17.1127 31.7254 17.0838 31.6979 17.0566 31.6698L8.82715 23.1601C8.47181 22.7926 8.50073 22.2236 8.8916 21.8896C9.06751 21.7394 9.29656 21.6563 9.53418 21.6562H26.4658ZM17.0566 4.33001C17.5303 3.84018 18.3362 3.80385 18.8574 4.24895C18.8874 4.27454 18.9161 4.30186 18.9434 4.33001L27.1729 12.8398C27.5282 13.2072 27.4993 13.7753 27.1084 14.1093C26.9324 14.2597 26.7036 14.3436 26.4658 14.3437H9.53418C9.00613 14.3435 8.57812 13.9407 8.57813 13.4443C8.57816 13.2206 8.66712 13.0052 8.82715 12.8398L17.0566 4.33001Z" }) })); });
+SortFilled.displayName = 'SortFilled';
+exports.default = SortFilled;

@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var BubbleFilled = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("path", { fillRule: "evenodd", d: "M21.7969 29.9531C21.7969 32.0307 20.1127 33.7148 18.0352 33.7148C15.9784 33.7148 14.3072 32.0642 14.2739 30.0153L14.2734 29.9531H21.7969ZM18.0352 2.28516C24.4037 2.28516 29.5664 7.44787 29.5664 13.8164C29.5664 18.4518 26.8313 22.4484 22.8869 24.2804L22.8867 27.1758C22.8867 27.7818 22.4608 28.2883 21.892 28.4125C21.7584 28.4541 21.6165 28.4766 21.4692 28.4766H14.4605C14.3128 28.4766 14.1704 28.454 14.0365 28.4121C13.4683 28.2876 13.043 27.7814 13.043 27.1758L13.0429 24.2139C9.17422 22.3531 6.50391 18.3966 6.50391 13.8164C6.50391 7.44787 11.6666 2.28516 18.0352 2.28516Z", clipRule: "evenodd" }) })); });
+BubbleFilled.displayName = 'BubbleFilled';
+exports.default = BubbleFilled;

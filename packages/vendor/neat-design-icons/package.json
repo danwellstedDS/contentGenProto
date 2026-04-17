@@ -1,0 +1,14 @@
+{
+  "name": "@derbysoft/neat-design-icons",
+  "version": "1.1.21",
+  "description": "DerbySoft Neat Design Icons — vendored for Render deployment",
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": ["lib", "es", "packages", "LICENSE", "README.md"],
+  "license": "ISC",
+  "dependencies": {
+    "rc-util": "^5.38.1"
+  }
+}

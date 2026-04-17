@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var RedoOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("path", { d: "M11.878 29.9072C11.5148 30.1673 11.0494 30.1801 10.6825 29.9786L10.6825 29.9808C10.6824 29.9828 10.6826 29.9849 10.6831 29.9872C9.11068 29.0331 7.70127 27.7522 6.56283 26.1623C2.05076 19.861 3.50389 11.0924 9.80847 6.57709C16.1131 2.0618 24.8817 3.50967 29.3938 9.811C33.7433 15.8853 32.5497 24.2524 26.8106 28.892L28.8197 29.1324C29.5521 29.2201 30.0832 29.8765 30.0059 30.5986C29.9285 31.3207 29.2721 31.835 28.5397 31.7473L23.8244 31.183C23.092 31.0953 22.5609 30.4389 22.6382 29.7168L23.136 25.0681C23.2134 24.346 23.8698 23.8317 24.6022 23.9194C25.3346 24.007 25.8657 24.6635 25.7884 25.3856L25.6194 26.9631C30.2483 23.0318 31.1641 16.1422 27.5673 11.1191C23.7771 5.82599 16.4115 4.60978 11.1156 8.40262C5.81979 12.1955 4.59917 19.5611 8.38931 24.8542C9.31136 26.1419 10.445 27.1883 11.709 27.98C11.8748 28.0589 12.0232 28.1805 12.1376 28.3404C12.4986 28.8445 12.3824 29.546 11.878 29.9072Z" }) })); });
+RedoOutlined.displayName = 'RedoOutlined';
+exports.default = RedoOutlined;

@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var ArrowDoubleDownOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M18.0223 20.8647C17.653 20.8721 17.2813 20.7349 16.9995 20.4531L4.47047 7.92406C3.9213 7.37488 3.9213 6.48449 4.47047 5.93532C5.01965 5.38614 5.91004 5.38614 6.45921 5.93532L18.0223 17.4984L29.5855 5.93532C30.1346 5.38614 31.025 5.38614 31.5742 5.93532C32.1234 6.48449 32.1234 7.37488 31.5742 7.92406L19.0451 20.4531C18.7633 20.7349 18.3916 20.8721 18.0223 20.8647Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M18.0223 30.4624C17.653 30.4698 17.2813 30.3326 16.9995 30.0508L4.47047 17.5217C3.9213 16.9725 3.9213 16.0822 4.47047 15.533C5.01965 14.9838 5.91004 14.9838 6.45921 15.533L18.0223 27.0961L29.5855 15.533C30.1346 14.9838 31.025 14.9838 31.5742 15.533C32.1234 16.0822 32.1234 16.9725 31.5742 17.5217L19.0451 30.0508C18.7633 30.3326 18.3916 30.4698 18.0223 30.4624Z" })] })); });
+ArrowDoubleDownOutlined.displayName = 'ArrowDoubleDownOutlined';
+exports.default = ArrowDoubleDownOutlined;

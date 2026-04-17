@@ -1,0 +1,867 @@
+/**
+ * @file TagTokenMeta.ts
+ * @author sunday(sunday.wei@derbysoft.net)
+ */
+
+export default [{
+  source: 'Tag',
+  token: 'tag-color-icon-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-disabled-raised',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-light-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-blue',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-blue-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-blue-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-blue',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-light-blue',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-green',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-green-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-green-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-green',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-light-green',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-orange',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-orange-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-orange-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-orange',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-light-orange',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-amber',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-amber-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-amber-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-amber',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-light-amber',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-red',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-red-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-red-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-red',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-light-red',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-pink',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-pink-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-pink-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-pink',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-light-pink',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-purple',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-purple-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-purple-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-purple',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-light-purple',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-cyan',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-cyan-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-cyan-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-cyan',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-light-cyan',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-neutral',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-neutral-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-light-neutral-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-neutral',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-light-neutral-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-dark',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-blue',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-blue-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-blue-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-blue',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-green',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg--dark-greenhover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-green-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-green',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-orange',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-orange-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-orange-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-orange',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-amber',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-amber-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-amber-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-amber',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-red',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-red-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-red-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-red',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-pink',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-pink-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-pink-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-pink',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-purple',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-purple-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-purple-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-purple',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-cyan',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-cyan-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-cyan-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-cyan',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-neutral',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-neutral-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-dark-neutral-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-neutral',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-dark-neutral-active',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-add-new',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-add-new-hover',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-add-new-focus',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-bg-add-new-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-add-new',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-add-new-focus',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-text-add-new-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-border-add-new',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-border-add-new-focus',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-add-new',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-color-icon-add-new-disabled',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-font-size-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-font-size-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-font-size-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-line-height-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-line-height-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-line-height-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-size-icon-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-size-icon-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-size-icon-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-gap-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-gap-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-gap-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-padding-v-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-padding-h-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-padding-v-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-padding-h-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-padding-v-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-padding-h-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-border-radius-small',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-border-radius-medium',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}, {
+  source: 'Tag',
+  token: 'tag-border-radius-large',
+  name: '',
+  nameEn: '',
+  desc: '',
+  descEn: ''
+}];

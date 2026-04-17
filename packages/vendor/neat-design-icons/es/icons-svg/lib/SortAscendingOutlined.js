@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var SortAscendingOutlined = React.forwardRef(function (props, ref) { return _jsxs("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [_jsx("path", { d: "M29.6193 11.2547L26.5645 8.19986V30.778C26.5645 31.477 25.9978 32.0436 25.2988 32.0436C24.5998 32.0436 24.0332 31.477 24.0332 30.778V8.24031L21.0152 11.2583C20.5277 11.7458 19.7373 11.7458 19.2499 11.2583C18.7624 10.7708 18.7624 9.98047 19.2499 9.49298L24.4244 4.31846C24.6147 4.12808 24.8513 4.01205 25.098 3.97037C25.4889 3.89764 25.9078 4.01247 26.2101 4.31483L31.3846 9.48936C31.8721 9.97684 31.8721 10.7672 31.3846 11.2547C30.8971 11.7422 30.1068 11.7422 29.6193 11.2547Z" }), _jsx("path", { d: "M15.0684 16.735H5.50586C4.80687 16.735 4.24023 17.3017 4.24023 18.0007C4.24023 18.6996 4.80687 19.2663 5.50586 19.2663H15.0684C15.7673 19.2663 16.334 18.6996 16.334 18.0007C16.334 17.3017 15.7673 16.735 15.0684 16.735Z" }), _jsx("path", { d: "M5.50586 7.17253H11.4121C12.1111 7.17253 12.6777 7.73917 12.6777 8.43816C12.6777 9.13714 12.1111 9.70378 11.4121 9.70378H5.50586C4.80687 9.70378 4.24023 9.13714 4.24023 8.43816C4.24023 7.73917 4.80687 7.17253 5.50586 7.17253Z" }), _jsx("path", { d: "M19.0059 26.2975H5.50586C4.80687 26.2975 4.24023 26.8642 4.24023 27.5632C4.24023 28.2621 4.80687 28.8288 5.50586 28.8288H19.0059C19.7048 28.8288 20.2715 28.2621 20.2715 27.5632C20.2715 26.8642 19.7048 26.2975 19.0059 26.2975Z" })] })); });
+SortAscendingOutlined.displayName = 'SortAscendingOutlined';
+export default SortAscendingOutlined;

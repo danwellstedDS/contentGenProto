@@ -1,0 +1,204 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.MockScrollData = void 0;
+/**
+ * @file MockScroll.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+
+/**
+ * This is the data recorded by human to mock a smooth scroll event.
+ */
+var MockScrollData = exports.MockScrollData = [{
+  x: 5,
+  timeout: 0
+}, {
+  x: 12,
+  timeout: 1
+}, {
+  x: 19,
+  timeout: 1
+}, {
+  x: 29,
+  timeout: 1
+}, {
+  x: 31,
+  timeout: 2
+}, {
+  x: 32,
+  timeout: 2
+}, {
+  x: 28,
+  timeout: 2
+}, {
+  x: 45,
+  timeout: 3
+}, {
+  x: 52,
+  timeout: 3
+}, {
+  x: 54,
+  timeout: 3
+}, {
+  x: 54,
+  timeout: 4
+}, {
+  x: 52,
+  timeout: 4
+}, {
+  x: 50,
+  timeout: 4
+}, {
+  x: 53,
+  timeout: 5
+}, {
+  x: 51,
+  timeout: 5
+}, {
+  x: 47,
+  timeout: 5
+}, {
+  x: 43,
+  timeout: 6
+}, {
+  x: 40,
+  timeout: 6
+}, {
+  x: 37,
+  timeout: 6
+}, {
+  x: 34,
+  timeout: 7
+}, {
+  x: 31,
+  timeout: 7
+}, {
+  x: 28,
+  timeout: 7
+}, {
+  x: 26,
+  timeout: 7
+}, {
+  x: 24,
+  timeout: 8
+}, {
+  x: 22,
+  timeout: 8
+}, {
+  x: 20,
+  timeout: 9
+}, {
+  x: 19,
+  timeout: 9
+}, {
+  x: 17,
+  timeout: 9
+}, {
+  x: 16,
+  timeout: 10
+}, {
+  x: 14,
+  timeout: 10
+}, {
+  x: 13,
+  timeout: 10
+}, {
+  x: 12,
+  timeout: 11
+}, {
+  x: 11,
+  timeout: 11
+}, {
+  x: 10,
+  timeout: 11
+}, {
+  x: 9,
+  timeout: 12
+}, {
+  x: 8,
+  timeout: 12
+}, {
+  x: 8,
+  timeout: 12
+}, {
+  x: 7,
+  timeout: 13
+}, {
+  x: 6,
+  timeout: 13
+}, {
+  x: 6,
+  timeout: 13
+}, {
+  x: 5,
+  timeout: 13
+}, {
+  x: 5,
+  timeout: 14
+}, {
+  x: 5,
+  timeout: 14
+}, {
+  x: 4,
+  timeout: 14
+}, {
+  x: 4,
+  timeout: 15
+}, {
+  x: 4,
+  timeout: 15
+}, {
+  x: 3,
+  timeout: 16
+}, {
+  x: 3,
+  timeout: 16
+}, {
+  x: 3,
+  timeout: 16
+}, {
+  x: 3,
+  timeout: 16
+}, {
+  x: 2,
+  timeout: 17
+}, {
+  x: 2,
+  timeout: 17
+}, {
+  x: 2,
+  timeout: 18
+}, {
+  x: 2,
+  timeout: 18
+}, {
+  x: 1,
+  timeout: 18
+}, {
+  x: 1,
+  timeout: 19
+}, {
+  x: 1,
+  timeout: 19
+}, {
+  x: 1,
+  timeout: 19
+}, {
+  x: 1,
+  timeout: 20
+}, {
+  x: 1,
+  timeout: 20
+}, {
+  x: 1,
+  timeout: 21
+}, {
+  x: 1,
+  timeout: 21
+}, {
+  x: 1,
+  timeout: 22
+}];

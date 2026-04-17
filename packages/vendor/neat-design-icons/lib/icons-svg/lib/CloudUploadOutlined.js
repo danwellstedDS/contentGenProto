@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var CloudUploadOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M18 4.78125C22.7905 4.78125 26.7279 8.19388 27.6469 12.7219C31.0596 12.9187 33.75 15.7408 33.75 19.2187C33.75 22.8281 30.7969 25.7812 27.1875 25.7812L25.0349 25.7812V23.1562L27.1875 23.1562C29.3313 23.1562 31.0895 21.4195 31.1245 19.2836L31.125 19.2188C31.125 17.0533 29.353 15.2812 27.1875 15.2812H25.2188V14.625C25.2188 10.6219 22.0029 7.40625 18 7.40625C14.6534 7.40625 11.897 9.6375 11.044 12.6562H10.125C7.23724 12.6562 4.875 15.0188 4.875 17.9062C4.875 20.794 7.23724 23.1562 10.125 23.1562L10.9701 23.1562V25.7812L10.125 25.7812C5.83732 25.7812 2.32096 22.3078 2.25106 18.0359L2.25 17.9062C2.25 13.8374 5.33451 10.4908 9.27207 10.0969C10.9126 6.94674 14.1939 4.78125 18 4.78125Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M23.0939 22.5858C23.5814 22.0983 23.5814 21.3079 23.0939 20.8204L18.933 16.6595C18.9177 16.6424 18.9018 16.6257 18.8855 16.6093C18.398 16.1218 17.6076 16.1218 17.1201 16.6093L12.9192 20.8101C12.4317 21.2976 12.4317 22.088 12.9192 22.5755C13.4067 23.063 14.1971 23.063 14.6846 22.5755L16.7461 20.514V29.918C16.7461 30.617 17.3128 31.1836 18.0117 31.1836C18.7107 31.1836 19.2773 30.617 19.2773 29.918V20.5346L21.3286 22.5858C21.8161 23.0733 22.6064 23.0733 23.0939 22.5858Z" })] })); });
+CloudUploadOutlined.displayName = 'CloudUploadOutlined';
+exports.default = CloudUploadOutlined;

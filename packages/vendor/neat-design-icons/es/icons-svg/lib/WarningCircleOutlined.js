@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var WarningCircleOutlined = React.forwardRef(function (props, ref) { return _jsxs("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [_jsx("path", { d: "M16.5938 10.8633V19.8633C16.5938 20.6399 17.2233 21.2695 18 21.2695C18.7766 21.2695 19.4062 20.6399 19.4062 19.8633V10.8633C19.4062 10.0866 18.7766 9.45703 18 9.45703C17.2233 9.45703 16.5938 10.0866 16.5938 10.8633Z" }), _jsx("path", { d: "M16.3125 24.8555C16.3125 23.9235 17.068 23.168 18 23.168C18.932 23.168 19.6875 23.9235 19.6875 24.8555C19.6875 25.7874 18.932 26.543 18 26.543C17.068 26.543 16.3125 25.7874 16.3125 24.8555Z" }), _jsx("path", { fillRule: "evenodd", d: "M18 33.75C9.30152 33.75 2.25 26.6985 2.25 18C2.25 9.30152 9.30152 2.25 18 2.25C26.6985 2.25 33.75 9.30152 33.75 18C33.75 26.6985 26.6985 33.75 18 33.75ZM18 31.2188C25.3005 31.2188 31.2188 25.3005 31.2188 18C31.2188 10.6995 25.3005 4.78125 18 4.78125C10.6995 4.78125 4.78125 10.6995 4.78125 18C4.78125 25.3005 10.6995 31.2188 18 31.2188Z", clipRule: "evenodd" })] })); });
+WarningCircleOutlined.displayName = 'WarningCircleOutlined';
+export default WarningCircleOutlined;

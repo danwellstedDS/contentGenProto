@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var BrochureOutlined = React.forwardRef(function (props, ref) { return _jsxs("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [_jsx("path", { d: "M17.4727 21.2695C18.094 21.2695 18.5977 21.7732 18.5977 22.3945C18.5977 23.0159 18.094 23.5195 17.4727 23.5195H13.2539C12.6326 23.5195 12.1289 23.0159 12.1289 22.3945C12.1289 21.7732 12.6326 21.2695 13.2539 21.2695H17.4727Z" }), _jsx("path", { d: "M17.4727 17.8945C18.094 17.8945 18.5977 18.3982 18.5977 19.0195C18.5977 19.6409 18.094 20.1445 17.4727 20.1445H15.3633C14.742 20.1445 14.2383 19.6409 14.2383 19.0195C14.2383 18.3982 14.742 17.8945 15.3633 17.8945H17.4727Z" }), _jsx("path", { fillRule: "evenodd", d: "M17.0508 7.20703C18.0604 7.20703 18.8789 8.02551 18.8789 9.03516V11.5664C18.8789 12.5761 18.0604 13.3945 17.0508 13.3945H11.0039C9.99426 13.3945 9.17578 12.5761 9.17578 11.5664V9.03516C9.17578 8.02551 9.99426 7.20703 11.0039 7.20703H17.0508ZM11.4258 11.1445H16.6289V9.45703H11.4258V11.1445Z", clipRule: "evenodd" }), _jsx("path", { fillRule: "evenodd", d: "M20.2088 2.28533C21.438 2.3009 22.4297 3.30222 22.4297 4.53516V7.59375H28.125L28.1541 7.59392C29.3833 7.60949 30.375 8.61082 30.375 9.84375V31.5C30.375 32.7426 29.3676 33.75 28.125 33.75H15.8203C14.5777 33.75 13.5703 32.7426 13.5703 31.5V28.4414H7.875C6.63236 28.4414 5.625 27.434 5.625 26.1914V4.53516C5.625 3.29252 6.63236 2.28516 7.875 2.28516H20.1797L20.2088 2.28533ZM22.4297 27.0393C22.4297 27.5634 22.1861 28.0578 21.7705 28.3772L17.7076 31.5H28.125V9.84375H22.4297V27.0393ZM15.8203 30.1127L17.9949 28.4414H15.8203V30.1127ZM7.875 26.1914H20.1797V4.53516H7.875V26.1914Z", clipRule: "evenodd" })] })); });
+BrochureOutlined.displayName = 'BrochureOutlined';
+export default BrochureOutlined;

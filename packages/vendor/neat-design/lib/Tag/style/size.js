@@ -1,0 +1,20 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _templateObject;
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+/**
+ * @file size.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+// Types
+var _default = exports.default = function _default(_ref) {
+  var css = _ref.css,
+    prefixCls = _ref.prefixCls,
+    componentsToken = _ref.componentsToken;
+  var tagToken = componentsToken.Tag;
+  return css(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n        &.", "-tag-size-small {\n            gap: ", "px;\n            padding: ", "px\n                ", "px;\n            border-radius: ", "px;\n            line-height: ", ";\n            font-size: ", "px;\n\n            .", "-tag-icon, .", "-tag-close-icon {\n                width: ", "px;\n                height: ", "px;\n                font-size: ", "px;\n            }\n\n            &.", "-tag-closable:not(.disabled) {\n                padding-right: ", "px;\n            }\n        }\n\n        &.", "-tag-size-medium {\n            gap: ", "px;\n            padding: ", "px\n                ", "px;\n            border-radius: ", "px;\n            line-height: ", ";\n            font-size: ", "px;\n\n            .", "-tag-icon, .", "-tag-close-icon {\n                width: ", "px;\n                height: ", "px;\n                font-size: ", "px;\n            }\n\n            &.", "-tag-closable:not(.disabled) {\n                padding-right: ", "px;\n            }\n        }\n\n        &.", "-tag-size-large {\n            gap: ", "px;\n            padding: ", "px\n                ", "px;\n            border-radius: ", "px;\n            line-height: ", ";\n            font-size: ", "px;\n\n            .", "-tag-icon, .", "-tag-close-icon {\n                width: ", "px;\n                height: ", "px;\n                font-size: ", "px;\n            }\n\n            &.", "-tag-closable:not(.disabled) {\n                padding-right: ", "px;\n            }\n        }\n    "])), prefixCls, tagToken['tag-gap-small'], tagToken['tag-padding-v-small'], tagToken['tag-padding-h-small'], tagToken['tag-border-radius-small'], tagToken['tag-line-height-small'], tagToken['tag-font-size-small'], prefixCls, prefixCls, tagToken['tag-size-icon-small'], tagToken['tag-size-icon-small'], tagToken['tag-size-icon-small'], prefixCls, tagToken['tag-gap-small'], prefixCls, tagToken['tag-gap-medium'], tagToken['tag-padding-v-medium'], tagToken['tag-padding-h-medium'], tagToken['tag-border-radius-medium'], tagToken['tag-line-height-medium'], tagToken['tag-font-size-medium'], prefixCls, prefixCls, tagToken['tag-size-icon-medium'], tagToken['tag-size-icon-medium'], tagToken['tag-size-icon-medium'], prefixCls, tagToken['tag-gap-medium'], prefixCls, tagToken['tag-gap-large'], tagToken['tag-padding-v-large'], tagToken['tag-padding-h-large'], tagToken['tag-border-radius-large'], tagToken['tag-line-height-large'], tagToken['tag-font-size-large'], prefixCls, prefixCls, tagToken['tag-size-icon-large'], tagToken['tag-size-icon-large'], tagToken['tag-size-icon-large'], prefixCls, tagToken['tag-gap-large']);
+};

@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var ScatterPlotOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M8.85938 21.583C8.85938 22.6703 9.74081 23.5517 10.8281 23.5517C11.9154 23.5517 12.7969 22.6703 12.7969 21.583C12.7969 20.4957 11.9154 19.6142 10.8281 19.6142C9.74081 19.6142 8.85938 20.4957 8.85938 21.583Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M16.7661 20.4134C16.7661 21.8696 17.9466 23.0501 19.4028 23.0501C20.859 23.0501 22.0395 21.8696 22.0395 20.4134C22.0395 18.9571 20.859 17.7766 19.4028 17.7766C17.9466 17.7766 16.7661 18.9571 16.7661 20.4134Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M18.3279 13.7295C18.3279 14.7391 19.1464 15.5576 20.156 15.5576C21.1657 15.5576 21.9842 14.7391 21.9842 13.7295C21.9842 12.7199 21.1657 11.9014 20.156 11.9014C19.1464 11.9014 18.3279 12.7199 18.3279 13.7295Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M25.6595 9.31641C25.6595 10.0931 26.2891 10.7227 27.0658 10.7227C27.8424 10.7227 28.472 10.0931 28.472 9.31641C28.472 8.53976 27.8424 7.91016 27.0658 7.91016C26.2891 7.91016 25.6595 8.53976 25.6595 9.31641Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M26.4512 15.2005C26.4512 15.7442 26.8919 16.1849 27.4356 16.1849C27.9792 16.1849 28.4199 15.7442 28.4199 15.2005C28.4199 14.6569 27.9792 14.2162 27.4356 14.2162C26.8919 14.2162 26.4512 14.6569 26.4512 15.2005Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M32.4844 27.8438H3.51562C2.81664 27.8438 2.25 28.4104 2.25 29.1094C2.25 29.8084 2.81664 30.375 3.51562 30.375H32.4844C33.1834 30.375 33.75 29.8084 33.75 29.1094C33.75 28.4104 33.1834 27.8438 32.4844 27.8438Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M4.78125 6.89062C4.78125 6.19164 4.21461 5.625 3.51562 5.625C2.81664 5.625 2.25 6.19164 2.25 6.89062V29.1094C2.25 29.8084 2.81664 30.375 3.51562 30.375C4.21461 30.375 4.78125 29.8084 4.78125 29.1094V6.89062Z" })] })); });
+ScatterPlotOutlined.displayName = 'ScatterPlotOutlined';
+exports.default = ScatterPlotOutlined;

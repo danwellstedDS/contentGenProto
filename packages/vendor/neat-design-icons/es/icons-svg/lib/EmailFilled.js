@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var EmailFilled = React.forwardRef(function (props, ref) { return _jsx("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: _jsx("path", { d: "M33.75 10.5388C33.5772 10.5498 33.4093 10.6007 33.2594 10.6875L17.9858 19.5057L2.71209 10.6875C2.57059 10.6055 2.41287 10.5555 2.25 10.541V7.78827C2.25 7.03607 2.32833 6.76329 2.47539 6.4883C2.62248 6.21327 2.83827 5.99748 3.1133 5.85039C3.38829 5.70333 3.66103 5.625 4.41327 5.625H31.5867C32.3389 5.625 32.6117 5.70333 32.8867 5.85039C33.1617 5.99748 33.3775 6.21327 33.5246 6.4883C33.6717 6.76329 33.75 7.03603 33.75 7.78827V10.5388ZM33.75 13.0024V28.2117C33.75 28.9639 33.6717 29.2367 33.5246 29.5117C33.3775 29.7867 33.1617 30.0025 32.8867 30.1496C32.6117 30.2967 32.339 30.375 31.5867 30.375H4.41327C3.66107 30.375 3.38829 30.2967 3.1133 30.1496C2.83827 30.0025 2.62248 29.7867 2.47539 29.5117C2.32833 29.2367 2.25 28.964 2.25 28.2117V13.0188L17.4191 21.7767C17.5912 21.8764 17.7868 21.9285 17.9858 21.9276C18.1847 21.9285 18.3803 21.8764 18.5524 21.7767L33.75 13.0024Z" }) })); });
+EmailFilled.displayName = 'EmailFilled';
+export default EmailFilled;

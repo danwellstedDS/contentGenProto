@@ -1,0 +1,31 @@
+{
+  "name": "@derbysoft/neat-design",
+  "version": "2.2.3",
+  "description": "DerbySoft Neat Design — vendored for Render deployment",
+  "license": "MIT",
+  "sideEffects": ["*.css"],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": ["dist", "es", "lib", "locale", "LICENSE", "README.md"],
+  "dependencies": {
+    "@derbysoft/neat-design-icons": "^1.1.18",
+    "@derbysoft/neat-design-token": "^2.3.0",
+    "ahooks": "^3.9.0",
+    "antd-style": "^3.7.1",
+    "dayjs": "^1.11.13",
+    "lodash": "^4.17.21",
+    "rc-cascader": "~3.34.0",
+    "rc-resize-observer": "^1.4.3",
+    "rc-tree": "~5.13.1",
+    "react-detectable-overflow": "^0.8.0",
+    "react-draggable": "^4.5.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": ">=11.10.6",
+    "@emotion/styled": ">=11.10.6",
+    "antd": "^5.26.1",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  }
+}

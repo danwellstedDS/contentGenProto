@@ -1,9 +1,14 @@
 services:
   - type: web
-    name: hotel-ad-copy-api
+    name: content-gen
     runtime: node
-    buildCommand: cd apps/api && npm install && npx prisma generate && npm run build
-    startCommand: cd apps/api && npx prisma migrate deploy && npm start
+    buildCommand: >
+      npm install &&
+      VITE_API_URL="" VITE_POSTHOG_KEY=$VITE_POSTHOG_KEY VITE_POSTHOG_HOST=$VITE_POSTHOG_HOST
+      npm run build -w apps/web &&
+      npx prisma generate --schema=apps/api/prisma/schema.prisma &&
+      npm run build -w apps/api
+    startCommand: npx prisma migrate deploy --schema=apps/api/prisma/schema.prisma && node apps/api/dist/index.js
     envVars:
       - key: DATABASE_URL
         sync: false
@@ -21,16 +26,11 @@ services:
         sync: false
       - key: POSTHOG_API_KEY
         sync: false
-
-  - type: web
-    name: hotel-ad-copy-web
-    runtime: static
-    buildCommand: cd apps/web && npm install && npm run build
-    staticPublishPath: apps/web/dist
-    envVars:
-      - key: VITE_API_URL
-        sync: false
+      - key: POSTHOG_HOST
+        value: https://eu.posthog.com
       - key: VITE_POSTHOG_KEY
         sync: false
       - key: VITE_POSTHOG_HOST
-        value: https://app.posthog.com
+        value: https://eu.posthog.com
+      - key: NODE_ENV
+        value: production

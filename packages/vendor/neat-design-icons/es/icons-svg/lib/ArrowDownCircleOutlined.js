@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var ArrowDownCircleOutlined = React.forwardRef(function (props, ref) { return _jsxs("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [_jsx("path", { d: "M18 31.2188C25.3005 31.2188 31.2188 25.3005 31.2188 18C31.2188 10.6995 25.3005 4.78125 18 4.78125C10.6995 4.78125 4.78125 10.6995 4.78125 18C4.78125 25.3005 10.6995 31.2188 18 31.2188ZM18 33.75C9.30152 33.75 2.25 26.6985 2.25 18C2.25 9.30152 9.30152 2.25 18 2.25C26.6985 2.25 33.75 9.30152 33.75 18C33.75 26.6985 26.6985 33.75 18 33.75Z" }), _jsx("path", { d: "M26.0864 13.8324C26.5807 14.3267 26.5807 15.128 26.0864 15.6223L18.927 22.7818C18.6783 23.0305 18.3518 23.154 18.0258 23.1524C17.6999 23.154 17.3734 23.0305 17.1247 22.7818L9.96524 15.6223C9.47099 15.128 9.47099 14.3267 9.96524 13.8324C10.4595 13.3382 11.2608 13.3382 11.7551 13.8324L18.0258 20.1031L24.2965 13.8324C24.7908 13.3382 25.5921 13.3382 26.0864 13.8324Z" })] })); });
+ArrowDownCircleOutlined.displayName = 'ArrowDownCircleOutlined';
+export default ArrowDownCircleOutlined;

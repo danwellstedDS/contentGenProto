@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var SettingFilled = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("path", { d: "M14.5576 31.3108L8.22631 27.6497L9.5896 25.2847C8.67609 24.2258 7.96758 23.0019 7.50623 21.6752H4.78125V14.3583H7.50623C7.96758 13.0316 8.67609 11.8077 9.5896 10.7488L8.22631 8.38378L14.5576 4.72266L15.9212 7.08821C16.6013 6.95915 17.2966 6.8934 18 6.8934C18.7034 6.8934 19.3987 6.95915 20.0788 7.08821L21.4424 4.72266L27.7737 8.38378L26.4104 10.7488C27.3239 11.8077 28.0324 13.0316 28.4938 14.3583H31.2188V21.6752H28.4938C28.0324 23.0019 27.3239 24.2258 26.4104 25.2847L27.7737 27.6497L21.4424 31.3108L20.0788 28.9453C19.3987 29.0743 18.7034 29.1401 18 29.1401C17.2966 29.1401 16.6013 29.0743 15.9212 28.9453L14.5576 31.3108ZM17.9989 12.4819C14.9512 12.4819 12.4805 14.9527 12.4805 18.0003C12.4805 21.048 14.9512 23.5187 17.9989 23.5187C21.0465 23.5187 23.5173 21.048 23.5173 18.0003C23.5173 14.9527 21.0465 12.4819 17.9989 12.4819ZM20.4821 20.4836C19.8174 21.1452 18.9364 21.512 17.9989 21.512C17.0614 21.512 16.1803 21.1452 15.5156 20.4836C14.854 19.8189 14.4872 18.9378 14.4872 18.0003C14.4872 17.0628 14.854 16.1818 15.5156 15.517C16.1803 14.8523 17.0614 14.4886 17.9989 14.4886C18.9364 14.4886 19.8174 14.8523 20.4821 15.517C21.1437 16.1818 21.5106 17.0628 21.5106 18.0003C21.5106 18.9378 21.1437 19.8189 20.4821 20.4836Z" }) })); });
+SettingFilled.displayName = 'SettingFilled';
+exports.default = SettingFilled;

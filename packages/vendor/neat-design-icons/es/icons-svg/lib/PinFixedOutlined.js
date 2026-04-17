@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var PinFixedOutlined = React.forwardRef(function (props, ref) { return _jsx("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: _jsx("path", { fillRule: "evenodd", d: "M24.4653 3.97266H11.5278C10.8288 3.97266 10.2622 4.5393 10.2622 5.23828C10.2622 5.93727 10.8288 6.50391 11.5278 6.50391H13.3559V14.9395L7.81991 20.4755C7.54275 20.7527 7.42101 21.1264 7.45469 21.4884C7.51203 22.1342 8.05453 22.6406 8.71531 22.6406H16.7309V32.6953C16.7309 33.3943 17.2976 33.9609 17.9966 33.9609C18.6955 33.9609 19.2622 33.3943 19.2622 32.6953V22.6406H27.2778C27.9768 22.6406 28.5434 22.074 28.5434 21.375C28.5434 21.3522 28.5428 21.3296 28.5416 21.3071C28.5285 21.0016 28.4053 20.7001 28.1721 20.4669L22.6372 14.932V6.50391H24.4653C25.1643 6.50391 25.7309 5.93727 25.7309 5.23828C25.7309 4.5393 25.1643 3.97266 24.4653 3.97266ZM20.2193 15.993C20.3036 16.1779 20.4311 16.3391 20.5889 16.4634L24.2349 20.1094H11.7658L15.4465 16.4286C15.5361 16.3515 15.6147 16.2622 15.6798 16.1632C15.8553 15.9044 15.9244 15.5951 15.8872 15.2966V6.50391H20.1059V15.279C20.0741 15.5204 20.1119 15.7692 20.2193 15.993Z", clipRule: "evenodd" }) })); });
+PinFixedOutlined.displayName = 'PinFixedOutlined';
+export default PinFixedOutlined;

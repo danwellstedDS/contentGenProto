@@ -1,0 +1,4 @@
+import React from 'react';
+import { TwoToneColorsTypes } from '../../components';
+declare const TableChartTwoTone: React.ComponentType<React.SVGProps<SVGSVGElement> & TwoToneColorsTypes>;
+export default TableChartTwoTone;

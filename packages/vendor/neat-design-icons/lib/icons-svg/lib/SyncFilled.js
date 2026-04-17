@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var SyncFilled = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("g", { id: "SyncFilled", children: (0, jsx_runtime_1.jsx)("path", { id: "Shape", fillRule: "evenodd", d: "M8.06432 8.13176C10.7914 5.40623 14.3659 4.04335 17.9397 4.04297C21.5135 4.04258 25.0879 5.40494 27.8142 8.12963C27.8813 8.19665 27.9473 8.26416 28.0129 8.33216L29.6996 6.64645C30.0251 6.32122 30.5822 6.50257 30.6536 6.95695L32.0221 15.6683C32.0665 15.9509 31.8224 16.1948 31.5396 16.1504L22.8234 14.7826C22.3688 14.7112 22.1873 14.1544 22.5128 13.8291L24.4465 11.8965C24.3822 11.8277 24.3161 11.7598 24.249 11.6927C22.5067 9.95141 20.2226 9.08054 17.9389 9.08078C15.6552 9.08103 13.3712 9.95215 11.6282 11.6941C9.88529 13.436 9.01366 15.7187 9.01341 18.0011C9.01337 18.3545 9.03431 18.7084 9.07597 19.0601L3.97507 18.2597C3.97361 18.1739 3.97265 18.0877 3.97266 18.0019C3.97353 14.4296 5.3372 10.8573 8.06432 8.13176ZM5.42905 29.6389C5.50042 30.0933 6.05761 30.2747 6.38303 29.9495L8.26508 28.0685C10.9648 30.6613 14.4509 31.9574 17.9369 31.957C21.5108 31.9566 25.0854 30.5935 27.8123 27.8682C30.5392 25.143 31.7882 21.8636 31.8966 18.4403L26.8559 17.6494C26.8606 17.7661 26.8628 17.8824 26.863 17.9992C26.8627 20.2815 25.9911 22.5642 24.2482 24.3062C22.5052 26.0481 20.2212 26.9192 17.9375 26.9195C15.7416 26.9197 13.5458 26.1146 11.8315 24.5047L13.5701 22.7671C13.8955 22.4418 13.7141 21.885 13.2594 21.8136L4.54326 20.4462C4.26043 20.4018 4.01639 20.6457 4.06079 20.9284L5.42905 29.6389Z", clipRule: "evenodd" }) }) })); });
+SyncFilled.displayName = 'SyncFilled';
+exports.default = SyncFilled;

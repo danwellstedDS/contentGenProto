@@ -1,0 +1,15 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _SnackBar = _interopRequireDefault(require("./SnackBar"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+/**
+ * @file index.ts
+ * @author minglong.zhao(minglong.zhao@derbysoft.com)
+ */
+
+var SnackBar = _SnackBar.default;
+var _default = exports.default = SnackBar;

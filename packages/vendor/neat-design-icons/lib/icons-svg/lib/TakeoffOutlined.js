@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var TakeoffOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M31.5059 27.7436C32.1272 27.7468 32.6282 28.2531 32.625 28.8744C32.6218 29.4956 32.1155 29.9968 31.4942 29.9936L4.49411 29.853C3.87282 29.8497 3.37178 29.3433 3.37502 28.7221C3.37825 28.1007 3.88461 27.5997 4.50592 27.603L31.5059 27.7436Z" }), (0, jsx_runtime_1.jsx)("path", { fillRule: "evenodd", d: "M11.4529 7.93619C11.8873 7.68541 12.4104 7.6255 12.8936 7.77978L12.907 7.78417L12.9202 7.7887L22.4151 11.0845L27.3634 8.55294C28.588 7.92643 30.0633 8.05611 31.1599 8.88665C33.1899 10.4243 33.0136 13.5292 30.8227 14.8272L13.0511 25.3565C11.7589 26.1221 10.1448 26.0872 8.88727 25.2641C7.78681 24.5438 6.27845 23.5576 5.12733 22.8089C3.75151 21.9141 3.55537 19.96 4.74515 18.816C5.33274 18.251 6.15554 18.0017 6.95793 18.1454L10.5315 18.7855L15.036 15.9923L9.14957 12.2721C7.98474 11.5466 8.08027 9.88335 9.21576 9.22777L11.4529 7.93619ZM11.013 10.7881L17.3775 14.8103C18.2552 15.3651 18.2497 16.647 17.3673 17.1942L10.9841 21.1522L6.56133 20.3601C6.46834 20.3434 6.37291 20.3724 6.30479 20.4378C6.16576 20.5715 6.18455 20.8126 6.3541 20.9229C7.50813 21.6734 9.01887 22.6611 10.1195 23.3815C10.6582 23.734 11.3495 23.7494 11.9043 23.4207L29.6759 12.8916C30.4914 12.4084 30.5569 11.2526 29.8013 10.6803C29.3931 10.3712 28.844 10.3229 28.3881 10.5562L23.1912 13.2149C22.8039 13.413 22.3525 13.4444 21.9415 13.3018L12.3974 9.98885L11.013 10.7881Z", clipRule: "evenodd" })] })); });
+TakeoffOutlined.displayName = 'TakeoffOutlined';
+exports.default = TakeoffOutlined;

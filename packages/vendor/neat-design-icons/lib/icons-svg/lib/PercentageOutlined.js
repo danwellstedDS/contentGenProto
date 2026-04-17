@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var PercentageOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("path", { d: "M10.6875 15.75C13.4789 15.75 15.75 13.4789 15.75 10.6875C15.75 7.89609 13.4789 5.625 10.6875 5.625C7.89609 5.625 5.625 7.89609 5.625 10.6875C5.625 13.4789 7.89609 15.75 10.6875 15.75ZM10.6875 8.15625C12.0832 8.15625 13.2188 9.2918 13.2188 10.6875C13.2188 12.0832 12.0832 13.2188 10.6875 13.2188C9.2918 13.2188 8.15625 12.0832 8.15625 10.6875C8.15625 9.2918 9.2918 8.15625 10.6875 8.15625ZM25.3125 20.25C22.5211 20.25 20.25 22.5211 20.25 25.3125C20.25 28.1039 22.5211 30.375 25.3125 30.375C28.1039 30.375 30.375 28.1039 30.375 25.3125C30.375 22.5211 28.1039 20.25 25.3125 20.25ZM25.3125 27.8438C23.9168 27.8438 22.7812 26.7082 22.7812 25.3125C22.7812 23.9168 23.9168 22.7812 25.3125 22.7812C26.7082 22.7812 27.8438 23.9168 27.8438 25.3125C27.8438 26.7082 26.7082 27.8438 25.3125 27.8438ZM6.86307 27.1482L27.1482 6.86307C27.6974 6.31389 28.5878 6.31389 29.1369 6.86307C29.6861 7.41224 29.6861 8.30263 29.1369 8.85181L8.85181 29.1369C8.30263 29.6861 7.41224 29.6861 6.86307 29.1369C6.31389 28.5878 6.31389 27.6974 6.86307 27.1482Z" }) })); });
+PercentageOutlined.displayName = 'PercentageOutlined';
+exports.default = PercentageOutlined;

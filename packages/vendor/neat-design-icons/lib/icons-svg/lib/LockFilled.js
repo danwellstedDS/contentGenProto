@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var LockFilled = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("path", { fillRule: "evenodd", d: "M26.5781 12.5156C26.5781 7.77806 22.7376 3.9375 18 3.9375C13.2624 3.9375 9.42188 7.77806 9.42188 12.5156C9.42188 12.6097 9.42339 12.7035 9.4264 12.7969L6.07718 12.7969C5.34282 12.7985 5.07289 12.8767 4.80079 13.0223C4.52579 13.1693 4.30996 13.3852 4.16289 13.6602C4.01582 13.9352 3.9375 14.2079 3.9375 14.9602L3.93753 29.9228C3.93916 30.6572 4.01737 30.9271 4.16289 31.1992C4.30996 31.4742 4.52579 31.69 4.80079 31.8371C5.07579 31.9842 5.34856 32.0625 6.10078 32.0625H29.8992C30.6514 32.0625 30.9242 31.9842 31.1992 31.8371C31.4742 31.69 31.69 31.4742 31.8371 31.1992C31.9842 30.9242 32.0625 30.6514 32.0625 29.8992V14.9602C32.0625 14.2079 31.9842 13.9352 31.8371 13.6602C31.69 13.3852 31.4742 13.1693 31.1992 13.0223C30.9242 12.8752 30.6514 12.7969 29.8992 12.7969L26.5736 12.7969C26.5766 12.7035 26.5781 12.6097 26.5781 12.5156ZM24.0404 12.7969C24.0447 12.7037 24.0469 12.6099 24.0469 12.5156C24.0469 9.17603 21.3396 6.46875 18 6.46875C14.6604 6.46875 11.9531 9.17603 11.9531 12.5156C11.9531 12.6099 11.9553 12.7037 11.9596 12.7969L24.0404 12.7969ZM17.9402 18.0006C17.9542 18.0002 17.9683 18 17.9824 18H18.0176C18.0317 18 18.0458 18.0002 18.0598 18.0007C19.5855 18.0324 20.8125 19.2792 20.8125 20.8125C20.8125 21.9105 20.1833 22.8616 19.2657 23.3248L19.2656 25.1895C19.2656 25.8787 18.7069 26.4375 18.0176 26.4375H17.9824C17.2931 26.4375 16.7344 25.8787 16.7344 25.1895L16.7343 23.3248C15.8168 22.8616 15.1875 21.9106 15.1875 20.8125C15.1875 19.2792 16.4145 18.0324 17.9402 18.0006Z", clipRule: "evenodd" }) })); });
+LockFilled.displayName = 'LockFilled';
+exports.default = LockFilled;

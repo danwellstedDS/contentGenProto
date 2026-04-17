@@ -1,0 +1,20 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _templateObject;
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+/**
+ * @file switcher.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+// Types
+var _default = exports.default = function _default(utils) {
+  var css = utils.css,
+    prefixCls = utils.prefixCls,
+    componentsToken = utils.componentsToken;
+  var treeToken = componentsToken.Tree;
+  return css(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n        .", "-tree-treenode {\n            .", "-tree-switcher {\n                display: flex;\n                justify-content: center;\n                align-items: center;\n                width: ", "px;\n\n                .", "-tree-switcher-leaf-line {\n                    &::before {\n                        inset-inline-end: ", "px;\n                        border-inline-end-color: ", ";\n                    }\n\n                    &::after {\n                        height: ", ";\n                        border-bottom-color: ", ";\n                    }\n                }\n\n                &::before {\n                    display: none;\n                }\n            }\n\n            &.", "-tree-treenode-leaf-last {\n                .", "-tree-switcher-leaf-line {\n                    :before {\n                        height: ", "!important;\n                    }\n                }\n            }\n        }\n\n        &.", "-tree-small {\n            .", "-tree-treenode {\n                .", "-tree-switcher {\n                    width: ", "px;\n\n                    .", "-tree-switcher-leaf-line {\n                        &::before {\n                            inset-inline-end: ", "px;\n                        }\n\n                        &::after {\n                            height: ", ";\n                        }\n                    }\n                }\n\n                &.", "-tree-treenode-leaf-last {\n                    .", "-tree-switcher-leaf-line {\n                        :before {\n                            height: ", "!important;\n                        }\n                    }\n                }\n            }\n        }\n\n        &.", "-tree-large {\n            .", "-tree-treenode {\n                .", "-tree-switcher {\n                    width: ", "px;\n\n                    .", "-tree-switcher-leaf-line {\n                        &::before {\n                            inset-inline-end: ", "px;\n                        }\n\n                        &::after {\n                            height: ", ";\n                        }\n                    }\n                }\n\n                &.", "-tree-treenode-leaf-last {\n                    .", "-tree-switcher-leaf-line {\n                        :before {\n                            height: ", "!important;\n                        }\n                    }\n                }\n            }\n        }\n    "])), prefixCls, prefixCls, treeToken['tree-size-fill-medium'], prefixCls, treeToken['tree-size-fill-medium'] / 2 - 0.5, treeToken['tree-color-border'], treeToken['tree-line-height-medium'], treeToken['tree-color-border'], prefixCls, prefixCls, treeToken['tree-line-height-medium'], prefixCls, prefixCls, prefixCls, treeToken['tree-size-fill-small'], prefixCls, treeToken['tree-size-fill-small'] / 2 - 0.5, treeToken['tree-line-height-small'], prefixCls, prefixCls, treeToken['tree-line-height-small'], prefixCls, prefixCls, prefixCls, treeToken['tree-size-fill-large'], prefixCls, treeToken['tree-size-fill-large'] / 2 - 0.5, treeToken['tree-line-height-large'], prefixCls, prefixCls, treeToken['tree-line-height-large']);
+};

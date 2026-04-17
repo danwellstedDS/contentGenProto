@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var SignOutOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M26.4375 9.5625V4.5H6.1875V31.5H26.4375V26.4727H28.6875V31.5867C28.6875 32.3389 28.6092 32.6117 28.4621 32.8867C28.315 33.1617 28.0992 33.3775 27.8242 33.5246C27.5492 33.6717 27.2764 33.75 26.5242 33.75H6.10078C5.34856 33.75 5.07579 33.6717 4.80079 33.5246C4.52579 33.3775 4.30996 33.1617 4.16289 32.8867C4.01582 32.6117 3.9375 32.3389 3.9375 31.5867V4.41328C3.9375 3.66106 4.01582 3.38829 4.16289 3.11329C4.30996 2.83829 4.52579 2.62246 4.80079 2.47539C5.07579 2.32832 5.34856 2.25 6.10078 2.25H26.5242C27.2764 2.25 27.5492 2.32832 27.8242 2.47539C28.0992 2.62246 28.315 2.83829 28.4621 3.11329C28.6092 3.38829 28.6875 3.66106 28.6875 4.41328V9.5625H26.4375Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M27.7781 16.7316L25.7283 14.6817C25.2408 14.1943 25.2408 13.4039 25.7283 12.9164C26.2157 12.4289 27.0061 12.4289 27.4936 12.9164L31.6543 17.0771C31.6714 17.0924 31.6883 17.1084 31.7048 17.1249C32.1922 17.6123 32.1922 18.4027 31.7048 18.8902L27.5039 23.0911C27.0164 23.5786 26.226 23.5786 25.7385 23.0911C25.2511 22.6036 25.2511 21.8132 25.7385 21.3257L27.8015 19.2628H18.0352C17.3362 19.2628 16.7695 18.6962 16.7695 17.9972C16.7695 17.2982 17.3362 16.7316 18.0352 16.7316H27.7781Z" })] })); });
+SignOutOutlined.displayName = 'SignOutOutlined';
+exports.default = SignOutOutlined;

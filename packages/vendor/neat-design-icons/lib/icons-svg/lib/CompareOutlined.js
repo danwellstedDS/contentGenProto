@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var CompareOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsx)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: (0, jsx_runtime_1.jsx)("g", { id: "CompareOutlined", children: (0, jsx_runtime_1.jsxs)("g", { id: "Shape", children: [(0, jsx_runtime_1.jsx)("path", { d: "M20.8125 6.39844C21.5115 6.39844 22.0781 6.96508 22.0781 7.66406C22.0781 8.36305 21.5115 8.92969 20.8125 8.92969H6.50391V27.0703H20.8125C21.5115 27.0703 22.0781 27.637 22.0781 28.3359C22.0781 29.0349 21.5115 29.6016 20.8125 29.6016H6.36328C5.04298 29.6016 3.97266 28.5312 3.97266 27.2109V8.78906C3.97266 7.46876 5.04298 6.39844 6.36328 6.39844H20.8125ZM29.4961 19.3711V16.5938C29.4961 15.8948 30.0627 15.3281 30.7617 15.3281C31.4607 15.3281 32.0273 15.8948 32.0273 16.5938V19.3711C32.0273 20.0701 31.4607 20.6367 30.7617 20.6367C30.0627 20.6367 29.4961 20.0701 29.4961 19.3711ZM32.0273 27.2109C32.0273 28.5312 30.957 29.6016 29.6367 29.6016H25.9629C25.2639 29.6016 24.6973 29.0349 24.6973 28.3359C24.6973 27.637 25.2639 27.0703 25.9629 27.0703H29.4961V24.1875C29.4961 23.4885 30.0627 22.9219 30.7617 22.9219C31.4607 22.9219 32.0273 23.4885 32.0273 24.1875V27.2109ZM32.0273 11.7773C32.0273 12.4763 31.4607 13.043 30.7617 13.043C30.0627 13.043 29.4961 12.4763 29.4961 11.7773V8.92969H25.9629C25.2639 8.92969 24.6973 8.36305 24.6973 7.66406C24.6973 6.96508 25.2639 6.39844 25.9629 6.39844H29.6367C30.957 6.39844 32.0273 7.46876 32.0273 8.78906V11.7773Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M19.2656 30.7969C19.2656 31.4959 18.699 32.0625 18 32.0625C17.301 32.0625 16.7344 31.4959 16.7344 30.7969L16.7344 5.23828C16.7344 4.5393 17.301 3.97266 18 3.97266C18.699 3.97266 19.2656 4.5393 19.2656 5.23828L19.2656 30.7969Z" })] }) }) })); });
+CompareOutlined.displayName = 'CompareOutlined';
+exports.default = CompareOutlined;

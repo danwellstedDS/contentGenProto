@@ -1,0 +1,16 @@
+var _templateObject;
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+/**
+ * @file horizontalError.ts
+ * @author liangxiaojun(liangxiaojun@derbysoft.net)
+ */
+
+// Types
+
+export default (function (_ref) {
+  var css = _ref.css,
+    prefixCls = _ref.prefixCls,
+    componentsToken = _ref.componentsToken;
+  var stepsToken = componentsToken.Steps;
+  return css(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n        .", "-steps-item.", "-steps-item-error {\n            > .", "-steps-item-container\n                > .", "-steps-item-content\n                > .", "-steps-item-title::after {\n                background-color: ", ";\n            }\n        }\n    "])), prefixCls, prefixCls, prefixCls, prefixCls, prefixCls, stepsToken['steps-color-border-error']);
+});

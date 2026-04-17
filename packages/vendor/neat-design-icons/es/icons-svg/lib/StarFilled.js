@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var StarFilled = React.forwardRef(function (props, ref) { return _jsx("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: _jsx("path", { d: "M15.4384 5.58105L12.6072 11.4014C12.5583 11.5017 12.4642 11.571 12.3598 11.5866L6.0304 12.5201C3.68914 12.8672 2.76337 15.7583 4.4433 17.4224L9.02578 21.9529C9.1078 22.034 9.14562 22.152 9.12568 22.2704L8.04504 28.664C7.64723 31.0069 10.0934 32.8097 12.1938 31.69L17.8562 28.6712C17.9473 28.6227 18.0546 28.6227 18.1459 28.6714L23.8085 31.6872C25.9088 32.8069 28.3542 31.0066 27.9568 28.6605L26.8761 22.2666C26.8563 22.1495 26.8944 22.0307 26.9756 21.9505L31.5574 17.4236C33.2385 15.7583 32.3127 12.8672 29.9724 12.5203L23.6419 11.5892C23.539 11.5738 23.4472 11.5062 23.3971 11.4033L20.5659 5.58288C19.5196 3.43722 16.4821 3.43522 15.4384 5.58105Z" }) })); });
+StarFilled.displayName = 'StarFilled';
+export default StarFilled;

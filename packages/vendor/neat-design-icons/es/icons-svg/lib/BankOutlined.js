@@ -1,0 +1,18 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+import { jsx as _jsx } from "react/jsx-runtime";
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+import React from 'react';
+var BankOutlined = React.forwardRef(function (props, ref) { return _jsx("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: _jsx("g", { id: "BankOutlined", children: _jsx("path", { id: "BankOutlined_2", fillRule: "evenodd", d: "M18.5118 4.09246C18.1858 3.94834 17.8142 3.94835 17.4882 4.09246L4.7265 9.73477C4.26824 9.93738 3.97266 10.3913 3.97266 10.8923V15.8892C3.97266 16.5882 4.5393 17.1548 5.23828 17.1548H6.60938L6.60937 29.7759H5.09766C4.47634 29.7759 3.97266 30.2796 3.97266 30.9009C3.97266 31.5223 4.47634 32.0259 5.09766 32.0259H30.9023C31.5237 32.0259 32.0273 31.5223 32.0273 30.9009C32.0273 30.2796 31.5237 29.7759 30.9023 29.7759H29.4258V17.1548H30.7617C31.4607 17.1548 32.0273 16.5882 32.0273 15.8892V10.8923C32.0273 10.3913 31.7318 9.93738 31.2735 9.73477L18.5118 4.09246ZM6.22266 11.5334L18 6.32629L29.7773 11.5334V14.9048H6.22266V11.5334ZM8.85937 29.7759H13.4648L13.4648 17.1548H8.85938L8.85937 29.7759ZM20.3203 29.7759H15.7148L15.7148 17.1548H20.3203V29.7759ZM22.5703 29.7759H27.1758V17.1548H22.5703V29.7759Z", clipRule: "evenodd" }) }) })); });
+BankOutlined.displayName = 'BankOutlined';
+export default BankOutlined;

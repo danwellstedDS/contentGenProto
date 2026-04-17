@@ -1,0 +1,23 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var jsx_runtime_1 = require("react/jsx-runtime");
+// GENERATE BY nicon
+// DON NOT EDIT IT MANUALLY
+var react_1 = __importDefault(require("react"));
+var LeanUxSprintOutlined = react_1.default.forwardRef(function (props, ref) { return (0, jsx_runtime_1.jsxs)("svg", __assign({ viewBox: "0 0 36 36" }, props, { ref: ref, children: [(0, jsx_runtime_1.jsx)("path", { d: "M19.4766 17.5781C19.4765 12.8408 15.6364 9 10.8984 9C6.16045 9 2.32031 12.8401 2.32031 17.5781C2.32031 22.3161 6.16117 26.1562 10.8984 26.1562C12.5225 26.1562 14.0413 25.7049 15.3359 24.9206C15.4385 24.8711 15.5344 24.8102 15.6221 24.7394C15.6454 24.724 15.6686 24.7085 15.6917 24.6929C15.6892 24.6907 15.6867 24.6885 15.6842 24.6864C15.9837 24.4161 16.1719 24.025 16.1719 23.5898C16.1719 22.7744 15.5108 22.1133 14.6953 22.1133C14.4451 22.1133 14.2094 22.1755 14.0029 22.2854C14.0011 22.2813 13.9993 22.2772 13.9975 22.2732C13.1089 22.8609 12.0436 23.2031 10.8984 23.2031C7.79184 23.2031 5.27344 20.6849 5.27344 17.5781C5.27344 14.4711 7.79138 11.9531 10.8984 11.9531C14.0052 11.9531 16.5234 14.4715 16.5234 17.5781L19.4766 17.5781Z" }), (0, jsx_runtime_1.jsx)("path", { d: "M19.4766 17.5781C19.4766 20.6848 21.995 23.2031 25.1016 23.2031C28.2082 23.2031 30.7266 20.6849 30.7266 17.5781C30.7266 14.4715 28.2083 11.9531 25.1016 11.9531C23.9821 11.9531 22.9391 12.28 22.0628 12.8435C21.8138 13.0348 21.5022 13.1484 21.1641 13.1484C20.3486 13.1484 19.6875 12.4874 19.6875 11.6719C19.6875 11.1739 19.934 10.7336 20.3116 10.4661L20.3081 10.4632C21.6765 9.53933 23.326 9 25.1016 9C29.8395 9 33.6797 12.8409 33.6797 17.5781C33.6797 22.3161 29.8388 26.1562 25.1016 26.1562C20.3643 26.1562 16.5235 22.316 16.5234 17.5781L19.4766 17.5781Z" })] })); });
+LeanUxSprintOutlined.displayName = 'LeanUxSprintOutlined';
+exports.default = LeanUxSprintOutlined;
