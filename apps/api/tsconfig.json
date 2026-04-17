@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "rootDir": "../../",
+    "resolveJsonModule": true,
+    "paths": {
+      "@hotel-copy/shared": ["../../packages/shared/src"]
+    }
+  },
+  "include": ["src", "../../packages/shared/src"],
+  "exclude": ["node_modules", "dist"]
+}

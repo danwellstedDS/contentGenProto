@@ -1,0 +1,157 @@
+// apps/api/prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id           String        @id @default(cuid())
+  email        String        @unique
+  passwordHash String
+  name         String
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  projects     Project[]
+  events       DomainEvent[]
+}
+
+model Project {
+  id              String         @id @default(cuid())
+  name            String
+  userId          String
+  user            User           @relation(fields: [userId], references: [id])
+  status          ProjectStatus  @default(DRAFT)
+  campaignType    String?
+  versionNumber   Int            @default(1)
+  parentProjectId String?
+  parentProject   Project?       @relation("ProjectVersions", fields: [parentProjectId], references: [id], onDelete: SetNull)
+  versions        Project[]      @relation("ProjectVersions")
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  hotels          HotelProfile[]
+  generations     Generation[]
+  events          DomainEvent[]
+}
+
+enum ProjectStatus {
+  DRAFT
+  GENERATING
+  IN_REVIEW
+  COMPLETE
+}
+
+model HotelProfile {
+  id            String   @id @default(cuid())
+  projectId     String
+  project       Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  hotelCode     String
+  hotelName     String
+  chain         String
+  brand         String
+  country       String
+  city          String
+  starRating    String?
+  roomCount     Int?
+  googlePlaceId String?
+  description   String?
+  categories    Json // { airportHotel: boolean, beachFront: boolean, ... }
+  amenities     Json // { freeWifi: boolean, pool: boolean, ... }
+  urls          Json // { en: { homepage: string, rooms: string, ... }, ja: {...}, ... }
+  localNames    Json // { ja: { hotelName, brand, chain, country, city }, zh_tw: {...}, ... }
+  notes         String?  // Manual enrichment notes
+  included      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([projectId, hotelCode])
+}
+
+model ToneConfig {
+  id                String          @id @default(cuid())
+  level             ToneConfigLevel // CHAIN or BRAND
+  entityName        String          // e.g. "KYORITSU MAINTENANCE" or "dormy inn"
+  tone              String          // e.g. "warm, accessible, modern"
+  prohibitedWords   String[]
+  mandatoryIncludes String[]
+  copyStyle         String          // e.g. "benefit-led"
+  notes             String?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  @@unique([level, entityName])
+}
+
+enum ToneConfigLevel {
+  CHAIN
+  BRAND
+}
+
+model Generation {
+  id              String           @id @default(cuid())
+  projectId       String
+  project         Project          @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  name                String?
+  languages           String[]         @default([])
+  campaignContext     String?
+  recipe              String?
+  approvedHotelCodes  String[]         @default([])
+  status              GenerationStatus @default(PENDING)
+  triggeredAt         DateTime         @default(now())
+  completedAt         DateTime?
+  errorMessage        String?
+  assets              GeneratedAsset[]
+}
+
+enum GenerationStatus {
+  PENDING
+  RUNNING
+  COMPLETE
+  FAILED
+}
+
+model GeneratedAsset {
+  id           String     @id @default(cuid())
+  generationId String
+  generation   Generation @relation(fields: [generationId], references: [id], onDelete: Cascade)
+  hotelCode    String
+  assetType    AssetType
+  variantCode  String     // e.g. "01", "02", ... "15"
+  variantLabel String     // e.g. "Name", "Access", "Membership"
+  copies       Json       // { en: string, ja: string, zh_tw: string, zh_cn: string, ko: string, it: string, pt: string, ru: string, es: string, de: string, fr: string, tr: string, el: string }
+  isEdited     Boolean    @default(false)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  @@unique([generationId, hotelCode, assetType, variantCode])
+}
+
+enum AssetType {
+  HEADLINE
+  DESCRIPTION
+  LONG_HEADLINE
+}
+
+// Domain event log — append-only audit trail
+model DomainEvent {
+  id            String   @id @default(cuid())
+  eventType     String   // e.g. "generation.triggered", "asset.edited", "tone_config.updated"
+  aggregateId   String   // projectId, generationId, etc.
+  aggregateType String   // "Project", "Generation", "GeneratedAsset", "ToneConfig"
+  userId        String?
+  user          User?    @relation(fields: [userId], references: [id])
+  projectId     String?
+  project       Project? @relation(fields: [projectId], references: [id])
+  payload       Json     // Event-specific data
+  occurredAt    DateTime @default(now())
+
+  @@index([aggregateId])
+  @@index([projectId])
+  @@index([userId])
+  @@index([eventType])
+}

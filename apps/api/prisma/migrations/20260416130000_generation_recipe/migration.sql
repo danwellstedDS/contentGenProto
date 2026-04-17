@@ -1,0 +1,1 @@
+ALTER TABLE "Generation" ADD COLUMN IF NOT EXISTS "recipe" TEXT;

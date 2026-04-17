@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+.turbo/
+
+# Environment files — never commit real secrets
+.env
+.env.local
+.env.*.local
+
+# Keep examples
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Prisma generated
+apps/api/src/generated/
+
+# Misc
+*.xlsx
+*.png
+*.jpg
+*.jpeg
+.claude/
