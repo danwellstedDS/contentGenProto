@@ -7,6 +7,14 @@ import type { Hotel } from "@hotel-copy/shared"
 import AppShell from "../components/AppShell"
 import ImportDropzone from "../components/ImportDropzone"
 
+interface ImportResult {
+  imported: number
+  skipped: number
+  warnings: string[]
+  chains?: { created: Array<{ id: string; name: string }> }
+  brands?: { created: Array<{ id: string; name: string; chainId: string; chainName: string }> }
+}
+
 export default function HotelsPage() {
   const navigate = useNavigate()
   const [hotels, setHotels] = useState<Hotel[]>([])
@@ -15,7 +23,7 @@ export default function HotelsPage() {
   const [chainFilter, setChainFilter] = useState("")
   const [importModalOpen, setImportModalOpen] = useState(false)
   const [importing, setImporting] = useState(false)
-  const [importResult, setImportResult] = useState<{ imported: number; skipped: number; warnings: string[] } | null>(null)
+  const [importResult, setImportResult] = useState<ImportResult | null>(null)
   const [importError, setImportError] = useState<string | null>(null)
   const [pendingFile, setPendingFile] = useState<File | null>(null)
 
@@ -28,7 +36,7 @@ export default function HotelsPage() {
 
   const allChains = useMemo(() => {
     const seen = new Set<string>()
-    hotels.forEach((h) => { if (h.chain) seen.add(h.chain) })
+    hotels.forEach((h) => { if (h.chainName) seen.add(h.chainName) })
     return Array.from(seen).sort()
   }, [hotels])
 
@@ -38,7 +46,7 @@ export default function HotelsPage() {
       const matchesSearch = !q
         || h.hotelName.toLowerCase().includes(q)
         || h.hotelCode.toLowerCase().includes(q)
-      const matchesChain = !chainFilter || h.chain === chainFilter
+      const matchesChain = !chainFilter || h.chainName === chainFilter
       return matchesSearch && matchesChain
     })
   }, [hotels, searchQuery, chainFilter])
@@ -49,7 +57,7 @@ export default function HotelsPage() {
     setImportResult(null)
     try {
       const result = await hotelsApi.import(file, mode)
-      setImportResult(result)
+      setImportResult(result as ImportResult)
       const updated = await hotelsApi.list()
       setHotels(updated)
     } catch {
@@ -74,6 +82,9 @@ export default function HotelsPage() {
     setImportError(null)
     setPendingFile(null)
   }
+
+  const newChains = importResult?.chains?.created ?? []
+  const newBrands = importResult?.brands?.created ?? []
 
   return (
     <AppShell activeNav="hotels">
@@ -142,8 +153,8 @@ export default function HotelsPage() {
                       </span>
                     </div>
                     <div className="hotel-row-right">
-                      {hotel.chain && (
-                        <span className="hotel-row-brand">{hotel.chain}</span>
+                      {hotel.chainName && (
+                        <span className="hotel-row-brand">{hotel.chainName}</span>
                       )}
                     </div>
                   </div>
@@ -171,6 +182,28 @@ export default function HotelsPage() {
                 type="success"
                 message={`${importResult.imported} hotel${importResult.imported !== 1 ? "s" : ""} imported${importResult.skipped > 0 ? `, ${importResult.skipped} skipped` : ""}`}
               />
+              {(newChains.length > 0 || newBrands.length > 0) && (
+                <Alert
+                  type="info"
+                  message={
+                    <span>
+                      {newChains.length > 0 && (
+                        <span><strong>{newChains.length} new chain{newChains.length !== 1 ? "s" : ""}</strong>: {newChains.map(c => c.name).join(", ")}. </span>
+                      )}
+                      {newBrands.length > 0 && (
+                        <span><strong>{newBrands.length} new brand{newBrands.length !== 1 ? "s" : ""}</strong>: {newBrands.map(b => b.name).join(", ")}. </span>
+                      )}
+                      <button
+                        className="btn-ghost"
+                        style={{ marginLeft: 8, padding: "2px 8px", fontSize: 12 }}
+                        onClick={() => { closeImportModal(); navigate("/brands?filter=needs-voice") }}
+                      >
+                        Configure voice →
+                      </button>
+                    </span>
+                  }
+                />
+              )}
               {importResult.warnings.length > 0 && (
                 <div className="import-warnings">
                   <strong>Warnings ({importResult.warnings.length})</strong>

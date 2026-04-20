@@ -2,8 +2,11 @@ export interface HotelData {
   id: string
   hotelCode: string
   hotelName: string
-  chain?: string | null
-  brand?: string | null
+  chainId?: string | null
+  brandId?: string | null
+  // Resolved names — populated by repository when chain/brand are joined
+  chainName?: string | null
+  brandName?: string | null
   country?: string | null
   city?: string | null
   starRating?: string | null
@@ -19,7 +22,11 @@ export interface HotelData {
   deletedAt?: Date | null
 }
 
-export type HotelInput = Omit<HotelData, "id" | "createdAt" | "updatedAt" | "deletedAt">
+// Input type for upsert/import — takes string names for chain/brand, resolved to IDs before save
+export type HotelInput = Omit<HotelData, "id" | "createdAt" | "updatedAt" | "deletedAt" | "chainName" | "brandName"> & {
+  chainId?: string | null
+  brandId?: string | null
+}
 
 export class Hotel {
   constructor(private readonly data: HotelData) {}
@@ -27,8 +34,10 @@ export class Hotel {
   get id() { return this.data.id }
   get hotelCode() { return this.data.hotelCode }
   get hotelName() { return this.data.hotelName }
-  get chain() { return this.data.chain }
-  get brand() { return this.data.brand }
+  get chainId() { return this.data.chainId }
+  get brandId() { return this.data.brandId }
+  get chainName() { return this.data.chainName }
+  get brandName() { return this.data.brandName }
   get country() { return this.data.country }
   get city() { return this.data.city }
   get starRating() { return this.data.starRating }

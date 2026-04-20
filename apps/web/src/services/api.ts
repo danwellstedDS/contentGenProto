@@ -3,7 +3,8 @@ import type { AxiosInstance } from "axios"
 import type {
   Hotel,
   ProjectHotel,
-  ToneConfig,
+  Chain,
+  Brand,
   Generation,
   GeneratedAsset,
   DomainEvent,
@@ -96,10 +97,10 @@ export const hotelsApi = {
     )
     return data
   },
-  list: async (opts?: { search?: string; chain?: string }) => {
+  list: async (opts?: { search?: string; chainId?: string }) => {
     const params = new URLSearchParams()
     if (opts?.search) params.set("search", opts.search)
-    if (opts?.chain) params.set("chain", opts.chain)
+    if (opts?.chainId) params.set("chainId", opts.chainId)
     const query = params.toString()
     const { data } = await http.get<Hotel[]>(`/hotels${query ? `?${query}` : ""}`)
     return data
@@ -137,22 +138,57 @@ export const hotelsApi = {
   },
 }
 
-// Tone configs (global)
-export const toneApi = {
-  list: async () => {
-    const { data } = await http.get<ToneConfig[]>("/tone-configs")
+// Chains
+export const chainsApi = {
+  list: async (opts?: { hasVoice?: boolean }) => {
+    const params = new URLSearchParams()
+    if (opts?.hasVoice !== undefined) params.set("hasVoice", String(opts.hasVoice))
+    const query = params.toString()
+    const { data } = await http.get<Array<Chain & { hotelCount: number; brandCount: number }>>(`/chains${query ? `?${query}` : ""}`)
     return data
   },
-  create: async (body: Omit<ToneConfig, "id" | "createdAt" | "updatedAt">) => {
-    const { data } = await http.post<ToneConfig>("/tone-configs", body)
+  get: async (id: string) => {
+    const { data } = await http.get<Chain & { brands: Array<Brand & { hotelCount: number }>; hotelCount: number }>(`/chains/${id}`)
     return data
   },
-  update: async (toneConfigId: string, body: Partial<Omit<ToneConfig, "id" | "level" | "entityName" | "createdAt" | "updatedAt">>) => {
-    const { data } = await http.put<ToneConfig>(`/tone-configs/${toneConfigId}`, body)
+  patch: async (id: string, body: Partial<Pick<Chain, "tone" | "prohibitedWords" | "mandatoryIncludes" | "copyStyle" | "notes">>) => {
+    const { data } = await http.patch<Chain>(`/chains/${id}`, body)
     return data
   },
-  delete: async (toneConfigId: string) => {
-    await http.delete(`/tone-configs/${toneConfigId}`)
+  delete: async (id: string) => {
+    await http.delete(`/chains/${id}`)
+  },
+}
+
+// Brands
+export const brandsApi = {
+  list: async (opts?: { chainId?: string; hasVoice?: boolean }) => {
+    const params = new URLSearchParams()
+    if (opts?.chainId) params.set("chainId", opts.chainId)
+    if (opts?.hasVoice !== undefined) params.set("hasVoice", String(opts.hasVoice))
+    const query = params.toString()
+    const { data } = await http.get<Array<Brand & { hotelCount: number; chainName: string }>>(`/brands${query ? `?${query}` : ""}`)
+    return data
+  },
+  get: async (id: string) => {
+    const { data } = await http.get<Brand & {
+      chain: Chain | null
+      hotelCount: number
+      resolved: { tone: string | null; prohibitedWords: string[]; mandatoryIncludes: string[]; copyStyle: string | null; notes: string | null }
+      sources: Record<string, "brand" | "chain" | "none">
+    }>(`/brands/${id}`)
+    return data
+  },
+  patch: async (id: string, body: Partial<Pick<Brand, "tone" | "prohibitedWords" | "mandatoryIncludes" | "copyStyle" | "notes">>) => {
+    const { data } = await http.patch<Brand>(`/brands/${id}`, body)
+    return data
+  },
+  delete: async (id: string) => {
+    await http.delete(`/brands/${id}`)
+  },
+  preview: async (id: string) => {
+    const { data } = await http.post<{ preview: string; resolvedTone: Record<string, unknown> }>(`/brands/${id}/preview`)
+    return data
   },
 }
 

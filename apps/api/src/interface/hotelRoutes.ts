@@ -26,20 +26,20 @@ export async function hotelRoutes(app: FastifyInstance) {
 
     try {
       const result = await importHotels(sub, buffer, mode)
-      return { imported: result.imported, skipped: result.skipped, warnings: result.warnings }
+      return result
     } catch (err) {
       const message = err instanceof Error ? err.message : "Parse error"
       return reply.status(422).send({ error: message })
     }
   })
 
-  // GET /hotels — list library hotels (with optional search + chain filter)
+  // GET /hotels — list library hotels (with optional search + chainId filter)
   app.get<{
-    Querystring: { search?: string; chain?: string }
+    Querystring: { search?: string; chainId?: string }
   }>("/hotels", auth, async (req) => {
     const hotels = await HotelRepository.findAll({
       search: req.query.search,
-      chain: req.query.chain,
+      chainId: req.query.chainId,
     })
     return hotels.map((h) => h.toData())
   })

@@ -1,8 +1,14 @@
 import * as XLSX from "xlsx"
 import type { HotelInput } from "../../domain/hotel/Hotel"
 
+// Intermediate type returned by parser — includes raw chain/brand strings before FK resolution
+export type HotelRaw = Omit<HotelInput, "chainId" | "brandId"> & {
+  chain?: string | null
+  brand?: string | null
+}
+
 export interface ParseResult {
-  hotels: HotelInput[]
+  hotels: HotelRaw[]
   imported: number
   skipped: number
   warnings: string[]
@@ -156,7 +162,7 @@ export function parseXlsx(buffer: Buffer): ParseResult {
   // e.g. "English Final URL", "Japanese Rooms URL", "Korean Gallery URL"
   const URL_TYPES = ["rooms", "gallery", "dining", "amenities", "location", "reviews", "offers", "events"]
 
-  const hotels: HotelInput[] = []
+  const hotels: HotelRaw[] = []
   let skipped = 0
 
   for (const row of basicRows) {

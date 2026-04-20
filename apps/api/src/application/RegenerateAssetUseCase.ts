@@ -2,19 +2,33 @@ import { LIMITS } from "@hotel-copy/shared"
 import type { AssetType } from "@hotel-copy/shared"
 import { GenerationRepository } from "../infrastructure/prisma/GenerationRepository"
 import { ProjectHotelRepository } from "../infrastructure/prisma/ProjectHotelRepository"
-import { ToneConfigRepository } from "../infrastructure/prisma/ToneConfigRepository"
 import { DomainEventStore } from "../infrastructure/events/DomainEventStore"
 import { makeAIClient } from "../infrastructure/ai/aiClient"
 import type { GeneratedAsset } from "../domain/generation/GeneratedAsset"
-import type { ToneConfig } from "../domain/tone-config/ToneConfig"
 import type { ProjectHotel } from "../domain/hotel/ProjectHotel"
+import type { ChainData } from "../domain/hotel/Chain"
+import type { BrandData } from "../domain/hotel/Brand"
 
-function buildToneText(configs: ToneConfig[], hotel: ProjectHotel): string {
-  const chain = configs.find((c) => c.level === "CHAIN" && hotel.chain && c.entityName.toLowerCase() === hotel.chain.toLowerCase())
-  const brand = configs.find((c) => c.level === "BRAND" && hotel.brand && c.entityName.toLowerCase() === hotel.brand.toLowerCase())
+function hasVoice(entity: ChainData | BrandData): boolean {
+  return !!(entity.tone || entity.copyStyle || entity.prohibitedWords.length > 0 || entity.mandatoryIncludes.length > 0)
+}
+
+function toPromptText(entity: ChainData | BrandData): string {
   const parts: string[] = []
-  if (chain) parts.push(`Chain (${chain.entityName}): ${chain.toPromptText()}`)
-  if (brand) parts.push(`Brand (${brand.entityName}): ${brand.toPromptText()}`)
+  if (entity.tone) parts.push(`Tone: ${entity.tone}`)
+  if (entity.copyStyle) parts.push(`Style: ${entity.copyStyle}`)
+  if (entity.prohibitedWords.length > 0) parts.push(`Prohibited words: ${entity.prohibitedWords.join(", ")}`)
+  if (entity.mandatoryIncludes.length > 0) parts.push(`Must include: ${entity.mandatoryIncludes.join(", ")}`)
+  if (entity.notes) parts.push(`Notes: ${entity.notes}`)
+  return parts.join(". ")
+}
+
+function buildToneText(hotel: ProjectHotel): string {
+  const chain = hotel.chain
+  const brand = hotel.brand
+  const parts: string[] = []
+  if (chain && hasVoice(chain)) parts.push(`Chain (${chain.name}): ${toPromptText(chain)}`)
+  if (brand && hasVoice(brand)) parts.push(`Brand (${brand.name}): ${toPromptText(brand)}`)
   return parts.join("\n") || "No specific tone guidance."
 }
 
@@ -33,12 +47,11 @@ export async function regenerateAsset(
   const hotel = await ProjectHotelRepository.findByProjectAndCode(projectId, existing.hotelCode)
   if (!hotel) throw new Error("Hotel not found")
 
-  const toneConfigs = await ToneConfigRepository.findAll()
   const aiClient = makeAIClient()
 
   const assetType = existing.assetType as AssetType
   const limit = LIMITS[assetType]
-  const toneText = buildToneText(toneConfigs, hotel)
+  const toneText = buildToneText(hotel)
   const languages = generation.languages.length > 0 ? generation.languages : ["en"]
   const langStructure: Record<string, string> = {}
   for (const code of languages) langStructure[code] = "..."
@@ -54,7 +67,7 @@ Output ONLY a valid JSON object with this exact structure (one variant):
 Brand tone: ${toneText}`
 
   const userPrompt = `Hotel: ${hotel.hotelName}
-Chain: ${hotel.chain ?? "N/A"}, Brand: ${hotel.brand ?? "N/A"}
+Chain: ${hotel.chain?.name ?? "N/A"}, Brand: ${hotel.brand?.name ?? "N/A"}
 Country: ${hotel.country ?? "N/A"}, City: ${hotel.city ?? "N/A"}
 Description: ${hotel.description ?? "N/A"}
 Regenerate variant "${existing.variantCode} - ${existing.variantLabel}" in ${languages.length} languages: ${languages.join(", ")}.`

@@ -9,20 +9,22 @@ import {
   AppstoreOutlined,
   BellOutlined,
   QuestionCircleOutlined,
+  TagsOutlined,
 } from "@ant-design/icons"
 import { useNavigate } from "react-router-dom"
 
-type NavKey = "home" | "campaign" | "hotels" | "calendar" | "media" | "analytics"
+type NavKey = "home" | "campaign" | "hotels" | "brands" | "calendar" | "media" | "analytics"
 
 interface Props {
   children: ReactNode
-  activeNav?: NavKey
+  activeNav?: NavKey | string
 }
 
 const NAV_ITEMS: { icon: ReactNode; key: NavKey; path?: string; title?: string }[] = [
   { icon: <HomeOutlined />, key: "home", path: "/dashboard", title: "Dashboard" },
   { icon: <NotificationOutlined />, key: "campaign", title: "Campaigns" },
   { icon: <BankOutlined />, key: "hotels", path: "/hotels", title: "Hotels" },
+  { icon: <TagsOutlined />, key: "brands", path: "/brands", title: "Brands" },
   { icon: <CalendarOutlined />, key: "calendar", title: "Calendar" },
   { icon: <PictureOutlined />, key: "media", title: "Media" },
   { icon: <BarChartOutlined />, key: "analytics", title: "Analytics" },

@@ -6,8 +6,6 @@ export type ProjectStatus = "DRAFT" | "GENERATING" | "IN_REVIEW" | "COMPLETE"
 
 export type GenerationStatus = "PENDING" | "RUNNING" | "COMPLETE" | "FAILED"
 
-export type ToneConfigLevel = "CHAIN" | "BRAND"
-
 export type LanguageCopies = Record<LanguageCode, string>
 
 export interface Project {
@@ -21,12 +19,43 @@ export interface Project {
   updatedAt: string
 }
 
+// Chain — top-level brand hierarchy with tone of voice
+export interface Chain {
+  id: string
+  name: string
+  tone?: string | null
+  prohibitedWords: string[]
+  mandatoryIncludes: string[]
+  copyStyle?: string | null
+  notes?: string | null
+  createdAt: string
+  updatedAt: string
+  deletedAt?: string | null
+}
+
+// Brand — belongs to a Chain; tone fields override chain per-field at generation time
+export interface Brand {
+  id: string
+  name: string
+  chainId: string
+  tone?: string | null
+  prohibitedWords: string[]
+  mandatoryIncludes: string[]
+  copyStyle?: string | null
+  notes?: string | null
+  createdAt: string
+  updatedAt: string
+  deletedAt?: string | null
+}
+
 export interface Hotel {
   id: string
   hotelCode: string
   hotelName: string
-  chain?: string | null
-  brand?: string | null
+  chainId?: string | null
+  brandId?: string | null
+  chainName?: string | null   // resolved from FK join
+  brandName?: string | null   // resolved from FK join
   country?: string | null
   city?: string | null
   starRating?: string | null
@@ -49,8 +78,10 @@ export interface ProjectHotel {
   hotelId: string
   hotelCode: string
   hotelName: string
-  chain?: string | null
-  brand?: string | null
+  chainId?: string | null
+  brandId?: string | null
+  chainName?: string | null
+  brandName?: string | null
   country?: string | null
   city?: string | null
   starRating?: string | null
@@ -76,19 +107,6 @@ export interface GeneratedAsset {
   variantLabel: string
   copies: LanguageCopies
   isEdited: boolean
-  createdAt: string
-  updatedAt: string
-}
-
-export interface ToneConfig {
-  id: string
-  level: ToneConfigLevel
-  entityName: string
-  tone: string
-  prohibitedWords: string[]
-  mandatoryIncludes: string[]
-  copyStyle: string
-  notes?: string
   createdAt: string
   updatedAt: string
 }
