@@ -11,6 +11,8 @@ import DashboardPage from "./pages/DashboardPage"
 import NewProjectPage from "./pages/NewProjectPage"
 import WizardPage from "./pages/WizardPage"
 import SettingsPage from "./pages/SettingsPage"
+import HotelsPage from "./pages/HotelsPage"
+import HotelDetailPage from "./pages/HotelDetailPage"
 
 // Initialise PostHog
 const posthogKey = import.meta.env.VITE_POSTHOG_KEY as string | undefined
@@ -41,6 +43,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/hotels" element={<HotelsPage />} />
+        <Route path="/hotels/:hotelCode" element={<HotelDetailPage />} />
         <Route path="/projects/new" element={<NewProjectPage />} />
         <Route path="/projects/:id/wizard/:step" element={<WizardPage />} />
         <Route path="/projects/:id/wizard" element={<Navigate to="1" replace />} />

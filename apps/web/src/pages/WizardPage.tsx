@@ -55,7 +55,7 @@ export default function WizardPage() {
       try {
         const [project, hotels] = await Promise.all([
           projectsApi.get(id),
-          hotelsApi.list(id),
+          hotelsApi.listForProject(id),
         ])
 
         store.setHotels(hotels)

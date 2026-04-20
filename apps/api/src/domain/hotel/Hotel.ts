@@ -1,12 +1,11 @@
-export interface HotelProfileData {
+export interface HotelData {
   id: string
-  projectId: string
   hotelCode: string
   hotelName: string
-  chain: string
-  brand: string
-  country: string
-  city: string
+  chain?: string | null
+  brand?: string | null
+  country?: string | null
+  city?: string | null
   starRating?: string | null
   roomCount?: number | null
   googlePlaceId?: string | null
@@ -15,17 +14,17 @@ export interface HotelProfileData {
   amenities: Record<string, Record<string, boolean>>
   urls: Record<string, Record<string, string>>
   localNames: Record<string, Record<string, string>>
-  notes?: string | null
-  included: boolean
   createdAt: Date
   updatedAt: Date
+  deletedAt?: Date | null
 }
 
-export class HotelProfile {
-  constructor(private readonly data: HotelProfileData) {}
+export type HotelInput = Omit<HotelData, "id" | "createdAt" | "updatedAt" | "deletedAt">
+
+export class Hotel {
+  constructor(private readonly data: HotelData) {}
 
   get id() { return this.data.id }
-  get projectId() { return this.data.projectId }
   get hotelCode() { return this.data.hotelCode }
   get hotelName() { return this.data.hotelName }
   get chain() { return this.data.chain }
@@ -34,13 +33,13 @@ export class HotelProfile {
   get city() { return this.data.city }
   get starRating() { return this.data.starRating }
   get roomCount() { return this.data.roomCount }
+  get googlePlaceId() { return this.data.googlePlaceId }
   get description() { return this.data.description }
   get categories() { return this.data.categories }
   get amenities() { return this.data.amenities }
   get urls() { return this.data.urls }
   get localNames() { return this.data.localNames }
-  get notes() { return this.data.notes }
-  get included() { return this.data.included }
+  get deletedAt() { return this.data.deletedAt }
 
   activeCategories(): string[] {
     return Object.entries(this.data.categories)
@@ -58,7 +57,7 @@ export class HotelProfile {
     return result
   }
 
-  toData(): HotelProfileData {
+  toData(): HotelData {
     return { ...this.data }
   }
 }

@@ -1,17 +1,17 @@
 import { LIMITS } from "@hotel-copy/shared"
 import type { AssetType } from "@hotel-copy/shared"
 import { GenerationRepository } from "../infrastructure/prisma/GenerationRepository"
-import { HotelRepository } from "../infrastructure/prisma/HotelRepository"
+import { ProjectHotelRepository } from "../infrastructure/prisma/ProjectHotelRepository"
 import { ToneConfigRepository } from "../infrastructure/prisma/ToneConfigRepository"
 import { DomainEventStore } from "../infrastructure/events/DomainEventStore"
 import { makeAIClient } from "../infrastructure/ai/aiClient"
 import type { GeneratedAsset } from "../domain/generation/GeneratedAsset"
 import type { ToneConfig } from "../domain/tone-config/ToneConfig"
-import type { HotelProfile } from "../domain/hotel/HotelProfile"
+import type { ProjectHotel } from "../domain/hotel/ProjectHotel"
 
-function buildToneText(configs: ToneConfig[], hotel: HotelProfile): string {
-  const chain = configs.find((c) => c.level === "CHAIN" && c.entityName.toLowerCase() === hotel.chain.toLowerCase())
-  const brand = configs.find((c) => c.level === "BRAND" && c.entityName.toLowerCase() === hotel.brand.toLowerCase())
+function buildToneText(configs: ToneConfig[], hotel: ProjectHotel): string {
+  const chain = configs.find((c) => c.level === "CHAIN" && hotel.chain && c.entityName.toLowerCase() === hotel.chain.toLowerCase())
+  const brand = configs.find((c) => c.level === "BRAND" && hotel.brand && c.entityName.toLowerCase() === hotel.brand.toLowerCase())
   const parts: string[] = []
   if (chain) parts.push(`Chain (${chain.entityName}): ${chain.toPromptText()}`)
   if (brand) parts.push(`Brand (${brand.entityName}): ${brand.toPromptText()}`)
@@ -30,7 +30,7 @@ export async function regenerateAsset(
   const generation = await GenerationRepository.findById(generationId)
   if (!generation) throw new Error("Generation not found")
 
-  const hotel = await HotelRepository.findByCode(projectId, existing.hotelCode)
+  const hotel = await ProjectHotelRepository.findByProjectAndCode(projectId, existing.hotelCode)
   if (!hotel) throw new Error("Hotel not found")
 
   const toneConfigs = await ToneConfigRepository.findAll()
@@ -54,8 +54,8 @@ Output ONLY a valid JSON object with this exact structure (one variant):
 Brand tone: ${toneText}`
 
   const userPrompt = `Hotel: ${hotel.hotelName}
-Chain: ${hotel.chain}, Brand: ${hotel.brand}
-Country: ${hotel.country}, City: ${hotel.city}
+Chain: ${hotel.chain ?? "N/A"}, Brand: ${hotel.brand ?? "N/A"}
+Country: ${hotel.country ?? "N/A"}, City: ${hotel.city ?? "N/A"}
 Description: ${hotel.description ?? "N/A"}
 Regenerate variant "${existing.variantCode} - ${existing.variantLabel}" in ${languages.length} languages: ${languages.join(", ")}.`
 

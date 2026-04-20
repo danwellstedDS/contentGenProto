@@ -49,7 +49,7 @@ export const ProjectRepository = {
     const source = await prisma.project.findUnique({ where: { id: projectId } })
     if (!source || source.userId !== userId) throw new Error("Not found")
 
-    const hotels = await prisma.hotelProfile.findMany({ where: { projectId } })
+    const projectHotels = await prisma.projectHotel.findMany({ where: { projectId } })
 
     const newProject = await prisma.project.create({
       data: {
@@ -61,19 +61,13 @@ export const ProjectRepository = {
       },
     })
 
-    if (hotels.length > 0) {
-      await prisma.hotelProfile.createMany({
-        data: hotels.map(({ id: _id, projectId: _pid, createdAt: _ca, updatedAt: _ua, ...rest }) => ({
-          ...rest,
+    if (projectHotels.length > 0) {
+      await prisma.projectHotel.createMany({
+        data: projectHotels.map(({ hotelId, notes, included }) => ({
           projectId: newProject.id,
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          categories: rest.categories as any,
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          amenities: rest.amenities as any,
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          urls: rest.urls as any,
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          localNames: rest.localNames as any,
+          hotelId,
+          notes,
+          included,
         })),
       })
     }

@@ -1,7 +1,8 @@
 import axios from "axios"
 import type { AxiosInstance } from "axios"
 import type {
-  HotelProfile,
+  Hotel,
+  ProjectHotel,
   ToneConfig,
   Generation,
   GeneratedAsset,
@@ -81,25 +82,54 @@ export const projectsApi = {
   },
 }
 
-// Hotels
+// Hotels — library-level operations
 export const hotelsApi = {
-  import: async (projectId: string, file: File, mode: "replace" | "merge" = "merge") => {
+  // Library
+  import: async (file: File, mode: "replace" | "merge" = "merge") => {
     const form = new FormData()
     form.append("file", file)
     form.append("mode", mode)
     const { data } = await http.post<{ imported: number; skipped: number; warnings: string[] }>(
-      `/projects/${projectId}/import`,
+      "/hotels/import",
       form,
       { headers: { "Content-Type": "multipart/form-data" } }
     )
     return data
   },
-  list: async (projectId: string) => {
-    const { data } = await http.get<HotelProfile[]>(`/projects/${projectId}/hotels`)
+  list: async (opts?: { search?: string; chain?: string }) => {
+    const params = new URLSearchParams()
+    if (opts?.search) params.set("search", opts.search)
+    if (opts?.chain) params.set("chain", opts.chain)
+    const query = params.toString()
+    const { data } = await http.get<Hotel[]>(`/hotels${query ? `?${query}` : ""}`)
     return data
   },
-  patch: async (projectId: string, hotelCode: string, body: { notes?: string; included?: boolean }) => {
-    const { data } = await http.patch<HotelProfile>(`/projects/${projectId}/hotels/${hotelCode}`, body)
+  get: async (hotelCode: string) => {
+    const { data } = await http.get<Hotel>(`/hotels/${hotelCode}`)
+    return data
+  },
+  patch: async (hotelCode: string, body: Partial<Omit<Hotel, "id" | "hotelCode" | "createdAt" | "updatedAt" | "deletedAt">>) => {
+    const { data } = await http.patch<Hotel>(`/hotels/${hotelCode}`, body)
+    return data
+  },
+  softDelete: async (hotelCode: string) => {
+    await http.delete(`/hotels/${hotelCode}`)
+  },
+
+  // Per-project
+  listForProject: async (projectId: string) => {
+    const { data } = await http.get<ProjectHotel[]>(`/projects/${projectId}/hotels`)
+    return data
+  },
+  addToProject: async (projectId: string, hotelCode: string) => {
+    const { data } = await http.post<ProjectHotel>(`/projects/${projectId}/hotels`, { hotelCode })
+    return data
+  },
+  removeFromProject: async (projectId: string, hotelCode: string) => {
+    await http.delete(`/projects/${projectId}/hotels/${hotelCode}`)
+  },
+  patchProjectHotel: async (projectId: string, hotelCode: string, body: { notes?: string | null; included?: boolean }) => {
+    const { data } = await http.patch<ProjectHotel>(`/projects/${projectId}/hotels/${hotelCode}`, body)
     return data
   },
   selection: async (projectId: string, action: "all" | "none") => {

@@ -35,7 +35,7 @@ model Project {
   deletedAt       DateTime?
   createdAt       DateTime       @default(now())
   updatedAt       DateTime       @updatedAt
-  hotels          HotelProfile[]
+  hotels          ProjectHotel[]
   generations     Generation[]
   events          DomainEvent[]
 
@@ -49,30 +49,49 @@ enum ProjectStatus {
   COMPLETE
 }
 
-model HotelProfile {
-  id            String   @id @default(cuid())
-  projectId     String
-  project       Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
-  hotelCode     String
+// Hotel library — one record per hotel, shared across projects
+model Hotel {
+  id            String    @id @default(cuid())
+  hotelCode     String    @unique
   hotelName     String
-  chain         String
-  brand         String
-  country       String
-  city          String
+  chain         String?
+  brand         String?
+  country       String?
+  city          String?
   starRating    String?
   roomCount     Int?
   googlePlaceId String?
   description   String?
-  categories    Json // { airportHotel: boolean, beachFront: boolean, ... }
-  amenities     Json // { freeWifi: boolean, pool: boolean, ... }
-  urls          Json // { en: { homepage: string, rooms: string, ... }, ja: {...}, ... }
-  localNames    Json // { ja: { hotelName, brand, chain, country, city }, zh_tw: {...}, ... }
-  notes         String?  // Manual enrichment notes
-  included      Boolean  @default(true)
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  categories    Json      @default("{}")
+  amenities     Json      @default("{}")
+  urls          Json      @default("{}")
+  localNames    Json      @default("{}")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  deletedAt     DateTime?
 
-  @@unique([projectId, hotelCode])
+  projects      ProjectHotel[]
+
+  @@index([chain])
+  @@index([brand])
+  @@index([deletedAt])
+}
+
+// Join table — links hotels to projects, carries per-project metadata
+model ProjectHotel {
+  id        String   @id @default(cuid())
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  hotelId   String
+  hotel     Hotel    @relation(fields: [hotelId], references: [id], onDelete: Cascade)
+  notes     String?
+  included  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([projectId, hotelId])
+  @@index([projectId])
+  @@index([hotelId])
 }
 
 model ToneConfig {

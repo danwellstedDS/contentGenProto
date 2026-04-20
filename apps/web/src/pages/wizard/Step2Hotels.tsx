@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { hotelsApi } from "../../services/api"
+import type { ProjectHotel } from "@hotel-copy/shared"
 import { useWizardStore } from "../../store/wizardStore"
 import WizardActionBar from "../../components/WizardActionBar"
 
@@ -17,7 +18,7 @@ export default function Step2Hotels() {
 
   useEffect(() => {
     if (hotels.length === 0 && id) {
-      hotelsApi.list(id).then(setHotels)
+      hotelsApi.listForProject(id).then((data: ProjectHotel[]) => setHotels(data))
     }
   }, [id])
 
