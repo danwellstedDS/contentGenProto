@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom"
-import { Button, Tag, Flex } from "@derbysoft/neat-design"
+import { Tag } from "@derbysoft/neat-design"
 import { useWizardStore } from "../../store/wizardStore"
+import WizardActionBar from "../../components/WizardActionBar"
 
 export default function Step4CampaignType() {
   const { id } = useParams<{ id: string }>()
@@ -10,6 +11,10 @@ export default function Step4CampaignType() {
   function selectPPC() {
     setCampaignType("PPC")
     navigate(`/projects/${id}/wizard/5`)
+  }
+
+  function handleNext() {
+    if (campaignType) navigate(`/projects/${id}/wizard/5`)
   }
 
   return (
@@ -48,10 +53,18 @@ export default function Step4CampaignType() {
         </div>
       </div>
 
-      <div className="step-nav">
-        <Button onClick={() => navigate(`/projects/${id}/wizard/3`)}>← Back</Button>
-        <span />
-      </div>
+      <WizardActionBar
+        onBack={() => navigate(`/projects/${id}/wizard/3`)}
+        summary={
+          campaignType
+            ? <span className="wab-summary-primary">{campaignType} selected</span>
+            : <span className="wab-summary-hint">Select a campaign type to continue.</span>
+        }
+        primaryLabel="Next: Context →"
+        onPrimary={handleNext}
+        primaryDisabled={!campaignType}
+        primaryTooltip="Select a campaign type to continue"
+      />
     </div>
   )
 }

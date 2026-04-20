@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import { Button, Input, Flex } from "@derbysoft/neat-design"
+import { Input, Flex } from "@derbysoft/neat-design"
 import { generationApi } from "../../services/api"
 import { useWizardStore } from "../../store/wizardStore"
+import WizardActionBar from "../../components/WizardActionBar"
 
 const SUGGESTED_BRIEFS = [
   "Summer holiday campaign targeting leisure travellers and couples. Aspirational and inspirational tone. Highlight your property's unique character and local experiences.",
@@ -97,17 +98,14 @@ export default function Step6ContextPrompt() {
 
       {error && <p className="step-error">{error}</p>}
 
-      <div className="step-nav">
-        <Button onClick={() => navigate(`/projects/${id}/wizard/5`)} disabled={triggering}>← Back</Button>
-        <Button
-          type="primary"
-          onClick={handleGenerate}
-          loading={triggering}
-          disabled={triggering}
-        >
-          {triggering ? "Starting…" : "Generate →"}
-        </Button>
-      </div>
+      <WizardActionBar
+        onBack={() => navigate(`/projects/${id}/wizard/5`)}
+        backDisabled={triggering}
+        primaryLabel="Generate →"
+        onPrimary={handleGenerate}
+        primaryDisabled={triggering}
+        primaryLoading={triggering}
+      />
     </div>
   )
 }
