@@ -6,6 +6,7 @@ services:
       npm install &&
       VITE_API_URL="" VITE_POSTHOG_KEY=$VITE_POSTHOG_KEY VITE_POSTHOG_HOST=$VITE_POSTHOG_HOST
       npm run build -w apps/web &&
+      npm run build -w packages/shared &&
       npx prisma generate --schema=apps/api/prisma/schema.prisma &&
       npm run build -w apps/api
     startCommand: npx prisma migrate deploy --schema=apps/api/prisma/schema.prisma && node apps/api/dist/apps/api/src/index.js
