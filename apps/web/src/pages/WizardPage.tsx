@@ -53,12 +53,15 @@ export default function WizardPage() {
 
     ;(async () => {
       try {
-        const [project, hotels] = await Promise.all([
+        const [project, projectHotels, libraryHotels] = await Promise.all([
           projectsApi.get(id),
           hotelsApi.listForProject(id),
+          hotelsApi.list(),
         ])
 
-        store.setHotels(hotels)
+        const linkedCodes = projectHotels.map((h) => h.hotelCode)
+        // Pre-select linked hotels; if none yet (new project), select all
+        store.setHotels(libraryHotels, linkedCodes.length > 0 ? linkedCodes : undefined)
 
         if (project.campaignType) {
           store.setCampaignType(project.campaignType as "PPC" | "PMAX")
@@ -66,7 +69,7 @@ export default function WizardPage() {
 
         const target = targetStepForStatus(
           project.status,
-          hotels.length > 0,
+          projectHotels.length > 0,
           !!project.campaignType
         )
 
