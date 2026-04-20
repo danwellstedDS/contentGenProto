@@ -6,12 +6,19 @@ import path from "path"
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: {
-      // Resolve workspace packages directly to their TypeScript source so
-      // Vite processes them natively. Remove @derbysoft/neat alias once the
-      // real package is installed from npm.
-      "@hotel-copy/shared": path.resolve(__dirname, "../../packages/shared/src/index.ts"),
-    },
+    alias: [
+      // Redirect neat-design-icons CJS sub-path imports to ESM equivalents.
+      // 68 files in packages/vendor/neat-design/es/ import from /lib/ instead
+      // of /es/ — Rollup rejects this in production without this redirect.
+      {
+        find: /@derbysoft\/neat-design-icons\/lib\/(.*)/,
+        replacement: "@derbysoft/neat-design-icons/es/$1",
+      },
+      {
+        find: "@hotel-copy/shared",
+        replacement: path.resolve(__dirname, "../../packages/shared/src/index.ts"),
+      },
+    ],
   },
   server: {
     port: 5173,
