@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { hotelsApi } from "../../services/api"
-import type { ProjectHotel } from "@hotel-copy/shared"
 import { useWizardStore } from "../../store/wizardStore"
 import WizardActionBar from "../../components/WizardActionBar"
 
@@ -15,10 +14,22 @@ export default function Step2Hotels() {
 
   const [searchQuery, setSearchQuery] = useState("")
   const [brandFilter, setBrandFilter] = useState("")
+  const [syncing, setSyncing] = useState(false)
+  // Track which hotel codes are already linked to the project so we know what to add/remove
+  const [linkedCodes, setLinkedCodes] = useState<Set<string>>(new Set())
 
   useEffect(() => {
     if (hotels.length === 0 && id) {
-      hotelsApi.listForProject(id).then((data: ProjectHotel[]) => setHotels(data))
+      // Load library hotels and project-linked hotels in parallel
+      Promise.all([
+        hotelsApi.list(),
+        hotelsApi.listForProject(id),
+      ]).then(([libraryHotels, projectHotels]) => {
+        const linked = projectHotels.map((h) => h.hotelCode)
+        setLinkedCodes(new Set(linked))
+        // Pre-select linked hotels; if none linked yet (new project), select all
+        setHotels(libraryHotels, linked.length > 0 ? linked : undefined)
+      })
     }
   }, [id])
 
@@ -63,8 +74,19 @@ export default function Step2Hotels() {
     deselectCodes(filtered.map((h) => h.hotelCode))
   }
 
-  function handleContinue() {
-    if (!canContinue) return
+  async function handleContinue() {
+    if (!canContinue || !id) return
+    setSyncing(true)
+
+    // Sync selections → ProjectHotel records
+    const toAdd = hotels.filter((h) => selectedHotelCodes.has(h.hotelCode) && !linkedCodes.has(h.hotelCode))
+    const toRemove = hotels.filter((h) => linkedCodes.has(h.hotelCode) && !selectedHotelCodes.has(h.hotelCode))
+
+    await Promise.all([
+      ...toAdd.map((h) => hotelsApi.addToProject(id, h.hotelCode)),
+      ...toRemove.map((h) => hotelsApi.removeFromProject(id, h.hotelCode)),
+    ])
+
     advanceTo(3)
     navigate(`/projects/${id}/wizard/3`)
   }
@@ -95,7 +117,6 @@ export default function Step2Hotels() {
 
   return (
     <div className="hotels-step">
-      {/* Header */}
       <div className="hotels-step-header">
         <div className="step-heading">
           <h2>Select hotels</h2>
@@ -133,7 +154,6 @@ export default function Step2Hotels() {
         )}
       </div>
 
-      {/* Hotel list */}
       <div className="hotels-step-list">
         {filtered.length === 0 ? (
           <p className="hotels-empty">No hotels match your filters.</p>
@@ -149,7 +169,8 @@ export default function Step2Hotels() {
                 <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   <span className="hotel-row-name">{hotel.hotelName}</span>
                   <span className="hotel-row-meta">
-                    {hotel.hotelCode} · {hotel.city}, {hotel.country}
+                    {hotel.hotelCode}
+                    {hotel.city && hotel.country ? ` · ${hotel.city}, ${hotel.country}` : ""}
                   </span>
                 </div>
                 <div className="hotel-row-right">
@@ -183,7 +204,8 @@ export default function Step2Hotels() {
         extra={actionBarExtra}
         primaryLabel="Continue to review →"
         onPrimary={handleContinue}
-        primaryDisabled={!canContinue}
+        primaryDisabled={!canContinue || syncing}
+        primaryLoading={syncing}
         primaryTooltip="Select at least one hotel to continue"
       />
     </div>
