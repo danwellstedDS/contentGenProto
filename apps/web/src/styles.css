@@ -247,7 +247,8 @@ body {
   color: #fff;
 }
 
-.wizard-meta-item.completed .wizard-meta-num {
+.wizard-meta-item.completed .wizard-meta-num,
+.wizard-meta-num--done {
   background: #52c41a;
   color: #fff;
 }
@@ -438,6 +439,165 @@ body {
   font-size: 12px;
   color: #aaa;
   margin-top: 4px;
+}
+
+/* ─── Import summary card (State B) ─────────────────────────────────────── */
+
+.import-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 24px;
+  background: #f6fffe;
+  border: 1px solid #b7ebe8;
+  border-radius: 10px;
+}
+
+.import-summary-card--loading {
+  background: #fafbfc;
+  border-color: #e8e8e8;
+  justify-content: center;
+}
+
+.import-summary-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.import-summary-count {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0a1628;
+  line-height: 1;
+}
+
+.import-summary-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.import-summary-meta {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.5;
+}
+
+.import-summary-filename {
+  color: #555;
+  font-weight: 500;
+}
+
+.import-replace-heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.import-warnings {
+  background: #fafbfc;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 13px;
+}
+
+.import-warnings ul {
+  margin: 6px 0 0;
+  padding-left: 20px;
+  color: #666;
+}
+
+/* ─── Import mode modal ──────────────────────────────────────────────────── */
+
+.import-modal-body {
+  padding: 4px 0 8px;
+}
+
+.import-modal-preview {
+  font-size: 14px;
+  color: #444;
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.import-modal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.import-modal-option {
+  padding: 14px 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.import-modal-option strong {
+  font-size: 13px;
+  color: #0a1628;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.import-modal-option p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.import-modal-option--danger {
+  border-color: #ffd6d9;
+  background: #fff8f8;
+}
+
+.import-modal-option--danger strong {
+  color: #c0392b;
+}
+
+.import-modal-btn {
+  height: 32px;
+  padding: 0 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.import-modal-btn--secondary {
+  background: #fff;
+  border-color: #d9d9d9;
+  color: #333;
+}
+
+.import-modal-btn--secondary:hover {
+  border-color: #aaa;
+}
+
+.import-modal-btn--primary {
+  background: #00b2a9;
+  color: #fff;
+}
+
+.import-modal-btn--primary:hover {
+  background: #009990;
+}
+
+.import-modal-btn--danger {
+  background: #e5374b;
+  color: #fff;
+}
+
+.import-modal-btn--danger:hover {
+  background: #c92e3f;
 }
 
 /* ─── Hotel selection rows ───────────────────────────────────────────────── */

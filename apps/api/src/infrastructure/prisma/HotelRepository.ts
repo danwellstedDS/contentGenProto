@@ -56,4 +56,8 @@ export const HotelRepository = {
       data: { included },
     })
   },
+
+  async deleteByProject(projectId: string): Promise<void> {
+    await prisma.hotelProfile.deleteMany({ where: { projectId } })
+  },
 }

@@ -22,6 +22,7 @@ export default function WizardMetaIndicator({ currentStep }: Props) {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const maxReachedStep = useWizardStore((s) => s.maxReachedStep)
+  const hotelsLoaded = useWizardStore((s) => s.hotels.length > 0)
 
   return (
     <div className="wizard-meta-sidebar">
@@ -47,8 +48,8 @@ export default function WizardMetaIndicator({ currentStep }: Props) {
             onClick={handleClick}
             role={isCompleted ? "button" : undefined}
           >
-            <div className="wizard-meta-num">
-              {isCompleted ? "✓" : idx + 1}
+            <div className={`wizard-meta-num${idx === 0 && hotelsLoaded && !isCompleted ? " wizard-meta-num--done" : ""}`}>
+              {isCompleted || (idx === 0 && hotelsLoaded) ? "✓" : idx + 1}
             </div>
             <div className="wizard-meta-labels">
               <span className="wizard-meta-label">{meta.label}</span>
