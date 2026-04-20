@@ -26,8 +26,11 @@ export async function importRoutes(app: FastifyInstance) {
     }
     const buffer = Buffer.concat(chunks)
 
+    const modeField = (data.fields?.mode as { value?: string } | undefined)?.value
+    const mode: "replace" | "merge" = modeField === "replace" ? "replace" : "merge"
+
     try {
-      const result = await importHotels(req.params.id, sub, buffer)
+      const result = await importHotels(req.params.id, sub, buffer, mode)
       return { imported: result.imported, skipped: result.skipped, warnings: result.warnings }
     } catch (err) {
       const message = err instanceof Error ? err.message : "Parse error"

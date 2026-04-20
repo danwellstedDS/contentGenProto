@@ -83,9 +83,10 @@ export const projectsApi = {
 
 // Hotels
 export const hotelsApi = {
-  import: async (projectId: string, file: File) => {
+  import: async (projectId: string, file: File, mode: "replace" | "merge" = "merge") => {
     const form = new FormData()
     form.append("file", file)
+    form.append("mode", mode)
     const { data } = await http.post<{ imported: number; skipped: number; warnings: string[] }>(
       `/projects/${projectId}/import`,
       form,

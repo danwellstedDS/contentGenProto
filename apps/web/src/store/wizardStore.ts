@@ -3,7 +3,7 @@ import type { HotelProfile, GeneratedAsset } from "@hotel-copy/shared"
 
 export interface WizardState {
   // Step 1 — import result
-  importResult: { imported: number; skipped: number; warnings: string[] } | null
+  importResult: { imported: number; skipped: number; warnings: string[]; fileName?: string } | null
 
   // Step 2 — hotel selection
   hotels: HotelProfile[]
