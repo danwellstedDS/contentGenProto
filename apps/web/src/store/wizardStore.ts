@@ -1,9 +1,9 @@
 import { create } from "zustand"
-import type { ProjectHotel, GeneratedAsset } from "@hotel-copy/shared"
+import type { Hotel, GeneratedAsset } from "@hotel-copy/shared"
 
 export interface WizardState {
-  // Step 2 — hotel selection
-  hotels: ProjectHotel[]
+  // Step 2 — hotel selection (library hotels; selectedHotelCodes tracks which are linked to this project)
+  hotels: Hotel[]
   selectedHotelCodes: Set<string>
 
   // Step 3 — language selection
@@ -34,7 +34,8 @@ export interface WizardState {
   maxReachedStep: number
 
   // Actions
-  setHotels: (hotels: ProjectHotel[]) => void
+  // linkedCodes: hotel codes already linked to the project; omit → select all (new project default)
+  setHotels: (hotels: Hotel[], linkedCodes?: string[]) => void
   toggleHotel: (code: string) => void
   selectAllHotels: () => void
   deselectAllHotels: () => void
@@ -78,9 +79,12 @@ const initialState = {
 export const useWizardStore = create<WizardState>((set, get) => ({
   ...initialState,
 
-  setHotels: (hotels) => {
-    const includedCodes = new Set(hotels.filter((h) => h.included).map((h) => h.hotelCode))
-    set({ hotels, selectedHotelCodes: includedCodes })
+  setHotels: (hotels, linkedCodes) => {
+    // If linkedCodes provided, pre-select those. If not (new project), select all by default.
+    const selectedHotelCodes = linkedCodes
+      ? new Set(linkedCodes)
+      : new Set(hotels.map((h) => h.hotelCode))
+    set({ hotels, selectedHotelCodes })
   },
 
   toggleHotel: (code) => {
