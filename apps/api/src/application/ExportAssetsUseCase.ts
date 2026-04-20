@@ -1,7 +1,7 @@
 import Papa from "papaparse"
 import { VARIANTS, LANGUAGES, LIMITS } from "@hotel-copy/shared"
 import { GenerationRepository } from "../infrastructure/prisma/GenerationRepository"
-import { HotelRepository } from "../infrastructure/prisma/HotelRepository"
+import { ProjectHotelRepository } from "../infrastructure/prisma/ProjectHotelRepository"
 import { DomainEventStore } from "../infrastructure/events/DomainEventStore"
 import { countCharacters } from "@hotel-copy/shared"
 import type { AssetType } from "@hotel-copy/shared"
@@ -34,9 +34,9 @@ export async function exportAssets(
   const allAssets = await GenerationRepository.findAssets(generationId)
   const assets = allAssets.filter((a) => a.assetType === assetType)
 
-  const hotels = await HotelRepository.findByProject(projectId)
+  const hotels = await ProjectHotelRepository.findByProject(projectId)
   const hotelChain: Record<string, string> = {}
-  for (const h of hotels) hotelChain[h.hotelCode] = h.chain
+  for (const h of hotels) hotelChain[h.hotelCode] = h.chain ?? ""
 
   const limit = LIMITS[assetType]
   let violationCount = 0

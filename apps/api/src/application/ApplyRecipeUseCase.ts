@@ -1,5 +1,5 @@
 import { GenerationRepository } from "../infrastructure/prisma/GenerationRepository"
-import { HotelRepository } from "../infrastructure/prisma/HotelRepository"
+import { ProjectHotelRepository } from "../infrastructure/prisma/ProjectHotelRepository"
 import { DomainEventStore } from "../infrastructure/events/DomainEventStore"
 import { runGenerationJob } from "./TriggerGenerationUseCase"
 
@@ -17,7 +17,7 @@ export async function applyRecipe(
   // Persist the recipe on the generation record
   await GenerationRepository.updateRecipe(generationId, recipe)
 
-  const hotels = await HotelRepository.findByProject(projectId)
+  const hotels = await ProjectHotelRepository.findByProject(projectId)
   const remainingCount = hotels.filter(
     (h) => h.included && h.hotelCode !== anchorHotelCode
   ).length

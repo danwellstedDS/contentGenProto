@@ -1,11 +1,11 @@
 import { VARIANTS, LIMITS, LANGUAGES } from "@hotel-copy/shared"
 import type { AssetType, LanguageCode } from "@hotel-copy/shared"
-import { HotelRepository } from "../infrastructure/prisma/HotelRepository"
+import { ProjectHotelRepository } from "../infrastructure/prisma/ProjectHotelRepository"
 import { ToneConfigRepository } from "../infrastructure/prisma/ToneConfigRepository"
 import { GenerationRepository } from "../infrastructure/prisma/GenerationRepository"
 import { DomainEventStore } from "../infrastructure/events/DomainEventStore"
 import { makeAIClient } from "../infrastructure/ai/aiClient"
-import type { HotelProfile } from "../domain/hotel/HotelProfile"
+import type { ProjectHotel } from "../domain/hotel/ProjectHotel"
 import type { ToneConfig } from "../domain/tone-config/ToneConfig"
 
 const ASSET_TYPES: AssetType[] = ["HEADLINE", "DESCRIPTION", "LONG_HEADLINE"]
@@ -23,9 +23,9 @@ async function withConcurrency<T>(items: T[], limit: number, fn: (item: T) => Pr
   await Promise.allSettled(workers)
 }
 
-function buildToneText(configs: ToneConfig[], hotel: HotelProfile): string {
-  const chain = configs.find((c) => c.level === "CHAIN" && c.entityName.toLowerCase() === hotel.chain.toLowerCase())
-  const brand = configs.find((c) => c.level === "BRAND" && c.entityName.toLowerCase() === hotel.brand.toLowerCase())
+function buildToneText(configs: ToneConfig[], hotel: ProjectHotel): string {
+  const chain = configs.find((c) => c.level === "CHAIN" && hotel.chain && c.entityName.toLowerCase() === hotel.chain.toLowerCase())
+  const brand = configs.find((c) => c.level === "BRAND" && hotel.brand && c.entityName.toLowerCase() === hotel.brand.toLowerCase())
   const parts: string[] = []
   if (chain) parts.push(`Chain (${chain.entityName}): ${chain.toPromptText()}`)
   if (brand) parts.push(`Brand (${brand.entityName}): ${brand.toPromptText()}`)
@@ -40,7 +40,7 @@ function buildLanguageStructure(langCodes: string[]): string {
 
 async function generateForHotel(
   generationId: string,
-  hotel: HotelProfile,
+  hotel: ProjectHotel,
   toneConfigs: ToneConfig[],
   assetType: AssetType,
   languages: string[],
@@ -80,9 +80,9 @@ ${toneText}`
 
   const userPrompt = `Hotel: ${hotel.hotelName}
 Local names: ${JSON.stringify(hotel.localNames)}
-Chain: ${hotel.chain}
-Brand: ${hotel.brand}
-Country: ${hotel.country}, City: ${hotel.city}
+Chain: ${hotel.chain ?? "N/A"}
+Brand: ${hotel.brand ?? "N/A"}
+Country: ${hotel.country ?? "N/A"}, City: ${hotel.city ?? "N/A"}
 Star rating: ${hotel.starRating ?? "N/A"}
 Rooms: ${hotel.roomCount ?? "N/A"}
 Description: ${hotel.description ?? "N/A"}
@@ -157,14 +157,14 @@ export async function runGenerationJob(
   await GenerationRepository.updateStatus(generationId, "RUNNING")
 
   try {
-    const hotels = await HotelRepository.findByProject(projectId)
-    const included = hotels.filter(
+    const projectHotels = await ProjectHotelRepository.findByProject(projectId)
+    const included = projectHotels.filter(
       (h) => h.included && !(excludeHotelCodes?.includes(h.hotelCode))
     )
     const toneConfigs = await ToneConfigRepository.findAll()
     const aiClient = makeAIClient()
 
-    const tasks: Array<{ hotel: HotelProfile; assetType: AssetType }> = []
+    const tasks: Array<{ hotel: ProjectHotel; assetType: AssetType }> = []
 
     if (lockedAssetIds && lockedAssetIds.length > 0) {
       // Only regenerate assets not in lockedAssetIds

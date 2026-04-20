@@ -1,69 +1,69 @@
 import type { FastifyInstance } from "fastify"
 import { ProjectRepository } from "../infrastructure/prisma/ProjectRepository"
+import { ProjectHotelRepository } from "../infrastructure/prisma/ProjectHotelRepository"
 import { HotelRepository } from "../infrastructure/prisma/HotelRepository"
 import { DomainEventStore } from "../infrastructure/events/DomainEventStore"
-import { importHotels } from "../application/ImportHotelsUseCase"
 
 export async function importRoutes(app: FastifyInstance) {
   const auth = { onRequest: [app.authenticate] }
 
-  // POST /projects/:id/import
-  app.post<{ Params: { id: string } }>("/projects/:id/import", auth, async (req, reply) => {
-    const { sub } = req.user as { sub: string }
-    const project = await ProjectRepository.findById(req.params.id)
-    if (!project || project.userId !== sub) {
-      return reply.status(404).send({ error: "Not found" })
-    }
-
-    const data = await req.file()
-    if (!data) {
-      return reply.status(400).send({ error: "No file uploaded" })
-    }
-
-    const chunks: Buffer[] = []
-    for await (const chunk of data.file) {
-      chunks.push(chunk as Buffer)
-    }
-    const buffer = Buffer.concat(chunks)
-
-    const modeField = (data.fields?.mode as { value?: string } | undefined)?.value
-    const mode: "replace" | "merge" = modeField === "replace" ? "replace" : "merge"
-
-    try {
-      const result = await importHotels(req.params.id, sub, buffer, mode)
-      return { imported: result.imported, skipped: result.skipped, warnings: result.warnings }
-    } catch (err) {
-      const message = err instanceof Error ? err.message : "Parse error"
-      return reply.status(422).send({ error: message })
-    }
-  })
-
-  // GET /projects/:id/hotels
+  // GET /projects/:id/hotels — list hotels linked to this project
   app.get<{ Params: { id: string } }>("/projects/:id/hotels", auth, async (req, reply) => {
     const { sub } = req.user as { sub: string }
     const project = await ProjectRepository.findById(req.params.id)
     if (!project || project.userId !== sub) {
       return reply.status(404).send({ error: "Not found" })
     }
-    const hotels = await HotelRepository.findByProject(req.params.id)
+    const hotels = await ProjectHotelRepository.findByProject(req.params.id)
     return hotels.map((h) => h.toData())
   })
 
-  // PATCH /projects/:id/hotels/:hotelCode
+  // POST /projects/:id/hotels — add a hotel from the library to this project
+  app.post<{
+    Params: { id: string }
+    Body: { hotelCode: string }
+  }>("/projects/:id/hotels", auth, async (req, reply) => {
+    const { sub } = req.user as { sub: string }
+    const project = await ProjectRepository.findById(req.params.id)
+    if (!project || project.userId !== sub) {
+      return reply.status(404).send({ error: "Not found" })
+    }
+    const hotel = await HotelRepository.findByCode(req.body.hotelCode)
+    if (!hotel) {
+      return reply.status(404).send({ error: "Hotel not found in library" })
+    }
+    const ph = await ProjectHotelRepository.addHotelToProject(req.params.id, hotel.id)
+    return reply.status(201).send(ph.toData())
+  })
+
+  // PATCH /projects/:id/hotels/:hotelCode — update per-project metadata (notes, included)
   app.patch<{
     Params: { id: string; hotelCode: string }
-    Body: { notes?: string; included?: boolean }
+    Body: { notes?: string | null; included?: boolean }
   }>("/projects/:id/hotels/:hotelCode", auth, async (req, reply) => {
     const { sub } = req.user as { sub: string }
     const project = await ProjectRepository.findById(req.params.id)
     if (!project || project.userId !== sub) {
       return reply.status(404).send({ error: "Not found" })
     }
-    const hotel = await HotelRepository.patch(req.params.id, req.params.hotelCode, req.body)
-    return hotel.toData()
+    const ph = await ProjectHotelRepository.patchProjectHotel(req.params.id, req.params.hotelCode, req.body)
+    return ph.toData()
   })
 
-  // POST /projects/:id/hotels/selection
+  // DELETE /projects/:id/hotels/:hotelCode — remove hotel link from this project
+  app.delete<{
+    Params: { id: string; hotelCode: string }
+  }>("/projects/:id/hotels/:hotelCode", auth, async (req, reply) => {
+    const { sub } = req.user as { sub: string }
+    const project = await ProjectRepository.findById(req.params.id)
+    if (!project || project.userId !== sub) {
+      return reply.status(404).send({ error: "Not found" })
+    }
+    await ProjectHotelRepository.removeHotelFromProject(req.params.id, req.params.hotelCode)
+    return reply.status(204).send()
+  })
+
+  // POST /projects/:id/hotels/selection — bulk set included flag
   app.post<{
     Params: { id: string }
     Body: { action: "all" | "none" }
@@ -74,7 +74,7 @@ export async function importRoutes(app: FastifyInstance) {
       return reply.status(404).send({ error: "Not found" })
     }
     const included = req.body.action === "all"
-    await HotelRepository.setAllIncluded(req.params.id, included)
+    await ProjectHotelRepository.setAllIncluded(req.params.id, included)
     await DomainEventStore.write({
       eventType: included ? "selection.all" : "selection.none",
       aggregateId: req.params.id,
