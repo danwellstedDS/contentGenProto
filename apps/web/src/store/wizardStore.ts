@@ -42,6 +42,8 @@ export interface WizardState {
   toggleHotel: (code: string) => void
   selectAllHotels: () => void
   deselectAllHotels: () => void
+  selectCodes: (codes: string[]) => void
+  deselectCodes: (codes: string[]) => void
   setSelectedLanguages: (langs: string[]) => void
   setCampaignType: (type: "PPC" | "PMAX") => void
   setGenerationName: (name: string) => void
@@ -102,6 +104,18 @@ export const useWizardStore = create<WizardState>((set, get) => ({
 
   deselectAllHotels: () => {
     set({ selectedHotelCodes: new Set() })
+  },
+
+  selectCodes: (codes) => {
+    const next = new Set(get().selectedHotelCodes)
+    codes.forEach((c) => next.add(c))
+    set({ selectedHotelCodes: next })
+  },
+
+  deselectCodes: (codes) => {
+    const next = new Set(get().selectedHotelCodes)
+    codes.forEach((c) => next.delete(c))
+    set({ selectedHotelCodes: next })
   },
 
   setSelectedLanguages: (langs) => set({ selectedLanguages: langs }),

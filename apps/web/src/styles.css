@@ -721,13 +721,100 @@ body {
   background: #c92e3f;
 }
 
-/* ─── Hotel selection rows ───────────────────────────────────────────────── */
+/* ─── Hotel selection — full-step layout ────────────────────────────────── */
 
-.hotel-list {
+/*
+ * Step2Hotels uses a custom layout instead of .wizard-step so the action bar
+ * can span the full width of .wizard-content. The content column has
+ * padding: 48px 64px 0, so the bar uses margin: 0 -64px to break out of
+ * that horizontal padding while keeping matching inner padding.
+ */
+
+.hotels-step {
+  display: flex;
+  flex-direction: column;
+  /* Ensure enough height so sticky bottom always has room to work */
+  min-height: calc(100vh - 56px - 48px); /* viewport minus header and top padding */
+}
+
+.hotels-step-header {
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+
+/* ── Search + filter row ── */
+
+.hotels-filters {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.hotels-search {
+  flex: 1;
+  height: 36px;
+  padding: 0 12px;
+  border: 1.5px solid #d0d5dd;
+  border-radius: 7px;
+  font-size: 13px;
+  color: #0a1628;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.hotels-search:focus {
+  border-color: #00b2a9;
+}
+
+.hotels-search::placeholder {
+  color: #aaa;
+}
+
+.hotels-brand-select {
+  height: 36px;
+  padding: 0 10px;
+  border: 1.5px solid #d0d5dd;
+  border-radius: 7px;
+  font-size: 13px;
+  color: #0a1628;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  min-width: 160px;
+}
+
+.hotels-brand-select:focus {
+  border-color: #00b2a9;
+}
+
+.hotels-filter-status {
+  font-size: 12px;
+  color: #888;
+  margin: 8px 0 0;
+}
+
+/* ── Scrollable list ── */
+
+.hotels-step-list {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  /* Bottom padding equal to action bar height so last row isn't hidden */
+  padding-bottom: 80px;
+  max-width: 860px;
 }
+
+.hotels-empty {
+  font-size: 14px;
+  color: #888;
+  padding: 32px 0;
+  text-align: center;
+}
+
+/* ─── Hotel selection rows ───────────────────────────────────────────────── */
 
 .hotel-row {
   display: flex;

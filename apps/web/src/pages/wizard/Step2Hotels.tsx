@@ -7,7 +7,10 @@ import WizardActionBar from "../../components/WizardActionBar"
 export default function Step2Hotels() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
-  const { hotels, selectedHotelCodes, setHotels, toggleHotel, advanceTo } = useWizardStore()
+  const {
+    hotels, selectedHotelCodes, setHotels, toggleHotel,
+    selectCodes, deselectCodes, advanceTo,
+  } = useWizardStore()
 
   const [searchQuery, setSearchQuery] = useState("")
   const [brandFilter, setBrandFilter] = useState("")
@@ -18,7 +21,7 @@ export default function Step2Hotels() {
     }
   }, [id])
 
-  // Unique chains for the brand filter
+  // Unique chains for the brand filter dropdown
   const allBrands = useMemo(() => {
     const seen = new Set<string>()
     hotels.forEach((h) => { if (h.chain) seen.add(h.chain) })
@@ -40,30 +43,27 @@ export default function Step2Hotels() {
   const selectedCount = selectedHotelCodes.size
   const canContinue = selectedCount > 0
 
-  // "1 brand · Name" or "N brands" for the action bar summary
+  // "1 brand · Name" or "N brands" summary shown in the action bar
   const brandSummary = useMemo(() => {
-    const brands = new Set<string>()
+    const selectedBrands = new Set<string>()
     hotels.forEach((h) => {
-      if (selectedHotelCodes.has(h.hotelCode) && h.chain) brands.add(h.chain)
+      if (selectedHotelCodes.has(h.hotelCode) && h.chain) selectedBrands.add(h.chain)
     })
-    if (brands.size === 0) return null
-    if (brands.size === 1) return `1 brand · ${Array.from(brands)[0]}`
-    return `${brands.size} brands`
+    if (selectedBrands.size === 0) return null
+    if (selectedBrands.size === 1) return `1 brand · ${Array.from(selectedBrands)[0]}`
+    return `${selectedBrands.size} brands`
   }, [hotels, selectedHotelCodes])
 
-  function selectFiltered() {
-    const next = new Set(selectedHotelCodes)
-    filtered.forEach((h) => next.add(h.hotelCode))
-    useWizardStore.setState({ selectedHotelCodes: next })
+  function handleSelectAll() {
+    selectCodes(filtered.map((h) => h.hotelCode))
   }
 
-  function deselectFiltered() {
-    const next = new Set(selectedHotelCodes)
-    filtered.forEach((h) => next.delete(h.hotelCode))
-    useWizardStore.setState({ selectedHotelCodes: next })
+  function handleDeselectAll() {
+    deselectCodes(filtered.map((h) => h.hotelCode))
   }
 
   function handleContinue() {
+    if (!canContinue) return
     advanceTo(3)
     navigate(`/projects/${id}/wizard/3`)
   }
@@ -87,8 +87,8 @@ export default function Step2Hotels() {
 
   const actionBarExtra = (
     <>
-      <button className="wab-text-btn" onClick={selectFiltered}>Select all</button>
-      <button className="wab-text-btn" onClick={deselectFiltered}>Deselect all</button>
+      <button className="wab-text-btn" onClick={handleSelectAll}>Select all</button>
+      <button className="wab-text-btn" onClick={handleDeselectAll}>Deselect all</button>
     </>
   )
 
