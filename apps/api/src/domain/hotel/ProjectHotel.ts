@@ -1,5 +1,8 @@
 // Fat join entity — carries Hotel profile fields denormalised alongside per-project metadata.
-// This lets use cases (generation, export, etc.) work with a single object without a second lookup.
+// chain and brand are the full resolved entities (loaded via FK join) for use in tone resolution.
+
+import type { ChainData } from "./Chain"
+import type { BrandData } from "./Brand"
 
 export interface ProjectHotelData {
   // Join fields
@@ -12,8 +15,10 @@ export interface ProjectHotelData {
   // Denormalised hotel fields
   hotelCode: string
   hotelName: string
-  chain?: string | null
-  brand?: string | null
+  chainId?: string | null
+  brandId?: string | null
+  chain?: ChainData | null    // full Chain entity — used for tone resolution at generation time
+  brand?: BrandData | null    // full Brand entity
   country?: string | null
   city?: string | null
   starRating?: string | null
@@ -42,8 +47,10 @@ export class ProjectHotel {
   // Hotel fields
   get hotelCode() { return this.data.hotelCode }
   get hotelName() { return this.data.hotelName }
-  get chain() { return this.data.chain }
-  get brand() { return this.data.brand }
+  get chainId() { return this.data.chainId }
+  get brandId() { return this.data.brandId }
+  get chain() { return this.data.chain }    // ChainData | null
+  get brand() { return this.data.brand }    // BrandData | null
   get country() { return this.data.country }
   get city() { return this.data.city }
   get starRating() { return this.data.starRating }

@@ -36,7 +36,7 @@ export async function exportAssets(
 
   const hotels = await ProjectHotelRepository.findByProject(projectId)
   const hotelChain: Record<string, string> = {}
-  for (const h of hotels) hotelChain[h.hotelCode] = h.chain ?? ""
+  for (const h of hotels) hotelChain[h.hotelCode] = h.chain?.name ?? ""
 
   const limit = LIMITS[assetType]
   let violationCount = 0

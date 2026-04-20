@@ -49,13 +49,56 @@ enum ProjectStatus {
   COMPLETE
 }
 
+// Chain — top-level brand hierarchy; carries chain-level tone of voice
+model Chain {
+  id                String    @id @default(cuid())
+  name              String    @unique
+  tone              String?
+  prohibitedWords   String[]  @default([])
+  mandatoryIncludes String[]  @default([])
+  copyStyle         String?
+  notes             String?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  deletedAt         DateTime?
+
+  brands Brand[]
+  hotels Hotel[]
+
+  @@index([deletedAt])
+}
+
+// Brand — belongs to a Chain; overrides chain tone per-field at generation time
+model Brand {
+  id                String    @id @default(cuid())
+  name              String
+  chainId           String
+  chain             Chain     @relation(fields: [chainId], references: [id])
+  tone              String?
+  prohibitedWords   String[]  @default([])
+  mandatoryIncludes String[]  @default([])
+  copyStyle         String?
+  notes             String?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  deletedAt         DateTime?
+
+  hotels Hotel[]
+
+  @@unique([chainId, name])
+  @@index([chainId])
+  @@index([deletedAt])
+}
+
 // Hotel library — one record per hotel, shared across projects
 model Hotel {
   id            String    @id @default(cuid())
   hotelCode     String    @unique
   hotelName     String
-  chain         String?
-  brand         String?
+  chainId       String?
+  chain         Chain?    @relation(fields: [chainId], references: [id])
+  brandId       String?
+  brand         Brand?    @relation(fields: [brandId], references: [id])
   country       String?
   city          String?
   starRating    String?
@@ -72,8 +115,8 @@ model Hotel {
 
   projects      ProjectHotel[]
 
-  @@index([chain])
-  @@index([brand])
+  @@index([chainId])
+  @@index([brandId])
   @@index([deletedAt])
 }
 
@@ -92,26 +135,6 @@ model ProjectHotel {
   @@unique([projectId, hotelId])
   @@index([projectId])
   @@index([hotelId])
-}
-
-model ToneConfig {
-  id                String          @id @default(cuid())
-  level             ToneConfigLevel // CHAIN or BRAND
-  entityName        String          // e.g. "KYORITSU MAINTENANCE" or "dormy inn"
-  tone              String          // e.g. "warm, accessible, modern"
-  prohibitedWords   String[]
-  mandatoryIncludes String[]
-  copyStyle         String          // e.g. "benefit-led"
-  notes             String?
-  createdAt         DateTime        @default(now())
-  updatedAt         DateTime        @updatedAt
-
-  @@unique([level, entityName])
-}
-
-enum ToneConfigLevel {
-  CHAIN
-  BRAND
 }
 
 model Generation {

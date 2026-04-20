@@ -53,6 +53,38 @@ function Field({
   )
 }
 
+function ReadonlyLinkField({
+  label,
+  value,
+  href,
+}: {
+  label: string
+  value: string | null | undefined
+  href?: string
+}) {
+  const navigate = useNavigate()
+  return (
+    <div className="hotel-field">
+      <span className="hotel-field-label">{label}</span>
+      {value ? (
+        href ? (
+          <button
+            className="btn-ghost"
+            style={{ padding: "0 4px", fontWeight: 500, textAlign: "left" }}
+            onClick={() => navigate(href)}
+          >
+            {value}
+          </button>
+        ) : (
+          <span className="hotel-field-value">{value}</span>
+        )
+      ) : (
+        <span className="hotel-field-value"><em style={{ color: "#aaa" }}>Not set — import from XLSX to assign</em></span>
+      )}
+    </div>
+  )
+}
+
 export default function HotelDetailPage() {
   const { hotelCode } = useParams<{ hotelCode: string }>()
   const navigate = useNavigate()
@@ -109,7 +141,7 @@ export default function HotelDetailPage() {
               ← Hotels
             </button>
             <h1 className="page-title">{hotel.hotelName}</h1>
-            <p className="page-subtitle">{hotel.hotelCode}{hotel.chain ? ` · ${hotel.chain}` : ""}</p>
+            <p className="page-subtitle">{hotel.hotelCode}{hotel.chainName ? ` · ${hotel.chainName}` : ""}</p>
           </div>
         </div>
 
@@ -118,8 +150,16 @@ export default function HotelDetailPage() {
             <h3 className="hotel-detail-section-title">Basic info</h3>
             <Field label="Hotel name" value={hotel.hotelName} onSave={(v) => patchField("hotelName", v)} />
             <Field label="Hotel code" value={hotel.hotelCode} onSave={(v) => patchField("hotelCode", v)} />
-            <Field label="Chain" value={hotel.chain} onSave={(v) => patchField("chain", v)} />
-            <Field label="Brand" value={hotel.brand} onSave={(v) => patchField("brand", v)} />
+            <ReadonlyLinkField
+              label="Chain"
+              value={hotel.chainName}
+              href={hotel.chainId ? `/brands?chainId=${hotel.chainId}` : undefined}
+            />
+            <ReadonlyLinkField
+              label="Brand"
+              value={hotel.brandName}
+              href={hotel.brandId ? `/brands/${hotel.brandId}` : undefined}
+            />
             <Field label="Country" value={hotel.country} onSave={(v) => patchField("country", v)} />
             <Field label="City" value={hotel.city} onSave={(v) => patchField("city", v)} />
             <Field label="Star rating" value={hotel.starRating} onSave={(v) => patchField("starRating", v)} />

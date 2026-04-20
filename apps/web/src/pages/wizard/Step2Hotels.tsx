@@ -36,7 +36,7 @@ export default function Step2Hotels() {
   // Unique chains for the brand filter dropdown
   const allBrands = useMemo(() => {
     const seen = new Set<string>()
-    hotels.forEach((h) => { if (h.chain) seen.add(h.chain) })
+    hotels.forEach((h) => { if (h.chainName) seen.add(h.chainName) })
     return Array.from(seen).sort()
   }, [hotels])
 
@@ -47,7 +47,7 @@ export default function Step2Hotels() {
       const matchesSearch = !q
         || h.hotelName.toLowerCase().includes(q)
         || h.hotelCode.toLowerCase().includes(q)
-      const matchesBrand = !brandFilter || h.chain === brandFilter
+      const matchesBrand = !brandFilter || h.chainName === brandFilter
       return matchesSearch && matchesBrand
     })
   }, [hotels, searchQuery, brandFilter])
@@ -59,7 +59,7 @@ export default function Step2Hotels() {
   const brandSummary = useMemo(() => {
     const selectedBrands = new Set<string>()
     hotels.forEach((h) => {
-      if (selectedHotelCodes.has(h.hotelCode) && h.chain) selectedBrands.add(h.chain)
+      if (selectedHotelCodes.has(h.hotelCode) && h.chainName) selectedBrands.add(h.chainName)
     })
     if (selectedBrands.size === 0) return null
     if (selectedBrands.size === 1) return `1 brand · ${Array.from(selectedBrands)[0]}`
@@ -174,8 +174,8 @@ export default function Step2Hotels() {
                   </span>
                 </div>
                 <div className="hotel-row-right">
-                  {hotel.chain && (
-                    <span className="hotel-row-brand">{hotel.chain}</span>
+                  {hotel.chainName && (
+                    <span className="hotel-row-brand">{hotel.chainName}</span>
                   )}
                   <div style={{
                     width: 20, height: 20, borderRadius: "50%",

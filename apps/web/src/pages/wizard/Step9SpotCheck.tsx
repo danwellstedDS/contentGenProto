@@ -156,8 +156,8 @@ export default function Step9SpotCheck() {
         <Flex vertical gap={4}>
           <h3 className="review-hotel-name">{currentHotel!.hotelName}</h3>
           <Flex gap={8} align="center">
-            <Tag color="neutral">{currentHotel!.chain}</Tag>
-            <Tag color="neutral">{currentHotel!.brand}</Tag>
+            {currentHotel!.chainName && <Tag color="neutral">{currentHotel!.chainName}</Tag>}
+            {currentHotel!.brandName && <Tag color="neutral">{currentHotel!.brandName}</Tag>}
             <span className="review-hotel-location">{currentHotel!.city}, {currentHotel!.country}</span>
           </Flex>
         </Flex>

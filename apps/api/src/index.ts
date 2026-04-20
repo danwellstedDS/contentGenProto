@@ -10,7 +10,8 @@ import { authRoutes } from "./interface/authRoutes"
 import { projectRoutes } from "./interface/projectRoutes"
 import { importRoutes } from "./interface/importRoutes"
 import { hotelRoutes } from "./interface/hotelRoutes"
-import { toneConfigRoutes } from "./interface/toneConfigRoutes"
+import { chainRoutes } from "./interface/chainRoutes"
+import { brandRoutes } from "./interface/brandRoutes"
 import { generationRoutes } from "./interface/generationRoutes"
 
 declare module "@fastify/jwt" {
@@ -54,7 +55,8 @@ async function main() {
   await app.register(projectRoutes)
   await app.register(importRoutes)
   await app.register(hotelRoutes)
-  await app.register(toneConfigRoutes)
+  await app.register(chainRoutes)
+  await app.register(brandRoutes)
   await app.register(generationRoutes)
 
   // Serve the compiled React frontend in production
