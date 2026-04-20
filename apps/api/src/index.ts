@@ -56,7 +56,7 @@ async function main() {
   await app.register(generationRoutes)
 
   // Serve the compiled React frontend in production
-  const webDistPath = path.join(__dirname, "../../web/dist")
+  const webDistPath = path.join(process.cwd(), "apps/web/dist")
   if (fs.existsSync(webDistPath)) {
     await app.register(fastifyStatic, { root: webDistPath, prefix: "/" })
     // SPA fallback — any unmatched GET returns index.html for React Router
