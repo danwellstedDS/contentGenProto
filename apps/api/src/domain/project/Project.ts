@@ -8,6 +8,7 @@ export interface ProjectData {
   campaignType?: string | null
   versionNumber: number
   parentProjectId?: string | null
+  deletedAt?: Date | null
   createdAt: Date
   updatedAt: Date
 }

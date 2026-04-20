@@ -8,13 +8,20 @@ function toProject(row: ProjectData): Project {
 export const ProjectRepository = {
   async findByUserId(userId: string): Promise<Project[]> {
     const rows = await prisma.project.findMany({
-      where: { userId },
+      where: { userId, deletedAt: null },
       orderBy: { createdAt: "desc" },
     })
     return rows.map((r: unknown) => toProject(r as ProjectData))
   },
 
   async findById(id: string): Promise<Project | null> {
+    const row = await prisma.project.findUnique({ where: { id } })
+    // Treat soft-deleted projects as not found for normal lookups
+    if (!row || row.deletedAt) return null
+    return toProject(row as unknown as ProjectData)
+  },
+
+  async findByIdIncludingDeleted(id: string): Promise<Project | null> {
     const row = await prisma.project.findUnique({ where: { id } })
     return row ? toProject(row as unknown as ProjectData) : null
   },
@@ -27,7 +34,11 @@ export const ProjectRepository = {
   },
 
   async delete(id: string): Promise<void> {
-    await prisma.project.delete({ where: { id } })
+    await prisma.project.update({ where: { id }, data: { deletedAt: new Date() } })
+  },
+
+  async restore(id: string): Promise<void> {
+    await prisma.project.update({ where: { id }, data: { deletedAt: null } })
   },
 
   async updateStatus(id: string, status: ProjectData["status"]): Promise<void> {

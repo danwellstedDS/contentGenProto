@@ -68,6 +68,9 @@ export const projectsApi = {
   delete: async (id: string) => {
     await http.delete(`/projects/${id}`)
   },
+  restore: async (id: string) => {
+    await http.patch(`/projects/${id}/restore`)
+  },
   events: async (id: string) => {
     const { data } = await http.get<DomainEvent[]>(`/projects/${id}/events`)
     return data

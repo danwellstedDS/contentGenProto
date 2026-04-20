@@ -39,7 +39,7 @@ export async function projectRoutes(app: FastifyInstance) {
     return project.toData()
   })
 
-  // DELETE /projects/:id
+  // DELETE /projects/:id — soft delete
   app.delete<{ Params: { id: string } }>("/projects/:id", auth, async (req, reply) => {
     const { sub } = req.user as { sub: string }
     const project = await ProjectRepository.findById(req.params.id)
@@ -47,6 +47,33 @@ export async function projectRoutes(app: FastifyInstance) {
       return reply.status(404).send({ error: "Not found" })
     }
     await ProjectRepository.delete(req.params.id)
+    await DomainEventStore.write({
+      eventType: "project.deleted",
+      aggregateId: project.id,
+      aggregateType: "Project",
+      userId: sub,
+      projectId: project.id,
+      payload: { projectName: project.name },
+    })
+    return reply.status(204).send()
+  })
+
+  // PATCH /projects/:id/restore — undo soft delete
+  app.patch<{ Params: { id: string } }>("/projects/:id/restore", auth, async (req, reply) => {
+    const { sub } = req.user as { sub: string }
+    const project = await ProjectRepository.findByIdIncludingDeleted(req.params.id)
+    if (!project || project.userId !== sub) {
+      return reply.status(404).send({ error: "Not found" })
+    }
+    await ProjectRepository.restore(req.params.id)
+    await DomainEventStore.write({
+      eventType: "project.restored",
+      aggregateId: project.id,
+      aggregateType: "Project",
+      userId: sub,
+      projectId: project.id,
+      payload: { projectName: project.name },
+    })
     return reply.status(204).send()
   })
 

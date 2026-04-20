@@ -32,11 +32,14 @@ model Project {
   parentProjectId String?
   parentProject   Project?       @relation("ProjectVersions", fields: [parentProjectId], references: [id], onDelete: SetNull)
   versions        Project[]      @relation("ProjectVersions")
+  deletedAt       DateTime?
   createdAt       DateTime       @default(now())
   updatedAt       DateTime       @updatedAt
   hotels          HotelProfile[]
   generations     Generation[]
   events          DomainEvent[]
+
+  @@index([deletedAt])
 }
 
 enum ProjectStatus {
