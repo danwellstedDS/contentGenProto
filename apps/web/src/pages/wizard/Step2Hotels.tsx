@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { hotelsApi } from "../../services/api"
 import { useWizardStore } from "../../store/wizardStore"
+import WizardActionBar from "../../components/WizardActionBar"
 
 export default function Step2Hotels() {
   const { id } = useParams<{ id: string }>()
@@ -75,9 +76,25 @@ export default function Step2Hotels() {
     )
   }
 
+  const actionBarSummary = canContinue ? (
+    <>
+      <span className="wab-summary-primary">{selectedCount} of {hotels.length} selected</span>
+      {brandSummary && <span className="wab-summary-secondary">{brandSummary}</span>}
+    </>
+  ) : (
+    <span className="wab-summary-hint">Select at least one hotel to continue.</span>
+  )
+
+  const actionBarExtra = (
+    <>
+      <button className="wab-text-btn" onClick={handleSelectAll}>Select all</button>
+      <button className="wab-text-btn" onClick={handleDeselectAll}>Deselect all</button>
+    </>
+  )
+
   return (
     <div className="hotels-step">
-      {/* ── Header ── */}
+      {/* Header */}
       <div className="hotels-step-header">
         <div className="step-heading">
           <h2>Select hotels</h2>
@@ -115,7 +132,7 @@ export default function Step2Hotels() {
         )}
       </div>
 
-      {/* ── Hotel list ── */}
+      {/* Hotel list */}
       <div className="hotels-step-list">
         {filtered.length === 0 ? (
           <p className="hotels-empty">No hotels match your filters.</p>
@@ -138,15 +155,13 @@ export default function Step2Hotels() {
                   {hotel.chain && (
                     <span className="hotel-row-brand">{hotel.chain}</span>
                   )}
-                  <div
-                    style={{
-                      width: 20, height: 20, borderRadius: "50%",
-                      background: isSelected ? "#00b2a9" : "#fff",
-                      border: `2px solid ${isSelected ? "#00b2a9" : "#d0d5dd"}`,
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      flexShrink: 0, transition: "all 0.15s",
-                    }}
-                  >
+                  <div style={{
+                    width: 20, height: 20, borderRadius: "50%",
+                    background: isSelected ? "#00b2a9" : "#fff",
+                    border: `2px solid ${isSelected ? "#00b2a9" : "#d0d5dd"}`,
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    flexShrink: 0, transition: "all 0.15s",
+                  }}>
                     {isSelected && (
                       <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
                         <path d="M1 4l2.5 2.5L9 1" stroke="#fff" strokeWidth="1.8"
@@ -161,61 +176,15 @@ export default function Step2Hotels() {
         )}
       </div>
 
-      {/* ── Sticky action bar ── */}
-      <div
-        className="hotels-action-bar"
-        role="region"
-        aria-label="Hotel selection actions"
-      >
-        <button
-          className="hotels-action-back"
-          onClick={() => navigate(`/projects/${id}/wizard/1`)}
-        >
-          ← Back
-        </button>
-
-        <div className="hotels-action-summary" aria-live="polite">
-          {canContinue ? (
-            <>
-              <span className="hotels-action-count">
-                {selectedCount} of {hotels.length} selected
-              </span>
-              {brandSummary && (
-                <span className="hotels-action-brands">{brandSummary}</span>
-              )}
-            </>
-          ) : (
-            <span className="hotels-action-empty">
-              Select at least one hotel to continue.
-            </span>
-          )}
-        </div>
-
-        <div className="hotels-action-spacer" />
-
-        <button
-          className="hotels-action-text-btn"
-          onClick={handleSelectAll}
-        >
-          Select all
-        </button>
-        <button
-          className="hotels-action-text-btn"
-          onClick={handleDeselectAll}
-        >
-          Deselect all
-        </button>
-
-        <button
-          className={`hotels-action-continue${!canContinue ? " hotels-action-continue--disabled" : ""}`}
-          onClick={handleContinue}
-          disabled={!canContinue}
-          aria-disabled={!canContinue}
-          title={!canContinue ? "Select at least one hotel to continue" : undefined}
-        >
-          Continue to review →
-        </button>
-      </div>
+      <WizardActionBar
+        onBack={() => navigate(`/projects/${id}/wizard/1`)}
+        summary={actionBarSummary}
+        extra={actionBarExtra}
+        primaryLabel="Continue to review →"
+        onPrimary={handleContinue}
+        primaryDisabled={!canContinue}
+        primaryTooltip="Select at least one hotel to continue"
+      />
     </div>
   )
 }

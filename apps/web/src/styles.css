@@ -303,6 +303,8 @@ body {
   flex-direction: column;
   gap: 32px;
   max-width: 680px;
+  /* Prevent content hiding behind the fixed action bar */
+  padding-bottom: 80px;
 }
 
 .step-heading {
@@ -326,17 +328,136 @@ body {
   line-height: 1.6;
 }
 
+/* ─── Wizard fixed action bar ────────────────────────────────────────────── */
+/*
+ * position: fixed anchored to the content column. Left offset = 56px (app
+ * sidebar) + 240px (wizard meta sidebar). Right = 0. Always visible regardless
+ * of scroll depth — avoids the min-height sticky activation bug.
+ */
+
+.wizard-action-bar {
+  position: fixed;
+  bottom: 0;
+  left: calc(56px + 240px);
+  right: 0;
+  padding: 14px 64px;
+  background: #fff;
+  border-top: 0.5px solid #eaecf0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 50;
+}
+
+.wab-back {
+  height: 34px;
+  padding: 0 14px;
+  border: 1.5px solid #d0d5dd;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.wab-back:hover:not(:disabled) {
+  border-color: #aaa;
+  background: #fafbfc;
+}
+
+.wab-back:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.wab-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wab-summary-primary {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0a1628;
+  white-space: nowrap;
+}
+
+.wab-summary-secondary {
+  font-size: 11px;
+  color: #888;
+  white-space: nowrap;
+}
+
+.wab-summary-hint {
+  font-size: 13px;
+  color: #888;
+}
+
+.wab-extra {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.wab-spacer {
+  flex: 1;
+}
+
+.wab-text-btn {
+  background: none;
+  border: none;
+  padding: 0 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+
+.wab-text-btn:hover {
+  color: #0a1628;
+}
+
+.wab-primary {
+  height: 34px;
+  padding: 0 18px;
+  background: #0a1628;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.wab-primary:hover:not(.wab-primary--disabled) {
+  background: #1a2d4a;
+}
+
+.wab-primary--disabled,
+.wab-primary:disabled {
+  background: #d0d5dd;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Legacy — kept for Steps 7–10 that haven't been migrated */
 .step-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 0 24px;
   margin-top: 8px;
-  position: sticky;
-  bottom: 0;
-  background: #fff;
-  z-index: 10;
-  box-shadow: 0 -1px 0 0 #f0f0f0;
 }
 
 .step-nav-right {
@@ -750,6 +871,78 @@ body {
   font-weight: 500;
 }
 
+/* ─── Step 2 hotels — custom full-width layout ───────────────────────────── */
+
+.hotels-step {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+
+.hotels-step-header {
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+
+.hotels-filters {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.hotels-search {
+  flex: 1;
+  height: 36px;
+  padding: 0 12px;
+  border: 1.5px solid #d0d5dd;
+  border-radius: 7px;
+  font-size: 13px;
+  color: #0a1628;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.hotels-search:focus { border-color: #00b2a9; }
+.hotels-search::placeholder { color: #aaa; }
+
+.hotels-brand-select {
+  height: 36px;
+  padding: 0 10px;
+  border: 1.5px solid #d0d5dd;
+  border-radius: 7px;
+  font-size: 13px;
+  color: #0a1628;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+  min-width: 160px;
+  transition: border-color 0.15s;
+}
+
+.hotels-brand-select:focus { border-color: #00b2a9; }
+
+.hotels-filter-status {
+  font-size: 12px;
+  color: #888;
+  margin: 8px 0 0;
+}
+
+.hotels-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 860px;
+}
+
+.hotels-empty {
+  font-size: 14px;
+  color: #888;
+  padding: 32px 0;
+  text-align: center;
+}
+
 .hotel-row-brand {
   font-size: 11px;
   font-weight: 500;
@@ -758,117 +951,6 @@ body {
   border-radius: 4px;
   padding: 2px 8px;
   white-space: nowrap;
-}
-
-/* ─── Hotel selection — sticky action bar ────────────────────────────────── */
-
-.hotels-action-bar {
-  position: sticky;
-  bottom: 0;
-  /* Break out of wizard-content's 64px horizontal padding */
-  margin: 0 -64px;
-  padding: 14px 64px;
-  background: #fff;
-  border-top: 0.5px solid #eaecf0;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.04);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  z-index: 10;
-}
-
-.hotels-action-back {
-  height: 34px;
-  padding: 0 14px;
-  border: 1.5px solid #d0d5dd;
-  border-radius: 6px;
-  background: #fff;
-  font-size: 13px;
-  font-weight: 500;
-  color: #333;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: border-color 0.15s, background 0.15s;
-  flex-shrink: 0;
-}
-
-.hotels-action-back:hover {
-  border-color: #aaa;
-  background: #fafbfc;
-}
-
-.hotels-action-summary {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.hotels-action-count {
-  font-size: 13px;
-  font-weight: 500;
-  color: #0a1628;
-  white-space: nowrap;
-}
-
-.hotels-action-brands {
-  font-size: 11px;
-  color: #888;
-  white-space: nowrap;
-}
-
-.hotels-action-empty {
-  font-size: 13px;
-  color: #888;
-}
-
-.hotels-action-spacer {
-  flex: 1;
-}
-
-.hotels-action-text-btn {
-  background: none;
-  border: none;
-  padding: 0 4px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #00b2a9;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: color 0.15s;
-}
-
-.hotels-action-text-btn:hover {
-  color: #009990;
-}
-
-.hotels-action-continue {
-  height: 34px;
-  padding: 0 18px;
-  background: #00b2a9;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.15s;
-  flex-shrink: 0;
-}
-
-.hotels-action-continue:hover {
-  background: #009990;
-}
-
-.hotels-action-continue--disabled {
-  background: #d0d5dd;
-  color: #aaa;
-  cursor: not-allowed;
-}
-
-.hotels-action-continue--disabled:hover {
-  background: #d0d5dd;
 }
 
 /* ─── Language pill selection ────────────────────────────────────────────── */

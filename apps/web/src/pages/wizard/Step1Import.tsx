@@ -1,10 +1,11 @@
 import { useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import { Button, Alert, Flex } from "@derbysoft/neat-design"
+import { Alert, Flex } from "@derbysoft/neat-design"
 import { Modal } from "antd"
 import { hotelsApi } from "../../services/api"
 import { useWizardStore } from "../../store/wizardStore"
 import ImportDropzone from "../../components/ImportDropzone"
+import WizardActionBar from "../../components/WizardActionBar"
 
 function formatDate(date: string | Date) {
   return new Date(date).toLocaleDateString("en-GB", {
@@ -150,16 +151,12 @@ export default function Step1Import() {
         </Flex>
       )}
 
-      <div className="step-nav">
-        <span />
-        <Button
-          type="primary"
-          disabled={!hasHotels && !importResult}
-          onClick={() => navigate(`/projects/${id}/wizard/2`)}
-        >
-          Next: Select hotels →
-        </Button>
-      </div>
+      <WizardActionBar
+        primaryLabel="Next: Select hotels →"
+        onPrimary={() => navigate(`/projects/${id}/wizard/2`)}
+        primaryDisabled={!hasHotels && !importResult}
+        primaryTooltip="Upload hotel data to continue"
+      />
 
       {/* Mode-selection modal — only shown in State B when a file is chosen */}
       <Modal

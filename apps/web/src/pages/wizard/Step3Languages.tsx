@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom"
-import { Button, Flex } from "@derbysoft/neat-design"
 import { LANGUAGES } from "@hotel-copy/shared"
 import { useWizardStore } from "../../store/wizardStore"
+import WizardActionBar from "../../components/WizardActionBar"
 
 export default function Step3Languages() {
   const { id } = useParams<{ id: string }>()
@@ -28,18 +28,6 @@ export default function Step3Languages() {
         <p>Choose which languages to generate ad copy for.</p>
       </div>
 
-      <Flex justify="space-between" align="center">
-        <span className="hotel-count-badge">
-          {selectedLanguages.length} of {LANGUAGES.length} selected
-        </span>
-        <Flex gap={8}>
-          <Button onClick={() => setSelectedLanguages(LANGUAGES.map((l) => l.code as string))}>
-            Select all
-          </Button>
-          <Button onClick={() => setSelectedLanguages([])}>Deselect all</Button>
-        </Flex>
-      </Flex>
-
       <div className="language-grid">
         {LANGUAGES.map((lang) => {
           const isSelected = selectedLanguages.includes(lang.code as string)
@@ -58,12 +46,28 @@ export default function Step3Languages() {
         })}
       </div>
 
-      <div className="step-nav">
-        <Button onClick={() => navigate(`/projects/${id}/wizard/2`)}>← Back</Button>
-        <Button type="primary" disabled={selectedLanguages.length === 0} onClick={handleNext}>
-          Next: Campaign type →
-        </Button>
-      </div>
+      <WizardActionBar
+        onBack={() => navigate(`/projects/${id}/wizard/2`)}
+        summary={
+          <span className="wab-summary-primary">
+            {selectedLanguages.length} of {LANGUAGES.length} language{selectedLanguages.length !== 1 ? "s" : ""} selected
+          </span>
+        }
+        extra={
+          <>
+            <button className="wab-text-btn" onClick={() => setSelectedLanguages(LANGUAGES.map((l) => l.code as string))}>
+              Select all
+            </button>
+            <button className="wab-text-btn" onClick={() => setSelectedLanguages([])}>
+              Deselect all
+            </button>
+          </>
+        }
+        primaryLabel="Next: Campaign type →"
+        onPrimary={handleNext}
+        primaryDisabled={selectedLanguages.length === 0}
+        primaryTooltip="Select at least one language to continue"
+      />
     </div>
   )
 }

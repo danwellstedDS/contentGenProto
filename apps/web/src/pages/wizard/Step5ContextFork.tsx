@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import { Button, Flex } from "@derbysoft/neat-design"
 import { generationApi } from "../../services/api"
 import { useWizardStore } from "../../store/wizardStore"
+import WizardActionBar from "../../components/WizardActionBar"
 
 export default function Step5ContextFork() {
   const { id } = useParams<{ id: string }>()
@@ -79,10 +79,14 @@ export default function Step5ContextFork() {
         </div>
       </div>
 
-      <div className="step-nav">
-        <Button onClick={() => navigate(`/projects/${id}/wizard/4`)} disabled={triggering}>← Back</Button>
-        <span />
-      </div>
+      <WizardActionBar
+        onBack={() => navigate(`/projects/${id}/wizard/4`)}
+        backDisabled={triggering}
+        primaryLabel="Skip — generate now"
+        onPrimary={skipAndGenerate}
+        primaryDisabled={triggering}
+        primaryLoading={triggering}
+      />
     </div>
   )
 }
