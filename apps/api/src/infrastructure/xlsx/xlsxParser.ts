@@ -1,8 +1,8 @@
 import * as XLSX from "xlsx"
-import type { HotelProfileData } from "../../domain/hotel/HotelProfile"
+import type { HotelInput } from "../../domain/hotel/Hotel"
 
 export interface ParseResult {
-  hotels: Omit<HotelProfileData, "id" | "projectId" | "createdAt" | "updatedAt">[]
+  hotels: HotelInput[]
   imported: number
   skipped: number
   warnings: string[]
@@ -156,7 +156,7 @@ export function parseXlsx(buffer: Buffer): ParseResult {
   // e.g. "English Final URL", "Japanese Rooms URL", "Korean Gallery URL"
   const URL_TYPES = ["rooms", "gallery", "dining", "amenities", "location", "reviews", "offers", "events"]
 
-  const hotels: ParseResult["hotels"] = []
+  const hotels: HotelInput[] = []
   let skipped = 0
 
   for (const row of basicRows) {
@@ -275,20 +275,18 @@ export function parseXlsx(buffer: Buffer): ParseResult {
     hotels.push({
       hotelCode,
       hotelName,
-      chain: row["Chain"] ?? "",
-      brand: row["Brand"] ?? "",
-      country: row["Country"] ?? "",
-      city: row["City"] ?? "",
-      starRating: starRating ?? undefined,
-      roomCount: roomCount ?? undefined,
-      googlePlaceId: googlePlaceId ?? undefined,
-      description: description || undefined,
+      chain: row["Chain"] ?? null,
+      brand: row["Brand"] ?? null,
+      country: row["Country"] ?? null,
+      city: row["City"] ?? null,
+      starRating: starRating ?? null,
+      roomCount: roomCount ?? null,
+      googlePlaceId: googlePlaceId ?? null,
+      description: description || null,
       categories,
       amenities,
       urls,
       localNames,
-      notes: undefined,
-      included: true,
     })
   }
 

@@ -2,7 +2,7 @@ import type { ReactNode } from "react"
 import {
   HomeOutlined,
   NotificationOutlined,
-  ProjectOutlined,
+  BankOutlined,
   CalendarOutlined,
   PictureOutlined,
   BarChartOutlined,
@@ -12,20 +12,20 @@ import {
 } from "@ant-design/icons"
 import { useNavigate } from "react-router-dom"
 
-type NavKey = "home" | "campaign" | "projects" | "calendar" | "media" | "analytics"
+type NavKey = "home" | "campaign" | "hotels" | "calendar" | "media" | "analytics"
 
 interface Props {
   children: ReactNode
   activeNav?: NavKey
 }
 
-const NAV_ITEMS: { icon: ReactNode; key: NavKey; path?: string }[] = [
-  { icon: <HomeOutlined />, key: "home", path: "/dashboard" },
-  { icon: <NotificationOutlined />, key: "campaign" },
-  { icon: <ProjectOutlined />, key: "projects" },
-  { icon: <CalendarOutlined />, key: "calendar" },
-  { icon: <PictureOutlined />, key: "media" },
-  { icon: <BarChartOutlined />, key: "analytics" },
+const NAV_ITEMS: { icon: ReactNode; key: NavKey; path?: string; title?: string }[] = [
+  { icon: <HomeOutlined />, key: "home", path: "/dashboard", title: "Dashboard" },
+  { icon: <NotificationOutlined />, key: "campaign", title: "Campaigns" },
+  { icon: <BankOutlined />, key: "hotels", path: "/hotels", title: "Hotels" },
+  { icon: <CalendarOutlined />, key: "calendar", title: "Calendar" },
+  { icon: <PictureOutlined />, key: "media", title: "Media" },
+  { icon: <BarChartOutlined />, key: "analytics", title: "Analytics" },
 ]
 
 export default function AppShell({ children, activeNav = "home" }: Props) {
@@ -40,6 +40,7 @@ export default function AppShell({ children, activeNav = "home" }: Props) {
             key={item.key}
             className={`app-sidebar-icon${item.key === activeNav ? " active" : ""}`}
             onClick={() => item.path && navigate(item.path)}
+            title={item.title}
           >
             {item.icon}
           </div>

@@ -3,7 +3,6 @@ import { HotelRepository } from "../infrastructure/prisma/HotelRepository"
 import { DomainEventStore } from "../infrastructure/events/DomainEventStore"
 
 export async function importHotels(
-  projectId: string,
   userId: string,
   buffer: Buffer,
   mode: "replace" | "merge" = "merge"
@@ -11,23 +10,23 @@ export async function importHotels(
   const result = parseXlsx(buffer)
 
   if (mode === "replace") {
-    console.log(`[ImportHotels] replace mode — deleting existing hotels for project ${projectId}`)
-    await HotelRepository.deleteByProject(projectId)
+    console.log(`[ImportHotels] replace mode — soft-deleting all library hotels`)
+    await HotelRepository.softDeleteAll()
   }
 
   console.log(`[ImportHotels] upserting ${result.hotels.length} hotels in transaction`)
-  await HotelRepository.upsertMany(projectId, result.hotels)
+  await HotelRepository.upsertMany(result.hotels)
 
   await DomainEventStore.write({
-    eventType: "file.imported",
-    aggregateId: projectId,
-    aggregateType: "Project",
+    eventType: "hotel.imported",
+    aggregateId: "library",
+    aggregateType: "Hotel",
     userId,
-    projectId,
     payload: {
       hotelCount: result.imported,
       skipped: result.skipped,
       validationErrors: result.warnings.length,
+      mode,
     },
   })
 

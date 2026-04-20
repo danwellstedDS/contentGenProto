@@ -9,6 +9,7 @@ import fastifyStatic from "@fastify/static"
 import { authRoutes } from "./interface/authRoutes"
 import { projectRoutes } from "./interface/projectRoutes"
 import { importRoutes } from "./interface/importRoutes"
+import { hotelRoutes } from "./interface/hotelRoutes"
 import { toneConfigRoutes } from "./interface/toneConfigRoutes"
 import { generationRoutes } from "./interface/generationRoutes"
 
@@ -52,6 +53,7 @@ async function main() {
   await app.register(authRoutes)
   await app.register(projectRoutes)
   await app.register(importRoutes)
+  await app.register(hotelRoutes)
   await app.register(toneConfigRoutes)
   await app.register(generationRoutes)
 

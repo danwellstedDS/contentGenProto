@@ -1,12 +1,9 @@
 import { create } from "zustand"
-import type { HotelProfile, GeneratedAsset } from "@hotel-copy/shared"
+import type { ProjectHotel, GeneratedAsset } from "@hotel-copy/shared"
 
 export interface WizardState {
-  // Step 1 — import result
-  importResult: { imported: number; skipped: number; warnings: string[]; fileName?: string } | null
-
   // Step 2 — hotel selection
-  hotels: HotelProfile[]
+  hotels: ProjectHotel[]
   selectedHotelCodes: Set<string>
 
   // Step 3 — language selection
@@ -37,8 +34,7 @@ export interface WizardState {
   maxReachedStep: number
 
   // Actions
-  setImportResult: (result: WizardState["importResult"]) => void
-  setHotels: (hotels: HotelProfile[]) => void
+  setHotels: (hotels: ProjectHotel[]) => void
   toggleHotel: (code: string) => void
   selectAllHotels: () => void
   deselectAllHotels: () => void
@@ -62,7 +58,6 @@ export interface WizardState {
 }
 
 const initialState = {
-  importResult: null,
   hotels: [],
   selectedHotelCodes: new Set<string>(),
   selectedLanguages: ["en", "ja", "zh_tw", "zh_cn", "ko", "it", "pt", "ru", "es", "de", "fr", "tr", "el"],
@@ -82,8 +77,6 @@ const initialState = {
 
 export const useWizardStore = create<WizardState>((set, get) => ({
   ...initialState,
-
-  setImportResult: (result) => set({ importResult: result }),
 
   setHotels: (hotels) => {
     const includedCodes = new Set(hotels.filter((h) => h.included).map((h) => h.hotelCode))

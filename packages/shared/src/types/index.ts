@@ -21,24 +21,47 @@ export interface Project {
   updatedAt: string
 }
 
-export interface HotelProfile {
+export interface Hotel {
   id: string
-  projectId: string
   hotelCode: string
   hotelName: string
-  chain: string
-  brand: string
-  country: string
-  city: string
-  starRating?: string
-  roomCount?: number
-  googlePlaceId?: string
-  description?: string
+  chain?: string | null
+  brand?: string | null
+  country?: string | null
+  city?: string | null
+  starRating?: string | null
+  roomCount?: number | null
+  googlePlaceId?: string | null
+  description?: string | null
   categories: Record<string, boolean>
   amenities: Record<string, Record<string, boolean>>
   urls: Record<string, Record<string, string>>
   localNames: Record<string, Record<string, string>>
-  notes?: string
+  createdAt: string
+  updatedAt: string
+  deletedAt?: string | null
+}
+
+// Per-project join — carries hotel fields denormalised for UI convenience
+export interface ProjectHotel {
+  id: string
+  projectId: string
+  hotelId: string
+  hotelCode: string
+  hotelName: string
+  chain?: string | null
+  brand?: string | null
+  country?: string | null
+  city?: string | null
+  starRating?: string | null
+  roomCount?: number | null
+  googlePlaceId?: string | null
+  description?: string | null
+  categories: Record<string, boolean>
+  amenities: Record<string, Record<string, boolean>>
+  urls: Record<string, Record<string, string>>
+  localNames: Record<string, Record<string, string>>
+  notes?: string | null
   included: boolean
   createdAt: string
   updatedAt: string

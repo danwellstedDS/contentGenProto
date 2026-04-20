@@ -1651,3 +1651,163 @@ body {
 .recipe-panel { border: 1px solid #e8e8e8; border-radius: 8px; padding: 16px; background: #fafafa; }
 .anchor-select { min-width: 280px; }
 .recipe-text { font-size: 13px; color: #555; line-height: 1.6; white-space: pre-wrap; }
+
+/* ─── Page layout (Hotels, other top-level pages) ───────────────────────── */
+
+.page-content {
+  margin-left: 56px;
+  padding: 32px 48px;
+  min-height: 100vh;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a1628;
+  margin: 0 0 4px;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+/* ─── Shared button styles ───────────────────────────────────────────────── */
+
+.btn-primary {
+  background: #0a1628;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: #1a2f4f; }
+
+.btn-secondary {
+  background: #fff;
+  color: #0a1628;
+  border: 1.5px solid #0a1628;
+  border-radius: 8px;
+  padding: 7px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-secondary:hover { background: #f5f7fa; }
+
+.btn-danger {
+  background: #fff;
+  color: #c00;
+  border: 1.5px solid #c00;
+  border-radius: 8px;
+  padding: 7px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-danger:hover { background: #fff5f5; }
+
+.btn-ghost {
+  background: transparent;
+  color: #555;
+  border: none;
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.btn-ghost:hover { background: #f0f2f5; color: #0a1628; }
+
+/* ─── Hotel detail page ─────────────────────────────────────────────────── */
+
+.hotel-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.hotel-detail-section {
+  background: #fff;
+  border: 1px solid #eaecf0;
+  border-radius: 10px;
+  padding: 20px 24px;
+}
+
+.hotel-detail-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 16px;
+}
+
+.hotel-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f2f4f7;
+  cursor: pointer;
+}
+.hotel-field:last-child { border-bottom: none; }
+.hotel-field:hover { background: #fafbfc; margin: 0 -8px; padding: 8px 8px; border-radius: 6px; }
+
+.hotel-field-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hotel-field-value {
+  font-size: 14px;
+  color: #0a1628;
+}
+
+.hotel-field-textarea {
+  font-size: 14px;
+  color: #0a1628;
+  border: 1px solid #eaecf0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+  width: 100%;
+}
+.hotel-field-textarea:focus { outline: none; border-color: #0a1628; }
+
+.hotel-categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hotel-category-tag {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #f2f4f7;
+  color: #888;
+  border: 1px solid #eaecf0;
+}
+.hotel-category-tag.active {
+  background: #e8f5f4;
+  color: #00897b;
+  border-color: #b2dfdb;
+}
