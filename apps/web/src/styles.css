@@ -945,6 +945,143 @@ body {
   font-size: 14px;
 }
 
+/* ─── Project table actions column ──────────────────────────────────────── */
+
+.pt-actions-th {
+  width: 56px;
+  min-width: 56px;
+}
+
+.pt-actions-td {
+  width: 56px;
+  text-align: right;
+  padding-right: 16px !important;
+}
+
+.pt-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #b0b8c4;
+  opacity: 0;
+  transition: color 0.15s, background 0.15s, opacity 0.15s;
+  padding: 0;
+}
+
+/* Reveal on row hover or keyboard focus within the row */
+.project-table tbody tr:hover .pt-delete-btn,
+.project-table tbody tr:focus-within .pt-delete-btn {
+  opacity: 1;
+}
+
+/* Always visible on touch devices */
+@media (hover: none) {
+  .pt-delete-btn {
+    opacity: 1;
+  }
+}
+
+.pt-delete-btn:hover {
+  color: #e5374b;
+  background: #fff1f2;
+}
+
+.pt-delete-btn:focus-visible {
+  opacity: 1;
+  outline: 2px solid #00b2a9;
+  outline-offset: 1px;
+}
+
+/* Row exit animation */
+@keyframes pt-row-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+.pt-row-removing {
+  animation: pt-row-fade-out 0.25s ease forwards;
+  pointer-events: none;
+}
+
+/* Delete confirmation modal */
+.pt-modal-body {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pt-delete-confirm-btn {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 6px;
+  background: #e5374b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.pt-delete-confirm-btn:hover {
+  background: #c82d3e;
+}
+
+/* Undo toast */
+.pt-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a2332;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  z-index: 1000;
+  white-space: nowrap;
+  animation: pt-toast-in 0.2s ease;
+}
+
+@keyframes pt-toast-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.pt-toast-msg {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pt-toast-undo {
+  border: none;
+  background: transparent;
+  color: #00b2a9;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.pt-toast-undo:hover {
+  color: #00c9bf;
+}
+
 /* ─── Login page ─────────────────────────────────────────────────────────── */
 
 .login-page {
